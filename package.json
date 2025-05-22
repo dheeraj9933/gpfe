@@ -6,8 +6,11 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://dheeraj-9933.github.io/gpfe",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@react-router/node": "^7.5.3",
@@ -25,6 +28,7 @@
     "@types/node": "^20",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "gh-pages": "^6.3.0",
     "sass": "^1.87.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.3",
