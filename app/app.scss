@@ -1,0 +1,129 @@
+@use "./common/colors";
+
+:root {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html,
+body {
+  /* @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  } */
+  button {
+    outline: none;
+    border: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+  // Spacing
+  .margin-y-100 {
+    margin: 100px 0;
+  }
+  .padding-y-100 {
+    padding: 100px 0;
+  }
+  .padding-y-50 {
+    padding: 50px 0;
+  }
+  // Flex
+  .flex-30 {
+    flex-basis: 30%;
+    flex-grow: 0;
+  }
+  .flex-24 {
+    flex-basis: 24%;
+    flex-grow: 0;
+  }
+
+  // Font
+  .orange-text {
+    color: colors.$orange-text;
+  }
+  .text-red {
+    color: colors.$text-red;
+  }
+  .text-green {
+    color: colors.$material-green;
+  }
+  .fs-7 {
+    font-size: 14px;
+  }
+  // Backgrounds
+  .dark-blue-bg {
+    background-color: colors.$dark-blue-bg;
+  }
+  .light-grey-bg {
+    background-color: colors.$light-grey-bg;
+  }
+  .green-bg {
+    background-color: colors.$material-green;
+  }
+  .lightgreen-bg {
+    background-color: #47867a0d;
+  }
+
+  .border-rounded {
+    border-radius: 22px;
+  }
+  
+  .box-shadow-light {
+    border-radius: 22px;
+    box-shadow: 0px 0px 7px 0px #00000026;
+  }
+
+  // Images
+  .bottom-left-bg {
+    max-width: 400px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .bottom-right-bg {
+    max-width: 400px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .top-left-bg {
+    max-width: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .bottom-right-bg {
+    max-width: 400px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .banner-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+  }
+  // Icons
+
+  .bt-icon {
+    background-color: colors.$dark-blue-bg;
+    fill: #fff;
+    font-size: 40px;
+    padding: 5px;
+    border-radius: 50%;
+  }
+
+}

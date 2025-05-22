@@ -1,0 +1,333 @@
+import React from "react";
+import {
+  Container,
+  Navbar,
+  Nav,
+  Row,
+  Col,
+  Image,
+  Card,
+  Button,
+} from "react-bootstrap";
+import Banner from "~/common/Banner";
+import HalfHalfSection from "~/common/HalfHalfSection";
+import "./About.scss";
+// import 'react-bootstrap-icons/font/bootstrap-icons.css';
+import { Android } from "react-bootstrap-icons";
+
+const AboutUs = () => {
+  return (
+    <div className="about-us-page">
+      {/* Hero Section */}
+      <Banner image="about/about-banner.png">
+        <div className="" style={{ flexBasis: "45%" }}></div>
+        <div className="" style={{ flexBasis: "50%", width: "50%" }}>
+          <div className="">
+            <h1 className="fs-2">
+              A Legacy Forged in Steel, A Future Built on Purpose
+            </h1>
+            <p className="lead">
+              Every great journey begins with a dream. For us, that dream took
+              shape decades ago—to build a legacy that not only builds economies
+              but uplifts people.
+            </p>
+          </div>
+        </div>
+      </Banner>
+
+      {/* What We Stand For Section */}
+      <section className="padding-y-100 position-relative stand-for-section">
+        <HalfHalfSection
+          leftContent={
+            <Image
+              src="about/stand.png"
+              alt="Industrial Plant"
+              fluid
+              className="rounded shadow"
+            />
+          }
+          rightContent={
+            <div className="d-flex flex-column gap-4">
+              <h2 className="fs-3">What We Stand For?</h2>
+              <p className="fs-5">
+                We are a company that manufactures steel—and supports the dreams
+                of a better tomorrow.
+              </p>
+              <p className="fs-5">
+                Our plant spans 200+ acres and produces 1,400,000 tons
+                annually—but it’s our people, passion, and vision that make us
+                who we are.
+              </p>
+              <ul className="list-unstyled d-flex flex-column gap-2">
+                <li className="mb-2 fs-5 d-flex align-items-center">
+                  <Android className="bt-icon me-2" />
+                  We don’t rely on coal.
+                </li>
+                <li className="mb-2 fs-5  d-flex align-items-center">
+                  <Android className="bt-icon me-2" /> We don’t cut corners.
+                </li>
+                <li className="mb-2 fs-5 d-flex align-items-center">
+                  <Android className="bt-icon me-2" /> We deliver cleaner,
+                  ethical production, and innovation with heart.
+                </li>
+              </ul>
+            </div>
+          }
+        />
+        <Image src="bg-poly-4.png" className="bottom-right-bg" />
+      </section>
+
+      {/* Mission and Vision Section */}
+      <section
+        className="text-white banner-img padding-y-100"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(about/mission.jpg)`,
+        }}
+      >
+        <Container className="py-5">
+          <Row className="justify-content-between">
+            <Col md={5}>
+              <h3>Our Mission</h3>
+              <p>
+                To empower industries and communities by delivering
+                high-quality, sustainable engineering solutions that inspire
+                trust, growth, and long-term value.
+              </p>
+            </Col>
+            <Col md={5}>
+              <h3>Our Vision</h3>
+              <p>
+                To empower industries and communities by delivering
+                high-quality, sustainable engineering solutions that inspire
+                trust, growth, and long-term value.
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* Our Values Section */}
+      <section className="py-5">
+        <Container>
+          <h2 className="text-center mb-5">Our Values</h2>
+          <div className="d-flex card-container">
+            <Col className="box-shadow-light p-4 my-card">
+              <div className="d-flex align-items-center mb-3 ">
+                <Android className="bt-icon me-2" />
+                <h5>Integrity</h5>
+              </div>
+              <p>
+                We lead with honesty, transparency, and unwavering ethical
+                standards.
+              </p>
+            </Col>
+            <Col className="box-shadow-light p-4 my-card">
+              <div className="d-flex align-items-center mb-3">
+                <Android className="bt-icon me-2" />
+                <h5>Innovation</h5>
+              </div>
+              <p>We solve real-world problems and shape a better future.</p>
+            </Col>
+            <Col className="box-shadow-light p-4 my-card">
+              <div className="d-flex align-items-center mb-3">
+                <Android className="bt-icon me-2" />
+                <h5>Excellence</h5>
+              </div>
+
+              <p>
+                From raw material to product—we ensure quality at every stage.
+              </p>
+            </Col>
+            <Col className="box-shadow-light p-4 my-card">
+              <div className="d-flex align-items-center mb-3">
+                <Android className="bt-icon me-2" />
+                <h5>People-Centered</h5>
+              </div>
+              <p>We invest in people, valuing relationships with respect.</p>
+            </Col>
+            <Col className="box-shadow-light p-4 my-card">
+              <div className="d-flex align-items-center mb-3">
+                <Android className="bt-icon me-2" />
+                <h5>Sustainability</h5>
+              </div>
+
+              <p>We’re responsible—protecting our communities.</p>
+            </Col>
+          </div>
+        </Container>
+      </section>
+
+      {/* Leadership Section */}
+      <section className="py-5 bg-light">
+        <Container>
+          <h2 className="text-center mb-3 h3">Leadership</h2>
+          <span className="d-block text-center mb-5 fs-6">
+            Meet the visionaries behind the momentum — and the reason we’re
+            rising
+          </span>
+          <Row className="justify-content-around">
+            <Col md={3} className="text-center">
+              <Image
+                fluid
+                src="about/leadership1.webp"
+                alt="Gopal Agarwal"
+                className="mb-3"
+              />
+              <h5>Gopal Agarwal</h5>
+              <p>Chairman</p>
+            </Col>
+            <Col md={3} className="text-center">
+              <Image
+                fluid
+                src="about/leadership2.webp"
+                alt="Abhishek Agarwal"
+                className="mb-3"
+              />
+              <h5>Abhishek Agarwal</h5>
+              <p>CEO</p>
+            </Col>
+            <Col md={3} className="text-center">
+              <Image
+                fluid
+                src="about/leadership3.webp"
+                alt="Vijay Kumar Natholia"
+                className="mb-3"
+              />
+              <h5>Vijay Kumar Natholia</h5>
+              <p>Executive President of Sales</p>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* Awards & Recognition Section */}
+      <section className="py-5">
+        <Container>
+          <h2 className="text-center mb-5  h3">Awards & Recognition</h2>
+          <Row>
+            <Col md={3} className="text-center">
+              <Card className="border-0 p-4  align-items-center box-shadow-light h-100">
+                <Card.Img variant="top" src="about/medal.svg" className="w-50" />
+                <Card.Body>
+                  <Card.Text>Star Export Certified Company 2020</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={3} className="text-center">
+              <Card className="border-0 p-4  align-items-center box-shadow-light h-100">
+                <Card.Img variant="top" src="about/award.svg" className="w-50" />
+                <Card.Body>
+                  <Card.Text>ISO 9001:2020 Certified</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={3} className="text-center">
+              <Card className="border-0 p-4  align-items-center box-shadow-light h-100">
+                <Card.Img variant="top" src="about/bars.svg" className="w-50" />
+                <Card.Body>
+                  <Card.Text>Best TMF for the Year 2019</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={3} className="text-center">
+              <Card className="border-0 p-4  align-items-center box-shadow-light h-100">
+                <Card.Img variant="top" src="about/employee.svg" className="w-50" />
+                <Card.Body>
+                  <Card.Text>Award for Best Employee Retention</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* Key Business Highlights Section */}
+      <section className="py-5">
+        <Container>
+          <h2 className="text-center mb-5">Key Business Highlights</h2>
+          <Row>
+            <Col md={4}>
+              <Card className="border-0 h-100">
+                <Card.Img className="rounded flex-grow-1" variant="top" src="about/highlight2.png" />
+                <Card.Body className="flex-shrink-1 flex-grow-0">
+                  <Card.Title>1,44,000+ Tons Annual Capacity</Card.Title>
+                  <Card.Text>
+                    Among South India’s top ERW steel pipe manufacturers.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="border-0 h-100">
+                <Card.Img className="rounded flex-grow-1" variant="top" src="about/highlight1.png" />
+                <Card.Body className="flex-shrink-1 flex-grow-0">
+                  <Card.Title>Fully Integrated Plant</Card.Title>
+                  <Card.Text>
+                    From sponge iron to finished pipes—ensuring full control and
+                    consistency.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="border-0">
+                <Card.Img className="rounded flex-grow-1" variant="top" src="about/highlight3.png" />
+                <Card.Body className="flex-shrink-1">
+                  <Card.Title>8 MW Clean Power Generator</Card.Title>
+                  <Card.Text>
+                    WHRB-based captive power driving sustainable operations.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-5 bg-light">
+        <Container>
+          <Row>
+            <Col md={3}>
+              <Image
+                src="https://picsum.photos/50/50"
+                alt="GP Agarwal Logo"
+                className="mb-3"
+              />
+            </Col>
+            <Col md={3}>
+              <h5>Who We Are</h5>
+              <Nav className="flex-column">
+                <Nav.Link href="#about-us">About Us</Nav.Link>
+                <Nav.Link href="#founders-journey">Founder's Journey</Nav.Link>
+              </Nav>
+            </Col>
+            <Col md={3}>
+              <h5>Our Businesses</h5>
+              <Nav className="flex-column">
+                <Nav.Link href="#steel">Steel</Nav.Link>
+                <Nav.Link href="#casting">Casting</Nav.Link>
+                <Nav.Link href="#power">Power</Nav.Link>
+              </Nav>
+            </Col>
+            <Col md={3}>
+              <h5>Contact Us</h5>
+              <p>
+                Kansas Towers, 5-4, 3rd Floor, 16th Cross, Chamber Road, Mumbai
+                - 400053
+              </p>
+              <p>+91-1-9876543210</p>
+              <p>contact@gpagarwal.com</p>
+            </Col>
+          </Row>
+          <hr />
+          <p className="text-center">
+            Copyright © 2025 GP Agarwal Group. All Rights Reserved.
+          </p>
+        </Container>
+      </footer>
+    </div>
+  );
+};
+
+export default AboutUs;

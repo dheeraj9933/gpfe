@@ -1,0 +1,196 @@
+@use "../common/colors";
+
+@mixin background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  // common classes
+  .orange-title {
+    color: colors.$orange-text;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+  // sections
+  .banner-text {
+    position: relative;
+    top: 45%;
+    .inner-text-container {
+      width: 400px;
+      padding: 15px 0 10px 15px;
+      h2 {
+        font-family: Cambria;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 36px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100px;
+      border-left: 4px solid #fff;
+      border-top: 4px solid #fff;
+      border-bottom: 4px solid #fff;
+    }
+  }
+  .founder-img {
+    position: relative;
+  }
+  .founder-section {
+    h2 {
+      color: #47867a;
+      font-style: italic;
+      line-height: 1;
+      // font-family: 'Helvetica Neue';
+    }
+    p {
+      // font-family: 'Myriad Pro';
+    }
+    h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .bg_poly {
+      position: absolute;
+      left: 100px;
+      top: 40px;
+      height: 100px;
+    }
+    .speech-quote {
+      position: absolute;
+      left: -80px;
+      top: -20px;
+    }
+  }
+
+  .future {
+    background-color: colors.$material-green;
+    .white-box {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      // margin: 20px;
+    }
+  }
+
+  .about-us-section {
+    position: relative;
+    .about-us-section-container {
+      padding: 15vh 0;
+    }
+    .about-img-1 {
+      max-width: 400px;
+    }
+    .about-img-2 {
+      max-width: 300px;
+      position: absolute;
+      left: 0;
+      bottom: -70px;
+    }
+  }
+
+  .industry-section {
+    h2 {
+      font-size: 55px;
+    }
+    h3 {
+      font-size: 35px;
+    }
+
+    h2,
+    h3 {
+      color: white;
+    }
+    .steel {
+      min-height: 500px;
+      background-image: url("/steel.png");
+      @include background;
+      .steel-inner {
+        margin-top: 100px;
+      }
+    }
+    .casting {
+      min-height: 350px;
+      background-image: url("/casting.jpg");
+      @include background;
+    }
+    .power {
+      min-height: 350px;
+      background-image: url("/power.png");
+      @include background;
+    }
+  }
+
+  .sustainability {
+    padding: 100px 0 60px 0;
+    .sustainability-floater {
+      border-radius: 20px;
+      padding: 18px;
+      position: relative;
+      top: -50px;
+      left: 5%;
+      max-width: 700px;
+    }
+    .bottom-right-bg {
+      width: 250px;
+    }
+  }
+
+  .career {
+    // padding: 100px 0 450px 0;
+    padding: 80px 0;
+    min-height: 750px;
+    overflow: hidden;
+    .career-container {
+      position: relative;
+      .career-text {
+        position: relative;
+        z-index: 1;
+      }
+      .career-img-1 {
+        width: 600px;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .work-culture {
+    position: relative;
+    padding: 20px 0 100px 0;
+    .work-culture-text {
+      padding: 80px 30px;
+      border-radius: 20px;
+    }
+    .work-culture-img {
+      position: relative;
+      top: 80px;
+      right: 50px;
+      align-self: flex-end;
+    }
+    .top-left-bg {
+      width: 350px;
+    }
+  }
+  .clients {
+    padding: 0px 0 150px 0;
+  }
+  .news-section {
+    padding: 20vh 0;
+  }
+}
