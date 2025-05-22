@@ -1,0 +1,14 @@
+.header nav {
+    a, .nav-link.show {
+        color: #fff;
+        text-decoration: none;
+        &:hover, &:focus {
+            color: #fff;
+        }
+    }
+    .dropdown-menu {
+        a {
+            color: #000;
+        }
+    }
+}

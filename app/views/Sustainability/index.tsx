@@ -19,10 +19,10 @@ const Sustainability = () => {
     <div className="sustainability-page">
       {/* Hero Section */}
       <Banner image="Sustainability/banner.webp">
-        <div className="" style={{ flexBasis: "45%" }}></div>
+        <div className="" style={{ flexBasis: "50%" }}></div>
         <div
           className=""
-          style={{ flexBasis: "50%", width: "50%", maxWidth: "400px" }}
+          style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
         >
           <div className="">
             <h1 className="fs-2 fst-italic">

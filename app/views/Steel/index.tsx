@@ -1,101 +1,129 @@
-const React = require('react');
-const { Container, Navbar, Nav, Row, Col, Image, Card, Button } = require('react-bootstrap');
-require('bootstrap/dist/css/bootstrap.min.css');
+import React from "react";
+import {
+  Container,
+  Navbar,
+  Nav,
+  Row,
+  Col,
+  Image,
+  Card,
+  Button,
+} from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Banner from "~/common/Banner";
+import HalfHalfSection from "~/common/HalfHalfSection";
 
 const SteelBusiness = () => {
   return (
     <div>
-      {/* Navbar */}
-      <Navbar bg="light" expand="lg" className="py-3">
-        <Container>
-          <Navbar.Brand href="#home">
-            <Image src="https://picsum.photos/50/50" alt="GP Agarwal Logo" />
-            <span className="ms-2">GP Agarwal</span>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="#who-we-are">Who We Are</Nav.Link>
-              <Nav.Link href="#our-businesses">Our Businesses</Nav.Link>
-              <Nav.Link href="#sustainability">Sustainability</Nav.Link>
-              <Nav.Link href="#partners">Partners</Nav.Link>
-              <Nav.Link href="#careers">Careers</Nav.Link>
-              <Nav.Link href="#contact-us">Contact Us</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
       {/* Hero Section */}
-      <section className="py-5 text-white" style={{ background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://picsum.photos/1200/600)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <Container>
-          <Row>
-            <Col md={8}>
-              <h1 className="display-4">Steel — The Backbone of Our Industrial Strength</h1>
-              <p className="lead">Forging Quality, Delivering Excellence</p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <Banner image="Steel/banner.webp">
+        <div className="" style={{ flexBasis: "50%" }}></div>
+        <div
+          className=""
+          style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
+        >
+          <div className="">
+            <h1 className="fs-2 fst-italic">
+              Steel – The Backbone of Our Industrial Strength
+            </h1>
+            <p className="lead mt-3">Forging Quality. Delivering Trust.</p>
+          </div>
+        </div>
+      </Banner>
 
       {/* Steel Ecosystem Section */}
-      <section className="py-5 bg-light">
-        <Container>
-          <Row>
-            <Col md={6}>
-              <Image src="https://picsum.photos/600/400" alt="Steel Ecosystem" fluid className="rounded shadow" />
-            </Col>
-            <Col md={6}>
+      <section className="py-5 bg-light position-relative">
+        <HalfHalfSection
+          leftContent={
+            <Image
+              src="Steel/ecosystem.png"
+              alt="Hands with Plant"
+              fluid
+              className="shadow border-rounded"
+            />
+          }
+          rightContent={
+            <div className="d-flex flex-column gap-3">
               <h2>The Steel Ecosystem</h2>
-              <p>Steel lies at the core of GP Agarwal Group’s journey—a symbol of our commitment to building India’s industrial future with strength, precision, and purpose.</p>
-              <p>Through our flagship entity, Maruti Ispat & Pipes Pvt. Ltd. (MIPPL), we have emerged as one of South India’s largest integrated steel plants—spread across 200+ acres in Martsalayam, Andhra Pradesh. It allows us to control every step of the production process—from raw material to finished product.</p>
-            </Col>
-          </Row>
-        </Container>
+              <p>
+                Steel lies at the core of GP Agarwal Group’s journey—a symbol of
+                our commitment to building India’s industrial future with
+                strength, precision, and purpose.
+              </p>
+              <p>
+                Through our flagship entity, Maruti Ispat & Pipes Pvt. Ltd.
+                (MIPPL), we have emerged as one of South India’s largest
+                integrated steel plants—spread across 200+ acres in Martsalayam,
+                Andhra Pradesh. It allows us to control every step of the
+                production process—from raw material to finished product.
+              </p>
+            </div>
+          }
+        />
+        <Image src="Steel/poly-bg-mid.svg" className="mid-left-bg" />
       </section>
 
       {/* What We Offer Section */}
       <section className="py-5">
         <Container>
           <h2 className="text-center mb-5">What We Offer</h2>
-          <Row>
-            <Col md={4}>
-              <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Sponge Iron" />
+          <Row className="flex-container">
+            <Col className="flex-30">
+              <Card className="border-0 text-center box-shadow-light">
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="Sponge Iron"
+                />
                 <Card.Body>
                   <Card.Title>Sponge Iron</Card.Title>
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={4}>
-              <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Steel Billets" />
+            <Col className="flex-30">
+              <Card className="border-0 text-center box-shadow-light">
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="Steel Billets"
+                />
                 <Card.Body>
                   <Card.Title>Steel Billets</Card.Title>
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={4}>
-              <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="ERW Steel Pipes" />
+            <Col className="flex-30">
+              <Card className="border-0 text-center box-shadow-light">
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="ERW Steel Pipes"
+                />
                 <Card.Body>
                   <Card.Title>ERW Steel Pipes</Card.Title>
                 </Card.Body>
               </Card>
             </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col md={6}>
-              <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Hot Rolled Coils" />
+            <Col className="flex-30">
+              <Card className="border-0 text-center box-shadow-light">
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="Hot Rolled Coils"
+                />
                 <Card.Body>
                   <Card.Title>Hot Rolled Coils</Card.Title>
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={6}>
-              <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="High-Tensile Solutions" />
+            <Col className="flex-30">
+              <Card className="border-0 text-center box-shadow-light">
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="High-Tensile Solutions"
+                />
                 <Card.Body>
                   <Card.Title>High-Tensile Solutions</Card.Title>
                 </Card.Body>
@@ -158,7 +186,11 @@ const SteelBusiness = () => {
           <Row>
             <Col md={4}>
               <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Infrastructure & Construction" />
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="Infrastructure & Construction"
+                />
                 <Card.Body>
                   <Card.Title>Infrastructure & Construction</Card.Title>
                 </Card.Body>
@@ -166,7 +198,11 @@ const SteelBusiness = () => {
             </Col>
             <Col md={4}>
               <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Oil & Gas" />
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="Oil & Gas"
+                />
                 <Card.Body>
                   <Card.Title>Oil & Gas</Card.Title>
                 </Card.Body>
@@ -174,7 +210,11 @@ const SteelBusiness = () => {
             </Col>
             <Col md={4}>
               <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Power & Energy" />
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="Power & Energy"
+                />
                 <Card.Body>
                   <Card.Title>Power & Energy</Card.Title>
                 </Card.Body>
@@ -184,7 +224,11 @@ const SteelBusiness = () => {
           <Row className="mt-4">
             <Col md={4}>
               <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Railways" />
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="Railways"
+                />
                 <Card.Body>
                   <Card.Title>Railways</Card.Title>
                 </Card.Body>
@@ -192,7 +236,11 @@ const SteelBusiness = () => {
             </Col>
             <Col md={4}>
               <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Automotive" />
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="Automotive"
+                />
                 <Card.Body>
                   <Card.Title>Automotive</Card.Title>
                 </Card.Body>
@@ -200,7 +248,11 @@ const SteelBusiness = () => {
             </Col>
             <Col md={4}>
               <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Water" />
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="Water"
+                />
                 <Card.Body>
                   <Card.Title>Water</Card.Title>
                 </Card.Body>
@@ -210,7 +262,11 @@ const SteelBusiness = () => {
           <Row className="mt-4">
             <Col md={6}>
               <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Agriculture" />
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="Agriculture"
+                />
                 <Card.Body>
                   <Card.Title>Agriculture</Card.Title>
                 </Card.Body>
@@ -218,7 +274,11 @@ const SteelBusiness = () => {
             </Col>
             <Col md={6}>
               <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Solar" />
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="Solar"
+                />
                 <Card.Body>
                   <Card.Title>Solar</Card.Title>
                 </Card.Body>
@@ -233,11 +293,23 @@ const SteelBusiness = () => {
         <Container>
           <Row>
             <Col md={6}>
-              <Image src="https://picsum.photos/600/400" alt="Roadmap" fluid className="rounded shadow" />
+              <Image
+                src="https://picsum.photos/600/400"
+                alt="Roadmap"
+                fluid
+                className="rounded shadow"
+              />
             </Col>
             <Col md={6}>
-              <h2>Our roadmap for building a sustainable, responsible future is not limited to today.</h2>
-              <p>We are investing in long-term solutions that protect our environment, generations to come, and build resilience for the future.</p>
+              <h2>
+                Our roadmap for building a sustainable, responsible future is
+                not limited to today.
+              </h2>
+              <p>
+                We are investing in long-term solutions that protect our
+                environment, generations to come, and build resilience for the
+                future.
+              </p>
             </Col>
           </Row>
         </Container>
@@ -250,31 +322,65 @@ const SteelBusiness = () => {
           <Row>
             <Col md={4}>
               <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="News 1" />
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="News 1"
+                />
                 <Card.Body>
-                  <Card.Title>Chairman Shankaran Merges with businesses, community initiatives</Card.Title>
-                  <Card.Text>Get the latest news and updates on our business, community initiatives, and more.</Card.Text>
-                  <Button variant="link" className="p-0">Read More</Button>
+                  <Card.Title>
+                    Chairman Shankaran Merges with businesses, community
+                    initiatives
+                  </Card.Title>
+                  <Card.Text>
+                    Get the latest news and updates on our business, community
+                    initiatives, and more.
+                  </Card.Text>
+                  <Button variant="link" className="p-0">
+                    Read More
+                  </Button>
                 </Card.Body>
               </Card>
             </Col>
             <Col md={4}>
               <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="News 2" />
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="News 2"
+                />
                 <Card.Body>
-                  <Card.Title>Chairman Shankaran on business, community initiatives</Card.Title>
-                  <Card.Text>Get the latest news and updates on our business, community initiatives, and more.</Card.Text>
-                  <Button variant="link" className="p-0">Read More</Button>
+                  <Card.Title>
+                    Chairman Shankaran on business, community initiatives
+                  </Card.Title>
+                  <Card.Text>
+                    Get the latest news and updates on our business, community
+                    initiatives, and more.
+                  </Card.Text>
+                  <Button variant="link" className="p-0">
+                    Read More
+                  </Button>
                 </Card.Body>
               </Card>
             </Col>
             <Col md={4}>
               <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="News 3" />
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/400/300"
+                  alt="News 3"
+                />
                 <Card.Body>
-                  <Card.Title>Chairman Shankaran on business, community initiatives</Card.Title>
-                  <Card.Text>Get the latest news and updates on our business, community initiatives, and more.</Card.Text>
-                  <Button variant="link" className="p-0">Read More</Button>
+                  <Card.Title>
+                    Chairman Shankaran on business, community initiatives
+                  </Card.Title>
+                  <Card.Text>
+                    Get the latest news and updates on our business, community
+                    initiatives, and more.
+                  </Card.Text>
+                  <Button variant="link" className="p-0">
+                    Read More
+                  </Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -283,10 +389,22 @@ const SteelBusiness = () => {
       </section>
 
       {/* The Road Ahead Section */}
-      <section className="py-5 text-center" style={{ background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://picsum.photos/1200/600)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section
+        className="py-5 text-center"
+        style={{
+          background:
+            "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://picsum.photos/1200/600)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <Container>
           <h2 className="text-white">The Road Ahead</h2>
-          <h3 className="text-white">At GP Agarwal Group, our commitment to sustainability is limited to empowering communities, and it builds resilience for the generations to come.</h3>
+          <h3 className="text-white">
+            At GP Agarwal Group, our commitment to sustainability is limited to
+            empowering communities, and it builds resilience for the generations
+            to come.
+          </h3>
         </Container>
       </section>
 
@@ -295,7 +413,11 @@ const SteelBusiness = () => {
         <Container>
           <Row>
             <Col md={3}>
-              <Image src="https://picsum.photos/50/50" alt="GP Agarwal Logo" className="mb-3" />
+              <Image
+                src="https://picsum.photos/50/50"
+                alt="GP Agarwal Logo"
+                className="mb-3"
+              />
             </Col>
             <Col md={3}>
               <h5>Who We Are</h5>
@@ -314,17 +436,22 @@ const SteelBusiness = () => {
             </Col>
             <Col md={3}>
               <h5>Contact Us</h5>
-              <p>Rama Towers, 5-4-83, 2nd Floor, TSK Chambers, M.G. Road, Secunderabad-500003</p>
+              <p>
+                Rama Towers, 5-4-83, 2nd Floor, TSK Chambers, M.G. Road,
+                Secunderabad-500003
+              </p>
               <p>Tel: +91 9002345678</p>
               <p>Fax: +91 22 6359000</p>
             </Col>
           </Row>
           <hr />
-          <p className="text-center">Copyright © 2025 GP Agarwal Group. All Rights Reserved.</p>
+          <p className="text-center">
+            Copyright © 2025 GP Agarwal Group. All Rights Reserved.
+          </p>
         </Container>
       </footer>
     </div>
   );
 };
 
-module.exports = SteelBusiness;
+export default SteelBusiness;

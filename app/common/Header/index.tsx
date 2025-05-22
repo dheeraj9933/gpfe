@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router";
 
 import { Search } from "react-bootstrap-icons";
-
+import './style.scss'
 import Navbar from "react-bootstrap/Navbar";
 import {
   Button,
@@ -19,14 +19,23 @@ import {
 const Header = () => {
   return (
     <>
-      <header className="">
-        <Navbar bg="#fff" data-bs-theme="light">
-          <Container className="d-flex justify-content-between align-items-center py-3">
+      <header className="header">
+        <Navbar data-bs-theme="transparent" style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1000,
+          backgroundColor: "transparent",
+          padding: "0px 20px",
+          // boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+        }}>
+          <Container className="d-flex justify-content-between align-items-center px-3 text-white">
             <div className="flex-shrink-0 ">
               <Navbar.Brand
                 href="/"
                 className="position-absolute"
-                style={{ top: "10px" }}
+                style={{ top: "0", padding: "0px" }}
               >
                 <Image src="/home.png" />
               </Navbar.Brand>
@@ -34,10 +43,10 @@ const Header = () => {
 
             {/* Middle section (slightly right of center) */}
             <div
-              className="position-absolute start-50 translate-middle-x"
+              className="position-absolute start-50 translate-middle-x pt-4"
               style={{ left: "55%" }}
             >
-              <Nav className="me-auto fw-bold">
+              <Nav className="me-auto">
                 <NavDropdown title="Who we are" id="basic-nav-dropdown">
                   <NavDropdown.Item href="/about-us">
                     About us
@@ -72,7 +81,7 @@ const Header = () => {
             </div>
 
             {/* Right section */}
-            <div className="flex-shrink-0 d-flex align-items-center">
+            <div className="flex-shrink-0 d-flex align-items-center pt-4">
               <Search
                 style={{ fontWeight: "bold", transform: "scale(1.2)" }}
                 className="fw-bold"

@@ -20,8 +20,8 @@ const AboutUs = () => {
     <div className="about-us-page">
       {/* Hero Section */}
       <Banner image="about/about-banner.png">
-        <div className="" style={{ flexBasis: "45%" }}></div>
-        <div className="" style={{ flexBasis: "50%", width: "50%" }}>
+        <div className="" style={{ flexBasis: "50%" }}></div>
+        <div className="" style={{ flexBasis: "50%", width: "45%" }}>
           <div className="">
             <h1 className="fs-2">
               A Legacy Forged in Steel, A Future Built on Purpose

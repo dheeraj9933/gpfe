@@ -15,7 +15,7 @@ const Banner = ({
         background: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${image})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        minHeight: "80vh",
+        minHeight: "90vh",
         backgroundRepeat: "no-repeat",
       }}
     >
