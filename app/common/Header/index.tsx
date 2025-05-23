@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router";
 
 import { Search } from "react-bootstrap-icons";
@@ -17,6 +17,16 @@ import {
   Row,
 } from "react-bootstrap";
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // adjust threshold as needed
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <>
       <header className="header">
@@ -30,8 +40,8 @@ const Header = () => {
             zIndex: 1000,
             backgroundColor: "transparent",
             padding: "0px 20px",
-            // boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
           }}
+          className={scrolled ? "bg-white shadow-sm" : ""}
         >
           <Container className="d-flex justify-content-between align-items-center px-3 text-white">
             <div className="flex-shrink-0 ">
@@ -46,7 +56,9 @@ const Header = () => {
 
             {/* Middle section (slightly right of center) */}
             <div
-              className="position-absolute start-50 translate-middle-x pt-4"
+              className={`position-absolute start-50 translate-middle-x pt-4 ${
+                scrolled ? "pb-3" : ""
+              }`}
               style={{ left: "55%" }}
             >
               <Nav className="me-auto">
@@ -76,15 +88,23 @@ const Header = () => {
             </div>
 
             {/* Right section */}
-            <div className="flex-shrink-0 d-flex align-items-center pt-4">
+            <div
+              className={`flex-shrink-0 d-flex align-items-center pt-4 ${
+                scrolled ? "pb-2" : ""
+              }`}
+            >
               <Search
                 style={{ fontWeight: "bold", transform: "scale(1.2)" }}
                 className="fw-bold"
               />
               <Form.Select
-                className="ms-2 rounded-4"
+                className="ms-2 rounded-4 transparent-select"
                 size="sm"
                 aria-label="Default select example"
+                style={{
+                  backgroundColor: `${scrolled ? "white" : "transparent"}`,
+                  color: `${scrolled ? "black" : "white"}`
+                }}
               >
                 <option>Eng</option>
                 <option value="1">Eng</option>
@@ -138,9 +158,15 @@ const Header = () => {
             <Col md={2}>
               <h5 className="">Careers</h5>
               <Nav className="flex-column">
-                <Nav.Link href="#steel" className="bold-link">Media</Nav.Link>
-                <Nav.Link href="#casting" className="bold-link">Contact Us</Nav.Link>
-                <Nav.Link href="#power" className="bold-link">News & Features</Nav.Link>
+                <Nav.Link href="#steel" className="bold-link">
+                  Media
+                </Nav.Link>
+                <Nav.Link href="#casting" className="bold-link">
+                  Contact Us
+                </Nav.Link>
+                <Nav.Link href="#power" className="bold-link">
+                  News & Features
+                </Nav.Link>
               </Nav>
             </Col>
             <Col md={2}>
@@ -161,7 +187,7 @@ const Header = () => {
               </ul>
             </Col>
             <Col className="d-flex justify-content-end">
-            <Image
+              <Image
                 src="/footer-social.png"
                 alt="Social Media Icons"
                 className="footer-social"

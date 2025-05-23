@@ -46,7 +46,7 @@ export function Welcome() {
               <Col style={{ flexBasis: "50%", flexGrow: "0" }}>
                 <div className="founder-img d-flex justify-content-center">
                   <Image src="/bg_frame.png" className="bg_poly" />
-                  <Image src="/Mask-group.png" className="w-50" />
+                  <Image src="HomePage/founder.webp" className="w-50" />
                 </div>
               </Col>
               <Col
