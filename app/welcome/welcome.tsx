@@ -99,7 +99,7 @@ export function Welcome() {
         </section>
 
         {/* News */}
-        <section>
+        <section className="py-5">
           <News />
         </section>
 

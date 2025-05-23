@@ -1,14 +1,50 @@
+@mixin linkStyle() {
+  color: #fff;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
 .header nav {
-    a, .nav-link.show {
-        color: #fff;
-        text-decoration: none;
-        &:hover, &:focus {
-            color: #fff;
-        }
+  a,
+  .nav-link.show {
+    @include linkStyle();
+  }
+  .dropdown-menu {
+    a {
+      color: #000;
     }
-    .dropdown-menu {
-        a {
-            color: #000;
-        }
+  }
+}
+footer {
+  a.nav-link {
+    color: #000;
+    text-decoration: none;
+    padding: 0;
+    margin: 5px 0;
+    &:hover,
+    &:focus {
+      color: #000;
     }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    li {
+      padding: 0 7px 0 7px;
+      border-right: #000 1px solid;
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+  .bold-link {
+    font-weight: 500;
+  }
+  .footer-links-container {
+    margin: 20px 0 50px 0;
+  }
 }

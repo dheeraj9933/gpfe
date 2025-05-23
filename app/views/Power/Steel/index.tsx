@@ -36,7 +36,7 @@ const SteelBusiness = () => {
       </Banner>
 
       {/* Steel Ecosystem Section */}
-      <section className="position-relative ecosystem">
+      <section className="py-5 position-relative">
         <HalfHalfSection
           leftContent={
             <Image

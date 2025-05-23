@@ -42,12 +42,27 @@ body {
     justify-content: center;
     gap: 25px;
   }
+  .no-gap {
+    gap: 0;
+  }
   .flex-30 {
     flex-basis: 30%;
     flex-grow: 0;
   }
   .flex-24 {
     flex-basis: 24%;
+    flex-grow: 0;
+  }
+  .flex-40 {
+    flex-basis: 40%;
+    flex-grow: 0;
+  }
+  .flex-49 {
+    flex-basis: 49%;
+    flex-grow: 0;
+  }
+  .flex-28 {
+    flex-basis: 28%;
     flex-grow: 0;
   }
 
@@ -80,7 +95,7 @@ body {
   .border-rounded {
     border-radius: 22px;
   }
-  
+
   .box-shadow-light {
     border-radius: 22px;
     box-shadow: 0px 0px 7px 0px #00000026;
@@ -105,17 +120,17 @@ body {
     left: 0;
     top: 0;
   }
-  .bottom-right-bg {
+  .top-right-bg {
     max-width: 400px;
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: 0; 
   }
   .mid-left-bg {
-    max-width: 400px;
+    max-width: 150px;
     position: absolute;
     left: 0;
-    top: 50%;
+    bottom: calc(0% - 150px);
     // transform: translateY(-50%);
   }
   .banner-img {
@@ -129,6 +144,11 @@ body {
     );
   }
   // Icons
+  .my-icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+  }
 
   .bt-icon {
     background-color: colors.$dark-blue-bg;
@@ -137,5 +157,4 @@ body {
     padding: 5px;
     border-radius: 50%;
   }
-
 }

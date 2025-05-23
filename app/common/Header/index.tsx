@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router";
 
 import { Search } from "react-bootstrap-icons";
-import './style.scss'
+import "./style.scss";
 import Navbar from "react-bootstrap/Navbar";
 import {
   Button,
@@ -20,16 +20,19 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <Navbar data-bs-theme="transparent" style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 1000,
-          backgroundColor: "transparent",
-          padding: "0px 20px",
-          // boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-        }}>
+        <Navbar
+          data-bs-theme="transparent"
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: 1000,
+            backgroundColor: "transparent",
+            padding: "0px 20px",
+            // boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+          }}
+        >
           <Container className="d-flex justify-content-between align-items-center px-3 text-white">
             <div className="flex-shrink-0 ">
               <Navbar.Brand
@@ -48,23 +51,15 @@ const Header = () => {
             >
               <Nav className="me-auto">
                 <NavDropdown title="Who we are" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="/about-us">
-                    About us
-                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/about-us">About us</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3">
                     Founders Journey
                   </NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Our Business" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="/steel">
-                    Steel
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="/casting">
-                    Casting
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="/power">
-                    Power
-                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/steel">Steel</NavDropdown.Item>
+                  <NavDropdown.Item href="/casting">Casting</NavDropdown.Item>
+                  <NavDropdown.Item href="/power">Power</NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link href="/Sustainability">Sustainability</Nav.Link>
                 <Nav.Link href="/careers">Careers</Nav.Link>
@@ -103,6 +98,84 @@ const Header = () => {
       <main>
         <Outlet />
       </main>
+      <footer className="pt-5 bg-light">
+        <Container className="d-flex flex-column align-items-center">
+          <Image src="footer-logo.png" alt="GP Agarwal Logo" className="mb-3" />
+        </Container>
+        <Container>
+          <Row className="footer-links-container">
+            <Col md={2}>
+              <h5>Who We Are</h5>
+              <Nav className="flex-column">
+                <Nav.Link href="#about-us">About Us</Nav.Link>
+                <Nav.Link href="#founders-journey">Founder's Journey</Nav.Link>
+              </Nav>
+            </Col>
+            <Col md={2}>
+              <h5>Our Businesses</h5>
+              <Nav className="flex-column">
+                <Nav.Link href="#steel">Steel</Nav.Link>
+                <Nav.Link href="#casting">Casting</Nav.Link>
+                <Nav.Link href="#power">Power</Nav.Link>
+              </Nav>
+            </Col>
+            <Col md={2}>
+              <h5>Sustainability</h5>
+              <Nav className="flex-column">
+                <Nav.Link href="#steel">Steel</Nav.Link>
+                <Nav.Link href="#casting">Casting</Nav.Link>
+                <Nav.Link href="#power">Power</Nav.Link>
+              </Nav>
+            </Col>
+            <Col md={2}>
+              <h5>Partners</h5>
+              <Nav className="flex-column">
+                <Nav.Link href="#steel">Steel</Nav.Link>
+                <Nav.Link href="#casting">Casting</Nav.Link>
+                <Nav.Link href="#power">Power</Nav.Link>
+              </Nav>
+            </Col>
+            <Col md={2}>
+              <h5 className="">Careers</h5>
+              <Nav className="flex-column">
+                <Nav.Link href="#steel" className="bold-link">Media</Nav.Link>
+                <Nav.Link href="#casting" className="bold-link">Contact Us</Nav.Link>
+                <Nav.Link href="#power" className="bold-link">News & Features</Nav.Link>
+              </Nav>
+            </Col>
+            <Col md={2}>
+              <p className="fs-7">
+                Rama Towers, 5-4-83, 2nd Floor, TSK Chambers, M.G. Road,
+                Secunderabad-500003
+              </p>
+              <p className="fs-7">Tel: +91 9002345678</p>
+              <p className="fs-7">Fax: +91 22 6359000</p>
+            </Col>
+          </Row>
+          <Row className="my-4">
+            <Col>
+              <ul>
+                <li>Terms and condition</li>
+                <li>Legal Notice</li>
+                <li>Privacy Policy</li>
+              </ul>
+            </Col>
+            <Col className="d-flex justify-content-end">
+            <Image
+                src="/footer-social.png"
+                alt="Social Media Icons"
+                className="footer-social"
+              />
+            </Col>
+          </Row>
+        </Container>
+        <p
+          className="text-center p-2  fs-7"
+          style={{ backgroundColor: "#F0F0F0", color: "#979797" }}
+        >
+          Copyright © 2025 GP Agarwal Group. All Rights Reserved.
+        </p>
+      </footer>
     </>
   );
 };
