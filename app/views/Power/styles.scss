@@ -1,13 +1,25 @@
-.steel-page {
-    .what-we-offer {
-        .bottom-right-bg {
-            max-width: 300px;
-        }
+.power-page {
+  .what-we-offer {
+    .bottom-right-bg {
+      max-width: 300px;
     }
-    .infra-internal {
-        border-radius: 25px;
+  }
+  .infra-internal {
+    border-radius: 25px;
+  }
+  .top-right-bg {
+    max-width: 200px;
+  }
+
+  .ecosystem {
+    padding: 150px 0 100px 0;
+  }
+  .highlight {
+    padding: 100px 0 350px 0;
+    position: relative;
+    .bottom-right-bg {
+      width: 100vw;
+      max-width: 100vw;
     }
-    .top-right-bg {
-        max-width: 200px;
-    }
+  }
 }

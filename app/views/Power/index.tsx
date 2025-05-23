@@ -18,29 +18,28 @@ import News from "~/welcome/internal/News";
 
 const SteelBusiness = () => {
   return (
-    <div className="steel-page">
+    <div className="power-page">
       {/* Hero Section */}
-      <Banner image="Steel/banner.webp">
+      <Banner image="Power/banner.webp">
         <div className="" style={{ flexBasis: "50%" }}></div>
         <div
           className=""
           style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
         >
           <div className="">
-            <h1 className="fs-2 fst-italic">
-              Steel – The Backbone of Our Industrial Strength
-            </h1>
-            <p className="lead mt-3">Forging Quality. Delivering Trust.</p>
+            {/* <h1 className="fs-2 fst-italic">
+              Power – The Backbone of Our Industrial Strength
+            </h1> */}
           </div>
         </div>
       </Banner>
 
       {/* Steel Ecosystem Section */}
-      <section className="py-5 position-relative">
+      <section className="position-relative ecosystem">
         <HalfHalfSection
           leftContent={
             <Image
-              src="Steel/ecosystem.png"
+              src="Power/ecosystem.png"
               alt="Hands with Plant"
               fluid
               className="shadow border-rounded"
@@ -48,93 +47,23 @@ const SteelBusiness = () => {
           }
           rightContent={
             <div className="d-flex flex-column gap-3">
-              <h2>The Steel Ecosystem</h2>
+              <h2>The Clean Energy Ecosystem</h2>
               <p>
-                Steel lies at the core of GP Agarwal Group’s journey—a symbol of
-                our commitment to building India’s industrial future with
-                strength, precision, and purpose.
+                At GP Agarwal Group, power is more than a utility — it’s a
+                strategic asset that drives our efficiency, self-reliance, and
+                long-term sustainability. Our in-house power division is built
+                around a clean energy model that reduces emissions and optimizes
+                performance across our steel and manufacturing operations.
               </p>
               <p>
-                Through our flagship entity, Maruti Ispat & Pipes Pvt. Ltd.
-                (MIPPL), we have emerged as one of South India’s largest
-                integrated steel plants—spread across 200+ acres in Martsalayam,
-                Andhra Pradesh. It allows us to control every step of the
-                production process—from raw material to finished product.
+                Through our 8 MW Waste Heat Recovery Boiler (WHRB) plant, we
+                convert industrial waste heat into usable power — making our
+                steel production greener, leaner, and more cost-efficient.
               </p>
             </div>
           }
         />
         <Image src="Steel/poly-bg-mid.svg" className="mid-left-bg" />
-      </section>
-
-      {/* What We Offer Section */}
-      <section className="py-5 position-relative what-we-offer">
-        <Container>
-          <h2 className="text-center mb-5">What We Offer</h2>
-          <Row className="flex-container">
-            <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Steel/offer-1.webp"
-                  alt="Sponge Iron"
-                />
-                <Card.Body>
-                  <Card.Title>Sponge Iron</Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Steel/offer-2.webp"
-                  alt="Steel Billets"
-                />
-                <Card.Body>
-                  <Card.Title>Steel Billets</Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Steel/offer-3.webp"
-                  alt="ERW Steel Pipes"
-                />
-                <Card.Body>
-                  <Card.Title>ERW Steel Pipes</Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Steel/offer-4.webp"
-                  alt="Hot Rolled Coils"
-                />
-                <Card.Body>
-                  <Card.Title>Hot Rolled Coils</Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Steel/offer-5.webp"
-                  alt="High-Tensile Solutions"
-                />
-                <Card.Body>
-                  <Card.Title>High-Tensile Solutions</Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-        <Image src="Steel/poly-bottom-right.png" className="bottom-right-bg" />
       </section>
 
       {/* Key Infrastructure Section 5 3 3 */}
@@ -150,7 +79,7 @@ const SteelBusiness = () => {
           >
             <h2 className="text-center mb-5 h2">Key Infrastructure</h2>
             <div className="flex-container no-gap">
-              <Col className="flex-30 border-end border-bottom">
+              <Col className="flex-30 border-end ">
                 <Card className="border-0 text-center p-4 ">
                   <Card.Img
                     variant="top"
@@ -164,7 +93,7 @@ const SteelBusiness = () => {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col className="flex-30 border-end border-bottom">
+              <Col className="flex-30 border-end ">
                 <Card className="border-0 text-center p-4 ">
                   <Card.Img
                     variant="top"
@@ -180,7 +109,7 @@ const SteelBusiness = () => {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col className="flex-30 border-bottom">
+              <Col className="flex-30">
                 <Card className="border-0 text-center p-4 ">
                   <Card.Img
                     variant="top"
@@ -194,106 +123,47 @@ const SteelBusiness = () => {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col className="flex-30 border-end">
-                <Card className="border-0 text-center p-4 ">
-                  <Card.Img
-                    variant="top"
-                    src="Steel/infra4.svg"
-                    alt="300 TPD Sponge Iron Kilns"
-                    className="my-icon mx-auto"
-                  />
-                  <Card.Body>
-                    <Card.Title className="fw-bold">8 MW WHRB</Card.Title>
-                    <Card.Text className="fw-bold">Clean Power</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col className="flex-30">
-                <Card className="border-0 text-center p-4 ">
-                  <Card.Img
-                    variant="top"
-                    src="Steel/infra5.svg"
-                    alt="300 TPD Sponge Iron Kilns"
-                    className="my-icon mx-auto"
-                  />
-                  <Card.Body>
-                    <Card.Title className="fw-bold">In-house </Card.Title>
-                    <Card.Text className="fw-bold">R&D Lab</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
             </div>
           </Container>
         </Container>
       </section>
-
-      {/* Industries We Serve Section */}
-      <section className="py-5">
+      {/* Sustainability Highlights Section */}
+      <section className="lightgreen-bg highlight">
         <Container>
-          <h2 className="text-center mb-5">Industries We Serve</h2>
-          <div className="d-flex image-collage justify-content-between">
-            <div className="flex-40">
-              <ImageWithText
-                src="Steel/collage-1.png"
-                alt="Collage 1"
-                text="Infrastructure & Construction"
-              />
-            </div>
-            <div className="flex-28">
-              <ImageWithText
-                src="Steel/collage-2.png"
-                alt="Collage 2"
-                text="Oil & Gas"
-              />
-            </div>
-            <div className="flex-28">
-              <ImageWithText
-                src="Steel/collage-3.png"
-                alt="Collage 3"
-                text="Power & Energy"
-              />
-            </div>
-          </div>
-          <div className="my-4 d-flex image-collage justify-content-between">
-            <div className="flex-49">
-              <ImageWithText
-                src="Steel/collage-4.png"
-                alt="Collage 4"
-                text="Railways"
-              />
-            </div>
-            <div className="flex-49">
-              <ImageWithText
-                src="Steel/collage-5.png"
-                alt="Collage 5"
-                text="Automotive"
-              />
-            </div>
-          </div>
-          <div className="d-flex image-collage justify-content-between">
-            <div className="flex-28">
-              <ImageWithText
-                src="Steel/collage-6.png"
-                alt="Collage 6"
-                text="Water"
-              />
-            </div>
-            <div className="flex-28">
-              <ImageWithText
-                src="Steel/collage-7.png"
-                alt="Collage 7"
-                text="Agriculture"
-              />
-            </div>
-            <div className="flex-40">
-              <ImageWithText
-                src="Steel/collage-8.png"
-                alt="Collage 8"
-                text="Solar"
-              />
-            </div>
-          </div>
+          <h2 className="h4 text-uppercase text-green">
+            Applications & Impact
+          </h2>
+          <p className="w-75 fs-5">
+            Our integrated energy systems are designed not just to power
+            operations, but to create measurable impact across the value chain.
+            From meeting the energy needs of core steel and casting facilities
+            to reducing carbon dependency, every initiative contributes to
+            long-term efficiency and sustainability. These efforts also lay the
+            groundwork for future-ready, multi-vertical clean energy ecosystems
+            that support innovation, resilience, and responsible growth.
+          </p>
+          <Row className="mt-4 align-items-end">
+            <Col md={3}>
+              <h4 className="text-green fw-bold mb-3">Integrated Power</h4>
+              <p className="fs-7">Recycled eco-friendly material used</p>
+            </Col>
+            <Col md={3}>
+              <h4 className="text-green fw-bold mb-3">Unit-Wide Supply</h4>
+              <p className="fs-7">Renewable energy used</p>
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            <Col md={3}>
+              <h4 className="text-green fw-bold mb-3">Grid Independence</h4>
+              <p className="fs-7">Of revenue</p>
+            </Col>
+            <Col md={3}>
+              <h4 className="text-green fw-bold mb-3">Scalable Energy</h4>
+              <p className="fs-7">Reduction in energy intensity FY</p>
+            </Col>
+          </Row>
         </Container>
+        <Image src="Power/impact.png" className="bottom-right-bg" />
       </section>
 
       {/* Roadmap Section */}
@@ -303,29 +173,35 @@ const SteelBusiness = () => {
           className="top-right-bg"
           alt="Roadmap Background"
         />
-        <Container>
-          <Row className="align-items-center">
-            <Col md={6}>
+        <HalfHalfSection
+          leftContent={
+            <div className="d-flex justify-content-end w-100 pe-5">
               <Image
-                src="Steel/roadmap.png"
+                src="Power/roadmap.png"
                 alt="Roadmap"
                 fluid
-                className="rounded shadow"
+                className="rounded"
               />
-            </Col>
-            <Col md={6}>
-              <h2 className="h3">
-                Our roadmap for building a sustainable, responsible future.
-              </h2>
-              <p className="fs-6">
-                At GP Agarwal Group, our commitment to sustainability is not
-                limited to today. We are investing in long-term solutions that
-                protect our environment, empower communities, and build
-                resilience for the generations to come.
+            </div>
+          }
+          rightContent={
+            <div className="d-flex flex-column gap-3">
+              <h2 className="h3">Sustainability in Every Unit</h2>
+              <p className="fs-6 my-4">
+                Our power plant aligns with our group-wide sustainability
+                vision. By repurposing thermal waste into electricity, we not
+                only reduce emissions but also conserve fuel, improve
+                operational economics, and contribute to India’s clean energy
+                future.
               </p>
-            </Col>
-          </Row>
-        </Container>
+              <p className="">
+                We are also exploring solar integration and green hydrogen
+                readiness to further diversify and future-proof our energy
+                ecosystem.
+              </p>
+            </div>
+          }
+        />
       </section>
 
       {/* News & Features Section */}
@@ -337,7 +213,7 @@ const SteelBusiness = () => {
 
       {/* The Road Ahead Section */}
 
-      <Banner image="Steel/road.webp">
+      <Banner image="Power/road.webp">
         <div className="" style={{ flexBasis: "50%" }}></div>
         <div
           className=""
@@ -346,10 +222,10 @@ const SteelBusiness = () => {
           <div className="">
             <h1 className="fs-2 ">The Road Ahead</h1>
             <p className="lead mt-3">
-              {" "}
-              At GP Agarwal Group, our commitment to sustainability is limited
-              to empowering communities, and it builds resilience for the
-              generations to come.
+              We are committed to expanding our clean power capacity as our
+              business scales. With sustainability at the core, our power
+              division will continue to evolve — integrating smarter, cleaner
+              technologies to energize every part of the value chain.
             </p>
             <Button
               variant="light"
