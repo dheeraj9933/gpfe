@@ -1,30 +1,9 @@
-const React = require('react');
-const { Container, Navbar, Nav, Row, Col, Image, Form, Button, Card } = require('react-bootstrap');
-require('bootstrap/dist/css/bootstrap.min.css');
+import React from 'react';
+import { Container, Navbar, Nav, Row, Col, Image, Form, Button, Card } from 'react-bootstrap';
 
 const ContactUs = () => {
   return (
     <div>
-      {/* Navbar */}
-      <Navbar bg="light" expand="lg" className="py-3">
-        <Container>
-          <Navbar.Brand href="#home">
-            <Image src="https://picsum.photos/50/50" alt="GP Agarwal Logo" />
-            <span className="ms-2">GP Agarwal</span>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="#who-we-are">Who We Are</Nav.Link>
-              <Nav.Link href="#our-businesses">Our Businesses</Nav.Link>
-              <Nav.Link href="#sustainability">Sustainability</Nav.Link>
-              <Nav.Link href="#partners">Partners</Nav.Link>
-              <Nav.Link href="#careers">Careers</Nav.Link>
-              <Nav.Link href="#contact-us">Contact Us</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
 
       {/* Contact Section */}
       <section className="py-5">
@@ -170,4 +149,4 @@ const ContactUs = () => {
   );
 };
 
-module.exports = ContactUs;
+export default ContactUs;

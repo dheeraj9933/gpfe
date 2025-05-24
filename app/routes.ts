@@ -13,6 +13,8 @@ export default [
     route("/steel", "views/Steel/index.tsx"),
     route("/power", "views/Power/index.tsx"),
     route("/casting", "views/Casting/index.tsx"),
+    route("/careers", "views/Career/index.tsx"),
+    route("/contact-us", "views/ContactUs/index.tsx"),
     route("/*", "views/NotFound/index.tsx"),
   ]),
 ] satisfies RouteConfig;

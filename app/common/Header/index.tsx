@@ -83,7 +83,7 @@ const Header = () => {
                     Customers
                   </NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href="#pricing">Contact Us</Nav.Link>
+                <Nav.Link href="/contact-us">Contact Us</Nav.Link>
               </Nav>
             </div>
 

@@ -69,6 +69,13 @@ body {
     flex-grow: 0;
   }
 
+  // Grid
+  .grid-container-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* sets equal horizontal and vertical spacing */
+  }
+
   // Font
   .orange-text {
     color: colors.$orange-text;
@@ -78,6 +85,9 @@ body {
   }
   .text-green {
     color: colors.$material-green;
+  }
+  .text-blue {
+    color: colors.$text-blue;
   }
   .fs-7 {
     font-size: 14px;
@@ -89,6 +99,12 @@ body {
   .light-grey-bg {
     background-color: colors.$light-grey-bg;
   }
+  .bg-light-blue {
+    background-color: colors.$light-blue-bg;
+  }
+  .bg-muted-blue {
+    background-color: colors.$text-blue;
+  }
   .green-bg {
     background-color: colors.$material-green;
   }
@@ -98,7 +114,6 @@ body {
   .border-rounded {
     border-radius: 22px;
   }
-
   .box-shadow-light {
     border-radius: 22px;
     box-shadow: 0px 0px 7px 0px #00000026;
