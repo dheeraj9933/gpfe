@@ -1,0 +1,47 @@
+.clients {
+  .clients-inner-container {
+    overflow: hidden;
+
+    .clients-scroll {
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: linear-gradient(
+          to right,
+          white 0%,
+          transparent 10%,
+          transparent 90%,
+          white 100%
+        );
+        pointer-events: none;
+      }
+
+      .clients-scroll-track {
+        display: inline-flex; // use flex for better control
+        white-space: nowrap;
+        gap: 20px;
+        animation: scroll-left 20s linear infinite;
+        img {
+            height: 100%;
+            align-self: center;
+        }
+      }
+    }
+  }
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

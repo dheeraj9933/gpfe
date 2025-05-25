@@ -4,9 +4,9 @@ import { Col, Container, Image, Row } from "react-bootstrap";
 const NewsSmall: React.FC<any> = ({ data }) => {
   return (
     <div className="align-items-stretch d-flex flex-column h-100 p-3">
-      <h3 className="h5">{data.title}</h3>
+      <h3 className="fs-18 helvetica-neue-reg mb-3">{data.title}</h3>
       <p className="fs-6">{data.description}</p>
-      <span className="text-red align-self-end mt-auto">Press Release</span>
+      <span className="text-red align-self-end mt-auto myriad-reg-bold">Press Release <ArrowUpRight /></span>
     </div>
   );
 };
@@ -15,16 +15,16 @@ const NewsBig: React.FC<any> = ({ data }) => {
   return (
     <div className="d-flex flex-column h-100 p-3">
       <Image src={data.img} alt="News Image" fluid />
-      <h3 className="h5">{data.title}</h3>
+      <h3 className="fs-18 helvetica-neue-reg mt-3">{data.title}</h3>
       <p className="fs-6">{data.description}</p>
-      <span className="text-red align-self-end mt-auto">Press Release</span>
+      <span className="text-red align-self-end mt-auto myriad-reg-bold">Press Release <ArrowUpRight className="fw-bold" /></span>
     </div>
   );
 };
 
 import "./styles.scss";
-const News: React.FC<{ lines?: number }> = (props) => {
-  let lines = props.lines ?? 2;
+import { ArrowUpRight } from "react-bootstrap-icons";
+const News: React.FC = (props) => {
 
   const newsData = {
     title:
@@ -40,8 +40,8 @@ const News: React.FC<{ lines?: number }> = (props) => {
       "Get the latest news and feature stories on our businesses, community initiatives, heritage and people. Scroll to read.",
   };
   return (
-    <Container className="news-section">
-      <h2 className="orange-title">News & Features</h2>
+    <div className="news-section">
+      
       <Row className="my-3">
         <Col md={12}>
           <Row className="gap-3 flex-nowrap">
@@ -57,24 +57,7 @@ const News: React.FC<{ lines?: number }> = (props) => {
           </Row>
         </Col>
       </Row>
-      {lines > 1 && (
-        <Row className="my-3">
-          <Col md={12}>
-            <Row className="gap-3 flex-nowrap">
-              <Col xs={6} className="light-grey-bg news-item">
-                <NewsBig data={newsData2} />
-              </Col>
-              <Col md={3} className="light-grey-bg news-item">
-                <NewsSmall data={newsData} />
-              </Col>
-              <Col md={3} className="light-grey-bg news-item">
-                <NewsSmall data={newsData} />
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      )}
-    </Container>
+    </div>
   );
 };
 

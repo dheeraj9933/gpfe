@@ -13,11 +13,11 @@ const WorkCulture: React.FC = () => {
         />
         <div className="d-flex gap-4 text-dark dark-blue-bg work-culture-text">
           <div className="d-flex flex-column gap-2">
-            <h3 className="h5 text-uppercase m-0 mt-3 orange-text">
+            <h3 className="h5 text-uppercase m-0 mt-3 orange-text helvetica-neue-reg">
               Work Culture
             </h3>
-            <h4 className="text-white">Business with a Human Heart</h4>
-            <p className="text-white">
+            <h4 className="text-white cambria-bold">Business with a Human Heart</h4>
+            <p className="text-white fs-5">
               At GP Agarwal Group, our people are our strength. We nurture a
               culture of collaboration, diversity, and purpose — where every
               voice matters and every effort counts. Together, we’re not just

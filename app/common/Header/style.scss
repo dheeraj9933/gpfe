@@ -6,6 +6,33 @@
     color: #fff;
   }
 }
+
+.extra-padding {
+  padding-bottom: 50px;
+}
+.nav-container {
+  padding: 10px 0;
+}
+.header {
+  a,
+  span {
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+  }
+  .navbar-expand .navbar-nav .dropdown-menu {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .search-icon {
+    fill: #000;
+  }
+  .right-nav-container {
+    // padding-bottom: 10px;
+  }
+}
+.navbar .dropdown-toggle::after {
+  display: none;
+}
 .header nav:not(.bg-white) {
   a,
   .nav-link.show {
@@ -22,8 +49,6 @@
     -moz-appearance: none;
     background-color: transparent;
     color: white;
-    // border: none;
-    padding-right: 2rem; // space for custom icon
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-chevron-down' viewBox='0 0 16 16'>  <path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/></svg>");
     background-repeat: no-repeat;
     background-position: right 0.5rem center;
@@ -31,6 +56,17 @@
   }
 }
 footer {
+  background: #293F5205;
+
+  a.nav-link,
+  span {
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+  }
+  padding-top: 80px;
+  .footer-logo {
+    max-width: 200px;
+  }
   a.nav-link {
     color: #000;
     text-decoration: none;

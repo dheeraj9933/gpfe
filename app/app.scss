@@ -1,5 +1,66 @@
 @use "./common/colors";
 
+@font-face {
+  font-family: "Myriad";
+  src: url("fonts/myriad-pro/MYRIADPRO-REGULAR.OTF") format("opentype");
+  // src: url("fonts/myriad-pro/MyriadPro-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Myriad";
+  src: url("fonts/myriad-pro/MYRIADPRO-BOLD.OTF") format("opentype");
+  // src: url("fonts/myriad-pro/MyriadPro-Light.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cambria";
+  src: url("fonts/cambria/Cambria-Bold.ttf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cambria";
+  src: url("fonts/cambria/Cambria-BoldItalic.ttf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("fonts/helvetica-neue/HelveticaNeueRoman.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("fonts/helvetica-neue/HelveticaNeueMedium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("fonts/helvetica-neue/HelveticaNeueMediumItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("fonts/helvetica-neue/HelveticaNeueBold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("fonts/helvetica-neue/HelveticaNeueBoldItalic.otf")
+    format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+
 :root {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -25,8 +86,18 @@ body {
   h6 {
     margin: 0;
   }
-  p {
+  p,
+  span, li {
+    font-family: "Myriad";
     margin: 0;
+  }
+  button {
+    font-family: 'Helvetica Neue' !important;
+    font-weight: 300 !important;
+  }
+  a.link-white {
+    text-decoration: none;
+    color: #fff;
   }
   // Spacing
   .margin-y-100 {
@@ -73,10 +144,61 @@ body {
   .grid-container-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* sets equal horizontal and vertical spacing */
+    gap: 20px;
+  }
+  .grid-container-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    row-gap: 40px;
   }
 
   // Font
+  .myriad-reg {
+    font-family: "Myriad";
+  }
+  .myriad-reg-bold {
+    font-family: "Myriad";
+    font-weight: 700;
+  }
+  .cambria-bold {
+    font-family: "Cambria";
+    font-weight: bold;
+  }
+  .cambria-bold-it {
+    font-family: "Cambria";
+    font-weight: bold;
+    font-style: italic;
+  }
+   .helvetica-neue-light {
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+  }
+  .helvetica-neue-reg {
+    font-family: "Helvetica Neue";
+    font-weight: normal;
+  }
+  .helvetica-neue-reg-it {
+    font-family: "Helvetica Neue";
+    font-weight: normal;
+    font-style: italic;
+  }
+  .helvetica-neue-bold {
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+  }
+  .helvetica-neue-bold-it {
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .fs-18 {
+    font-size: 18px;
+  }
+  .fs-20 {
+    font-size: 20px;
+  }
   .orange-text {
     color: colors.$orange-text;
   }
@@ -89,8 +211,18 @@ body {
   .text-blue {
     color: colors.$text-blue;
   }
+  .text-dark-blue {
+    color: colors.$dark-blue-bg;
+  }
+  .border-dark-blue {
+    border: 1px solid colors.$dark-blue-bg;
+  }
+
   .fs-7 {
     font-size: 14px;
+  }
+  .fw-semi-bold {
+    font-weight: 500;
   }
   // Backgrounds
   .dark-blue-bg {
@@ -117,6 +249,17 @@ body {
   .box-shadow-light {
     border-radius: 22px;
     box-shadow: 0px 0px 7px 0px #00000026;
+  }
+  .light-form-bg {
+    background-color: colors.$light-form-bg;
+  }
+  .light-border {
+    box-shadow: 0px 0px 7px 0px #0000001a;
+  }
+
+  // form -btn
+  .btn-light-form-bg {
+    background-color: colors.$light-form-bg;
   }
 
   // Images
@@ -174,5 +317,40 @@ body {
     font-size: 40px;
     padding: 5px;
     border-radius: 50%;
+  }
+}
+
+// Career page
+.career-page {
+  .custom-grid {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 20px;
+    & > * {
+      max-height: 280px;
+    }
+  }
+  .grid-item-6 {
+    grid-column: span 6;
+  }
+  .grid-item-4 {
+    grid-column: span 4;
+  }
+  .grid-item-7 {
+    grid-column: span 7;
+  }
+  .max-width-75 {
+    padding: 40px;
+    max-width: 1000px;
+  }
+}
+
+.customers-page {
+  .customer-grid-collage {
+    .grid-container-3 {
+      & > * {
+        max-height: 280px;
+      }
+    }
   }
 }

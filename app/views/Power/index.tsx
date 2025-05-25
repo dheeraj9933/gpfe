@@ -14,7 +14,8 @@ import Banner from "~/common/Banner";
 import HalfHalfSection from "~/common/HalfHalfSection";
 import "./styles.scss"; // Import your CSS file for custom styles
 import ImageWithText from "~/common/ImageWithText";
-import News from "~/welcome/internal/News";
+import News from "~/common/News";
+import SliderIcons from "~/common/SliderIcons";
 
 const SteelBusiness = () => {
   return (
@@ -27,9 +28,10 @@ const SteelBusiness = () => {
           style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
         >
           <div className="">
-            {/* <h1 className="fs-2 fst-italic">
-              Power – The Backbone of Our Industrial Strength
-            </h1> */}
+            <h1 className="fs-2 cambria-bold-it mb-2">
+              Power – Energizing Growth Sustainably
+            </h1>
+            <p className="fs-5">Clean Energy That Fuels Industry</p>
           </div>
         </div>
       </Banner>
@@ -47,15 +49,15 @@ const SteelBusiness = () => {
           }
           rightContent={
             <div className="d-flex flex-column gap-3">
-              <h2>The Clean Energy Ecosystem</h2>
-              <p>
+              <h2 className="helvetica-neue-reg">The Clean Energy Ecosystem</h2>
+              <p className="fs-5">
                 At GP Agarwal Group, power is more than a utility — it’s a
                 strategic asset that drives our efficiency, self-reliance, and
                 long-term sustainability. Our in-house power division is built
                 around a clean energy model that reduces emissions and optimizes
                 performance across our steel and manufacturing operations.
               </p>
-              <p>
+              <p className="fs-5">
                 Through our 8 MW Waste Heat Recovery Boiler (WHRB) plant, we
                 convert industrial waste heat into usable power — making our
                 steel production greener, leaner, and more cost-efficient.
@@ -77,7 +79,9 @@ const SteelBusiness = () => {
             className="my-5 py-5 px-0 bg-white infra-internal"
             style={{ width: "85%" }}
           >
-            <h2 className="text-center mb-5 h2">Key Infrastructure</h2>
+            <h2 className="text-center mb-5 h2 cambria-bold">
+              Key Infrastructure
+            </h2>
             <div className="flex-container no-gap">
               <Col className="flex-30 border-end ">
                 <Card className="border-0 text-center p-4 ">
@@ -127,10 +131,11 @@ const SteelBusiness = () => {
           </Container>
         </Container>
       </section>
+
       {/* Sustainability Highlights Section */}
       <section className="lightgreen-bg highlight">
         <Container>
-          <h2 className="h4 text-uppercase text-green">
+          <h2 className="h4 text-uppercase text-green helvetica-neue-reg">
             Applications & Impact
           </h2>
           <p className="w-75 fs-5">
@@ -144,22 +149,30 @@ const SteelBusiness = () => {
           </p>
           <Row className="mt-4 align-items-end">
             <Col md={3}>
-              <h4 className="text-green fw-bold mb-3">Integrated Power</h4>
-              <p className="fs-7">Recycled eco-friendly material used</p>
+              <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
+                Integrated Power
+              </h4>
+              <p className="fs-6">Recycled eco-friendly material used</p>
             </Col>
             <Col md={3}>
-              <h4 className="text-green fw-bold mb-3">Unit-Wide Supply</h4>
-              <p className="fs-7">Renewable energy used</p>
+              <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
+                Unit-Wide Supply
+              </h4>
+              <p className="fs-6">Renewable energy used</p>
             </Col>
           </Row>
           <Row className="mt-4">
             <Col md={3}>
-              <h4 className="text-green fw-bold mb-3">Grid Independence</h4>
-              <p className="fs-7">Of revenue</p>
+              <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
+                Grid Independence
+              </h4>
+              <p className="fs-6">Of revenue</p>
             </Col>
             <Col md={3}>
-              <h4 className="text-green fw-bold mb-3">Scalable Energy</h4>
-              <p className="fs-7">Reduction in energy intensity FY</p>
+              <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
+                Scalable Energy
+              </h4>
+              <p className="fs-6">Reduction in energy intensity FY</p>
             </Col>
           </Row>
         </Container>
@@ -186,15 +199,15 @@ const SteelBusiness = () => {
           }
           rightContent={
             <div className="d-flex flex-column gap-3">
-              <h2 className="h3">Sustainability in Every Unit</h2>
-              <p className="fs-6 my-4">
+              <h2 className="h3 cambria-bold">Sustainability in Every Unit</h2>
+              <p className="fs-5 my-4">
                 Our power plant aligns with our group-wide sustainability
                 vision. By repurposing thermal waste into electricity, we not
                 only reduce emissions but also conserve fuel, improve
                 operational economics, and contribute to India’s clean energy
                 future.
               </p>
-              <p className="">
+              <p className="fs-5">
                 We are also exploring solar integration and green hydrogen
                 readiness to further diversify and future-proof our energy
                 ecosystem.
@@ -207,20 +220,23 @@ const SteelBusiness = () => {
       {/* News & Features Section */}
       <section className="py-5">
         <Container>
-          <News lines={1} />
+          <div className="d-flex justify-content-between">
+            <h2 className="h3 text-uppercase cambria-bold">News & Features</h2>
+            <SliderIcons />
+          </div>
+          <News />
         </Container>
       </section>
 
       {/* The Road Ahead Section */}
 
       <Banner image="Power/road.webp">
-        <div className="" style={{ flexBasis: "50%" }}></div>
         <div
-          className=""
-          style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
+          className="d-flex align-items-center"
+          style={{ maxWidth: "500px", height: "100%" }}
         >
           <div className="">
-            <h1 className="fs-2 ">The Road Ahead</h1>
+            <h1 className="fs-2 cambria-bold">The Road Ahead</h1>
             <p className="lead mt-3">
               We are committed to expanding our clean power capacity as our
               business scales. With sustainability at the core, our power

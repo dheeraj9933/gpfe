@@ -25,7 +25,7 @@ const Sustainability = () => {
           style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
         >
           <div className="">
-            <h1 className="fs-2 fst-italic">
+            <h1 className="fs-2 cambria-bold-it">
               Growing Responsibly, Building Sustainably
             </h1>
             <p className="lead mt-3">
@@ -50,7 +50,7 @@ const Sustainability = () => {
           }
           rightContent={
             <div className="d-flex flex-column gap-3">
-              <h2 className="text-green h3 m-0">
+              <h2 className="text-green h3 m-0 cambria-bold">
                 Our Commitment to Sustainability
               </h2>
               <p>
@@ -66,7 +66,7 @@ const Sustainability = () => {
                 and every forward step leaves a positive legacy for generations
                 to come.
               </p>
-              <p className="text-white green-bg p-3 rounded commitment">
+              <p className="text-white green-bg p-3 rounded commitment w-75">
                 <strong>Our vision is clear:</strong> To create an India where
                 every innovation fuels resilience, every investment strengthens
                 the planet, and every step forward leaves a positive legacy for
@@ -80,7 +80,7 @@ const Sustainability = () => {
       {/* Three Sustainability Pillars Section */}
       <section className="pillars lightgreen-bg position-relative">
         <Container>
-          <h2 className="text-center mb-5 text-green">
+          <h2 className="text-center mb-5 text-green cambria-bold">
             Three Sustainability Pillars
           </h2>
           <Row className="justify-content-around align-items-stretch">
@@ -94,7 +94,7 @@ const Sustainability = () => {
                   style={{ width: "150px", height: "150px" }}
                 />
                 <Card.Body>
-                  <Card.Title className="text-green">
+                  <Card.Title className="text-green cambria-bold">
                     Clean Manufacturing
                   </Card.Title>
                   <Card.Text>
@@ -117,7 +117,7 @@ const Sustainability = () => {
                   style={{ width: "150px", height: "150px" }}
                 />
                 <Card.Body>
-                  <Card.Title className="text-green">
+                  <Card.Title className="text-green cambria-bold">
                     Community Development
                   </Card.Title>
                   <Card.Text>
@@ -140,7 +140,7 @@ const Sustainability = () => {
                   style={{ width: "150px", height: "150px" }}
                 />
                 <Card.Body>
-                  <Card.Title className="text-green">
+                  <Card.Title className="text-green cambria-bold">
                     Environmental Responsibility
                   </Card.Title>
                   <Card.Text>
@@ -181,7 +181,7 @@ const Sustainability = () => {
                   className="rounded shadow"
                 />
                 <hr className="border border-white border-2 opacity-100 w-25"></hr>
-                <span className="text-center h4">Our CSR </span>
+                <span className="text-center h4 helvetica-neue-reg">Our CSR </span>
               </div>
               <a
                 href="#explore"
@@ -204,7 +204,7 @@ const Sustainability = () => {
                   className="rounded shadow"
                 />
                 <hr className="border border-white border-2 opacity-100 w-25"></hr>
-                <span className="text-center h4">Our ESG </span>
+                <span className="text-center h4 helvetica-neue-reg">Our ESG </span>
               </div>
 
               <a
@@ -224,13 +224,13 @@ const Sustainability = () => {
         <Container>
           <Row className="mb-5">
             <Col md={6} className="pe-5">
-              <h2 className="text-green h4 text-uppercase">
+              <h2 className="text-green h4 text-uppercase helvetica-neue-reg">
                 Forging a Greener Tomorrow
               </h2>
-              <h3 className="h4">
+              <h3 className="h4 cambria-bold">
                 Our roadmap for building a sustainable, responsible future.
               </h3>
-              <p>
+              <p className="fs-5">
                 At GP Agarwal Group, we are committed to creating a future we
                 are investing in long-term solutions that protect our
                 environment, generations to come, and build resilience for the
@@ -250,7 +250,6 @@ const Sustainability = () => {
           <Row className="card-container justify-content-between">
             <Col className="flex-24">
               <Card className="border-0 p-4 box-shadow-light h-100">
-                <Card.Body className="p-0">
                   <Card.Img
                     variant="top"
                     src="Sustainability/roadmap1.svg"
@@ -258,7 +257,8 @@ const Sustainability = () => {
                     className="rounded-circle mb-2"
                     style={{ width: "50px", height: "50px" }}
                   />
-                  <Card.Title>Expand Clean Energy</Card.Title>
+                <Card.Body className="p-0 mt-2">
+                  <Card.Title className="cambria-bold">Expand Clean Energy</Card.Title>
                   <Card.Text>
                     Transition more operations to renewable energy sources.
                   </Card.Text>
@@ -274,8 +274,8 @@ const Sustainability = () => {
                   className="rounded-circle mb-2"
                   style={{ width: "50px", height: "50px" }}
                 />
-                <Card.Body className="p-0">
-                  <Card.Title>Achieve Net-Zero by 2030</Card.Title>
+                <Card.Body className="p-0 mt-2">
+                  <Card.Title className="cambria-bold">Achieve Net-Zero by 2030</Card.Title>
                   <Card.Text>
                     Reduce emissions through greener practices.
                   </Card.Text>
@@ -291,8 +291,8 @@ const Sustainability = () => {
                   className="rounded-circle mb-2"
                   style={{ width: "50px", height: "50px" }}
                 />
-                <Card.Body className="p-0">
-                  <Card.Title>Strengthen Community Development</Card.Title>
+                <Card.Body className="p-0 mt-2">
+                  <Card.Title className="cambria-bold">Strengthen Community Development</Card.Title>
                   <Card.Text>
                     Enhance education and livelihood programs.
                   </Card.Text>
@@ -308,8 +308,8 @@ const Sustainability = () => {
                   className="rounded-circle mb-2"
                   style={{ width: "50px", height: "50px" }}
                 />
-                <Card.Body className="p-0">
-                  <Card.Title>Adopt Circular Economy Principles</Card.Title>
+                <Card.Body className="p-0 mt-2">
+                  <Card.Title className="cambria-bold">Adopt Circular Economy Principles</Card.Title>
                   <Card.Text>Reduce waste in all operations.</Card.Text>
                 </Card.Body>
               </Card>
@@ -321,7 +321,7 @@ const Sustainability = () => {
       {/* Sustainability Highlights Section */}
       <section className="py-5 lightgreen-bg highlight">
         <Container>
-          <h2 className="h4 text-uppercase text-green">
+          <h2 className="h4 text-uppercase text-green helvetica-neue-reg">
             Sustainability Highlights of FY 2023-24
           </h2>
           <p className="w-75 fs-5">
@@ -338,7 +338,7 @@ const Sustainability = () => {
               <h3 className="text-green fw-bold">32%</h3>
               <p className="fs-7">Recycled eco-friendly material used</p>
             </Col>
-            <Col md={3}>
+            <Col md={2}>
               <h4 className="h6">
                 Renewable <br /> Resource
               </h4>
@@ -396,7 +396,7 @@ const Sustainability = () => {
         }}
       >
         <Container className="align-items-center d-flex flex-column justify-content-center h-100">
-          <h3 className="text-white h1 w-75">
+          <h3 className="text-white h1 w-75 cambria-bold">
             Together, we can build a future that is strong, sustainable, and
             full of opportunity.
           </h3>

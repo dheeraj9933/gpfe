@@ -7,7 +7,10 @@ import Sustainability from "./internal/Sustainability";
 import Career from "./internal/Career";
 import WorkCulture from "./internal/WorkCulture";
 import Clients from "./internal/Clients";
-import News from "./internal/News";
+import News from "../common/News";
+import Tags from "~/common/Tags";
+import { Link } from "react-router";
+import { ArrowRight } from "react-bootstrap-icons";
 
 export function Welcome() {
   return (
@@ -18,7 +21,7 @@ export function Welcome() {
           fluid
           className="p-0 text-white min-vh-100"
           style={{
-            backgroundImage: `url('/banner_1.png')`,
+            backgroundImage: `url('HomePage/banner.webp')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             width: "100%",
@@ -27,9 +30,9 @@ export function Welcome() {
           data-bs-theme="dark"
         >
           <Container className="banner-text">
-            <div className="inner-text-container">
-              <h2>Strength in Every Load. Progress in Every Pipe.</h2>
-              <p>
+            <div className="inner-text-container ">
+              <h2 className="cambria-bold-it mb-3">Strength in Every Load. Progress in Every Pipe.</h2>
+              <p className="myriad-reg">
                 At GP Agarwal Group, our steel pipes move more than material —
                 they carry the vision of a stronger, better-connected India.
                 From production to project delivery, every load represents
@@ -45,7 +48,7 @@ export function Welcome() {
             <Row className="py-5 my-5">
               <Col style={{ flexBasis: "50%", flexGrow: "0" }}>
                 <div className="founder-img d-flex justify-content-center">
-                    <Image src="HomePage/founder.webp" className="w-50" />
+                  <Image src="HomePage/founder.webp" className="w-50" />
                 </div>
               </Col>
               <Col
@@ -57,7 +60,7 @@ export function Welcome() {
                 }}
               >
                 <Image src="/annotations.png" className="speech-quote" />
-                <h2>
+                <h2 className="helvetica-neue-reg-it">
                   Cherish every day. We have adapted the journey as our
                   destination.
                 </h2>
@@ -68,7 +71,8 @@ export function Welcome() {
                   strength, and a commitment to uplift society.
                 </p>
                 <div className="d-flex flex-column my-4">
-                  <h3>Shri. Gopal Agarwal </h3>
+                  <h3 className="helvetica-neue-reg">Shri. Gopal Agarwal </h3>
+                  <p className="helvetica-neue-reg">Shri. Gopal Agarwal </p>
                   <span>Managing Director , GP Agarwal Group</span>
                 </div>
                 <div>
@@ -89,7 +93,7 @@ export function Welcome() {
         {/* About Us */}
         <section className="about-us-section">
           <AboutUs />
-          <Image src="/bg-poly-1.svg" className="bottom-left-bg" />
+          <Image src="HomePage/bg-poly-left.svg" className="bottom-left-bg" />
         </section>
 
         {/* Industry */}
@@ -98,8 +102,19 @@ export function Welcome() {
         </section>
 
         {/* News */}
-        <section className="py-5">
-          <News />
+        <section className="padding-y-100 position-relative news-container">
+          <Container>
+            <h2 className="orange-text h3 text-uppercase helvetica-neue-reg">News & Features</h2>
+            <div className="d-flex justify-content-between my-4">
+              <Tags />
+              <div className="fw-bold">
+                <Link to='/news' className="text-black text-decoration-none">View More <ArrowRight className="fs-5"/></Link>
+              </div>
+            </div>
+            <News />
+            <News />
+          </Container>
+          <Image src="HomePage/bg-poly-top.svg" className="top-right-bg" />
         </section>
 
         {/* Sustainability */}
@@ -117,7 +132,7 @@ export function Welcome() {
           <Clients />
         </section>
 
-         {/* Career */}
+        {/* Career */}
         <section>
           <Career />
         </section>

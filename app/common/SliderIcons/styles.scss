@@ -1,0 +1,16 @@
+.slider-icon {
+  background-color: #f1f1f1;
+  padding: 8px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  path {
+    fill: #000;
+  }
+  &.disabled {
+    path {
+      fill: #aaa;
+    }
+  }
+}

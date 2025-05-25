@@ -48,7 +48,7 @@ const AboutUs = () => {
           }
           rightContent={
             <div className="d-flex flex-column gap-4">
-              <h2 className="fs-3">What We Stand For?</h2>
+              <h2 className="fs-3 cambria-bold">What We Stand For?</h2>
               <p className="fs-5">
                 We are a company that manufactures steel—and supports the dreams
                 of a better tomorrow.
@@ -87,7 +87,7 @@ const AboutUs = () => {
         <Container className="py-5">
           <Row className="justify-content-between">
             <Col md={5}>
-              <h3>Our Mission</h3>
+              <h3 className="cambria-bold mb-3">Our Mission</h3>
               <p>
                 To empower industries and communities by delivering
                 high-quality, sustainable engineering solutions that inspire
@@ -95,7 +95,7 @@ const AboutUs = () => {
               </p>
             </Col>
             <Col md={5}>
-              <h3>Our Vision</h3>
+              <h3 className="cambria-bold mb-3">Our Vision</h3>
               <p>
                 To empower industries and communities by delivering
                 high-quality, sustainable engineering solutions that inspire
@@ -109,7 +109,7 @@ const AboutUs = () => {
       {/* Our Values Section */}
       <section className="py-5">
         <Container>
-          <h2 className="text-center mb-5">Our Values</h2>
+          <h2 className="text-center mb-5 cambria-bold">Our Values</h2>
           <div className="d-flex card-container">
             <Col className="box-shadow-light p-4 my-card">
               <div className="d-flex align-items-center mb-3 ">
@@ -160,8 +160,8 @@ const AboutUs = () => {
       {/* Leadership Section */}
       <section className="py-5 bg-light">
         <Container>
-          <h2 className="text-center mb-3 h3">Leadership</h2>
-          <span className="d-block text-center mb-5 fs-6">
+          <h2 className="text-center mb-3 h3 cambria-bold">Leadership</h2>
+          <span className="d-block text-center mb-5 fs-5">
             Meet the visionaries behind the momentum — and the reason we’re
             rising
           </span>
@@ -171,30 +171,36 @@ const AboutUs = () => {
                 fluid
                 src="about/leadership1.webp"
                 alt="Gopal Agarwal"
-                className="mb-3"
+                className=""
               />
-              <h5>Gopal Agarwal</h5>
-              <p>Chairman</p>
+              <div className="light-border py-2">
+                <h5>Gopal Agarwal</h5>
+                <p className="fs-6 text-secondary mt-1">Managing Director</p>
+              </div>
             </Col>
             <Col md={3} className="text-center">
               <Image
                 fluid
                 src="about/leadership2.webp"
                 alt="Abhishek Agarwal"
-                className="mb-3"
               />
-              <h5>Abhishek Agarwal</h5>
-              <p>CEO</p>
+              <div className="light-border py-2">
+                <h5>Abhishek Agarwal</h5>
+                <p className="fs-6 text-secondary mt-1">CEO</p>
+              </div>
             </Col>
             <Col md={3} className="text-center">
               <Image
                 fluid
                 src="about/leadership3.webp"
                 alt="Vijay Kumar Natholia"
-                className="mb-3"
               />
-              <h5>Vijay Kumar Natholia</h5>
-              <p>Executive President of Sales</p>
+              <div className="light-border py-2">
+                <h5>Vijay Kumar Natholia</h5>
+                <p className="fs-6 text-secondary mt-1">
+                  SENIOR VICE PRESIDENT OF SALES
+                </p>
+              </div>
             </Col>
           </Row>
         </Container>
@@ -203,11 +209,17 @@ const AboutUs = () => {
       {/* Awards & Recognition Section */}
       <section className="py-5">
         <Container>
-          <h2 className="text-center mb-5  h3">Awards & Recognition</h2>
+          <h2 className="text-center mb-5 cambria-bold h3">
+            Awards & Recognition
+          </h2>
           <Row>
             <Col md={3} className="text-center">
               <Card className="border-0 p-4  align-items-center box-shadow-light h-100">
-                <Card.Img variant="top" src="about/medal.svg" className="w-50" />
+                <Card.Img
+                  variant="top"
+                  src="about/medal.svg"
+                  className="w-50"
+                />
                 <Card.Body>
                   <Card.Text>Star Export Certified Company 2020</Card.Text>
                 </Card.Body>
@@ -215,7 +227,11 @@ const AboutUs = () => {
             </Col>
             <Col md={3} className="text-center">
               <Card className="border-0 p-4  align-items-center box-shadow-light h-100">
-                <Card.Img variant="top" src="about/award.svg" className="w-50" />
+                <Card.Img
+                  variant="top"
+                  src="about/award.svg"
+                  className="w-50"
+                />
                 <Card.Body>
                   <Card.Text>ISO 9001:2020 Certified</Card.Text>
                 </Card.Body>
@@ -231,7 +247,11 @@ const AboutUs = () => {
             </Col>
             <Col md={3} className="text-center">
               <Card className="border-0 p-4  align-items-center box-shadow-light h-100">
-                <Card.Img variant="top" src="about/employee.svg" className="w-50" />
+                <Card.Img
+                  variant="top"
+                  src="about/employee.svg"
+                  className="w-50"
+                />
                 <Card.Body>
                   <Card.Text>Award for Best Employee Retention</Card.Text>
                 </Card.Body>
@@ -244,11 +264,18 @@ const AboutUs = () => {
       {/* Key Business Highlights Section */}
       <section className="py-5">
         <Container>
-          <h2 className="text-center mb-5">Key Business Highlights</h2>
+          <h2 className="text-center mb-5 cambria-bold">
+            Key Business Highlights
+          </h2>
           <Row>
             <Col md={4}>
               <Card className="border-0 h-100">
-                <Card.Img className="rounded flex-grow-1" variant="top" src="about/highlight2.png" />
+                <Card.Img
+                  className="rounded"
+                  variant="top"
+                  src="about/highlight2.png"
+                  style={{ height: "500px", width: "auto" }}
+                />
                 <Card.Body className="flex-shrink-1 flex-grow-0">
                   <Card.Title>1,44,000+ Tons Annual Capacity</Card.Title>
                   <Card.Text>
@@ -259,7 +286,12 @@ const AboutUs = () => {
             </Col>
             <Col md={4}>
               <Card className="border-0 h-100">
-                <Card.Img className="rounded flex-grow-1" variant="top" src="about/highlight1.png" />
+                <Card.Img
+                  className="rounded"
+                  variant="top"
+                  src="about/highlight1.png"
+                  style={{ height: "500px", width: "auto" }}
+                />
                 <Card.Body className="flex-shrink-1 flex-grow-0">
                   <Card.Title>Fully Integrated Plant</Card.Title>
                   <Card.Text>
@@ -271,7 +303,12 @@ const AboutUs = () => {
             </Col>
             <Col md={4}>
               <Card className="border-0">
-                <Card.Img className="rounded flex-grow-1" variant="top" src="about/highlight3.png" />
+                <Card.Img
+                  className="rounded"
+                  variant="top"
+                  src="about/highlight3.png"
+                  style={{ height: "500px", width: "auto" }}
+                />
                 <Card.Body className="flex-shrink-1">
                   <Card.Title>8 MW Clean Power Generator</Card.Title>
                   <Card.Text>
@@ -283,49 +320,6 @@ const AboutUs = () => {
           </Row>
         </Container>
       </section>
-
-      {/* Footer */}
-      <footer className="py-5 bg-light">
-        <Container>
-          <Row>
-            <Col md={3}>
-              <Image
-                src="https://picsum.photos/50/50"
-                alt="GP Agarwal Logo"
-                className="mb-3"
-              />
-            </Col>
-            <Col md={3}>
-              <h5>Who We Are</h5>
-              <Nav className="flex-column">
-                <Nav.Link href="#about-us">About Us</Nav.Link>
-                <Nav.Link href="#founders-journey">Founder's Journey</Nav.Link>
-              </Nav>
-            </Col>
-            <Col md={3}>
-              <h5>Our Businesses</h5>
-              <Nav className="flex-column">
-                <Nav.Link href="#steel">Steel</Nav.Link>
-                <Nav.Link href="#casting">Casting</Nav.Link>
-                <Nav.Link href="#power">Power</Nav.Link>
-              </Nav>
-            </Col>
-            <Col md={3}>
-              <h5>Contact Us</h5>
-              <p>
-                Kansas Towers, 5-4, 3rd Floor, 16th Cross, Chamber Road, Mumbai
-                - 400053
-              </p>
-              <p>+91-1-9876543210</p>
-              <p>contact@gpagarwal.com</p>
-            </Col>
-          </Row>
-          <hr />
-          <p className="text-center">
-            Copyright © 2025 GP Agarwal Group. All Rights Reserved.
-          </p>
-        </Container>
-      </footer>
     </div>
   );
 };

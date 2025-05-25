@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router";
 
-import { Search } from "react-bootstrap-icons";
+import { ChevronDown, Search } from "react-bootstrap-icons";
 import "./style.scss";
 import Navbar from "react-bootstrap/Navbar";
 import {
@@ -21,12 +21,22 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      if (location.pathname === "/contact-us") return;
       setScrolled(window.scrollY > 50); // adjust threshold as needed
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    // This runs on every URL change
+    if (location.pathname === "/contact-us") {
+      setScrolled(true);
+    }
+
+    // You can put any logic here (e.g., analytics, fetch, scroll)
+  }, [location.pathname]);
   return (
     <>
       <header className="header">
@@ -39,43 +49,64 @@ const Header = () => {
             right: 0,
             zIndex: 1000,
             backgroundColor: "transparent",
-            padding: "0px 20px",
+            padding: "14px 20px",
           }}
           className={scrolled ? "bg-white shadow-sm" : ""}
         >
-          <Container className="d-flex justify-content-between align-items-center px-3 text-white">
+          <Container className="d-flex justify-content-between align-items-center text-white nav-container">
             <div className="flex-shrink-0 ">
               <Navbar.Brand
                 href="/"
                 className="position-absolute"
                 style={{ top: "0", padding: "0px" }}
               >
-                <Image src="/home.png" />
+                <Image src="/logo2.png" />
               </Navbar.Brand>
             </div>
 
             {/* Middle section (slightly right of center) */}
             <div
-              className={`position-absolute start-50 translate-middle-x pt-4 ${
-                scrolled ? "pb-3" : ""
+              className={`position-absolute start-50 translate-middle-x ${
+                scrolled ? "" : ""
               }`}
               style={{ left: "55%" }}
             >
               <Nav className="me-auto">
-                <NavDropdown title="Who we are" id="basic-nav-dropdown">
+                <NavDropdown
+                  title={
+                    <span>
+                      Who we are <ChevronDown />
+                    </span>
+                  }
+                  id="basic-nav-dropdown"
+                >
                   <NavDropdown.Item href="/about-us">About us</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3">
                     Founders Journey
                   </NavDropdown.Item>
                 </NavDropdown>
-                <NavDropdown title="Our Business" id="basic-nav-dropdown">
+                <NavDropdown
+                  title={
+                    <span>
+                      Our Business <ChevronDown />
+                    </span>
+                  }
+                  id="basic-nav-dropdown"
+                >
                   <NavDropdown.Item href="/steel">Steel</NavDropdown.Item>
                   <NavDropdown.Item href="/casting">Casting</NavDropdown.Item>
                   <NavDropdown.Item href="/power">Power</NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link href="/Sustainability">Sustainability</Nav.Link>
                 <Nav.Link href="/careers">Careers</Nav.Link>
-                <NavDropdown title="Partners" id="basic-nav-dropdown">
+                <NavDropdown
+                  title={
+                    <span>
+                      Partners <ChevronDown />
+                    </span>
+                  }
+                  id="basic-nav-dropdown"
+                >
                   <NavDropdown.Item href="/suppliers">
                     Suppliers
                   </NavDropdown.Item>
@@ -89,13 +120,14 @@ const Header = () => {
 
             {/* Right section */}
             <div
-              className={`flex-shrink-0 d-flex align-items-center pt-4 ${
-                scrolled ? "pb-2" : ""
+              className={`flex-shrink-0 d-flex align-items-center position-relative ${
+                scrolled ? "right-nav-container" : ""
               }`}
+              // style={{ paddingTop: "22px" }}
             >
               <Search
                 style={{ fontWeight: "bold", transform: "scale(1.2)" }}
-                className="fw-bold"
+                className={`fw-bold ${scrolled ? "search-icon" : ""}`}
               />
               <Form.Select
                 className="ms-2 rounded-4 transparent-select"
@@ -103,7 +135,7 @@ const Header = () => {
                 aria-label="Default select example"
                 style={{
                   backgroundColor: `${scrolled ? "white" : "transparent"}`,
-                  color: `${scrolled ? "black" : "white"}`
+                  color: `${scrolled ? "black" : "white"}`,
                 }}
               >
                 <option>Eng</option>
@@ -118,21 +150,25 @@ const Header = () => {
       <main>
         <Outlet />
       </main>
-      <footer className="pt-5 bg-light">
+      <footer className="">
         <Container className="d-flex flex-column align-items-center">
-          <Image src="footer-logo.png" alt="GP Agarwal Logo" className="mb-3" />
+          <Image
+            src="logo.png"
+            alt="GP Agarwal Logo"
+            className="footer-logo mb-3"
+          />
         </Container>
         <Container>
           <Row className="footer-links-container">
             <Col md={2}>
-              <h5>Who We Are</h5>
+              <h5 className="cambria-bold">Who We Are</h5>
               <Nav className="flex-column">
                 <Nav.Link href="#about-us">About Us</Nav.Link>
                 <Nav.Link href="#founders-journey">Founder's Journey</Nav.Link>
               </Nav>
             </Col>
             <Col md={2}>
-              <h5>Our Businesses</h5>
+              <h5 className="cambria-bold">Our Businesses</h5>
               <Nav className="flex-column">
                 <Nav.Link href="#steel">Steel</Nav.Link>
                 <Nav.Link href="#casting">Casting</Nav.Link>
@@ -140,7 +176,7 @@ const Header = () => {
               </Nav>
             </Col>
             <Col md={2}>
-              <h5>Sustainability</h5>
+              <h5 className="cambria-bold">Sustainability</h5>
               <Nav className="flex-column">
                 <Nav.Link href="#steel">Steel</Nav.Link>
                 <Nav.Link href="#casting">Casting</Nav.Link>
@@ -148,7 +184,7 @@ const Header = () => {
               </Nav>
             </Col>
             <Col md={2}>
-              <h5>Partners</h5>
+              <h5 className="cambria-bold">Partners</h5>
               <Nav className="flex-column">
                 <Nav.Link href="#steel">Steel</Nav.Link>
                 <Nav.Link href="#casting">Casting</Nav.Link>
@@ -156,7 +192,7 @@ const Header = () => {
               </Nav>
             </Col>
             <Col md={2}>
-              <h5 className="">Careers</h5>
+              <h5 className="cambria-bold">Careers</h5>
               <Nav className="flex-column">
                 <Nav.Link href="#steel" className="bold-link">
                   Media
@@ -170,28 +206,54 @@ const Header = () => {
               </Nav>
             </Col>
             <Col md={2}>
-              <p className="fs-7">
+              <p className="">
                 Rama Towers, 5-4-83, 2nd Floor, TSK Chambers, M.G. Road,
                 Secunderabad-500003
               </p>
-              <p className="fs-7">Tel: +91 9002345678</p>
-              <p className="fs-7">Fax: +91 22 6359000</p>
+              <a
+                href="tel:+919002345678"
+                className="text-decoration-none text-black mt-2"
+              >
+                Tel: +91 9002345678
+              </a>
+              <br />
+              <a
+                href="mailto:info@gpagarwalgroup.com"
+                className="text-decoration-none text-black mt-2"
+              >
+                Email:info@gpagarwal.com
+              </a>
             </Col>
           </Row>
           <Row className="my-4">
             <Col>
-              <ul>
-                <li>Terms and condition</li>
+              <ul className="helvetica-neue-reg-it">
+                <li className="">Terms and condition</li>
                 <li>Legal Notice</li>
                 <li>Privacy Policy</li>
               </ul>
             </Col>
-            <Col className="d-flex justify-content-end">
-              <Image
-                src="/footer-social.png"
-                alt="Social Media Icons"
-                className="footer-social"
-              />
+            <Col className="d-flex justify-content-end column-gap-3">
+              <a href="http://www.google.com" target="__blank">
+                <Image
+                  src="social/LogoInstagram.svg"
+                  alt="Linked In"
+                  className=""
+                />
+              </a>
+              <a href="http://www.google.com" target="__blank">
+                <Image src="social/X.svg" alt="Linked In" className="" />
+              </a>
+              <a href="http://www.google.com" target="__blank">
+                <Image
+                  src="social/LogoYouTube.svg"
+                  alt="Linked In"
+                  className=""
+                />
+              </a>
+              <a href="http://www.google.com" target="__blank">
+                <Image src="social/LinkedIn.svg" alt="Linked In" className="" />
+              </a>
             </Col>
           </Row>
         </Container>

@@ -16,7 +16,7 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({
 }) => (
   <figure className={`${className} image-with-text`}>
     <img src={src} alt={alt} />
-    <figcaption>{text}</figcaption>
+    <figcaption className="ms-2 cambria-bold fs-5">{text}</figcaption>
   </figure>
 );
 

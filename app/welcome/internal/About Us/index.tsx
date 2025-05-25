@@ -7,8 +7,8 @@ const AboutUs: React.FC = () => {
       <Row className="">
         <Col style={{ flexBasis: "50%", flexGrow: "0" }}>
           <div className="d-flex justify-content-center flex-column gap-2">
-            <h2 className="orange-title">About Us</h2>
-            <h2 className="fs-3">A Legacy of Strength. A Future of Possibility.</h2>
+            <h2 className="orange-text helvetica-neue-reg text-uppercase h4">About Us</h2>
+            <h2 className="fs-3 cambria-bold">A Legacy of Strength. A Future of Possibility.</h2>
             <p>
               GP Agarwal Group is a next-generation industrial powerhouse, built
               on decades of trust and excellence. With diversified ventures in

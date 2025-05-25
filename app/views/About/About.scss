@@ -1,10 +1,8 @@
 .about-us-page {
-
   .stand-for-section {
     .bottom-right-bg {
       width: 300px;
     }
-    
   }
   .card-container {
     flex-wrap: wrap;
@@ -14,6 +12,9 @@
   .my-card {
     flex-grow: 0;
     flex-basis: 30%;
+    h5 {
+      font-family: "Helvetica Neue";
+      font-weight: normal;
+    }
   }
-  
 }

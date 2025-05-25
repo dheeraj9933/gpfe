@@ -8,25 +8,14 @@
 
 main {
   // common classes
-  .orange-title {
-    color: colors.$orange-text;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
-    letter-spacing: 0%;
-    text-transform: uppercase;
-  }
   // sections
   .banner-text {
     position: relative;
     top: 45%;
     .inner-text-container {
       width: 400px;
-      padding: 15px 0 10px 15px;
+      padding: 25px 0 25px 25px;
       h2 {
-        font-family: Cambria;
-        font-weight: 700;
-        font-style: italic;
         font-size: 36px;
         line-height: 100%;
         letter-spacing: 0%;
@@ -64,7 +53,7 @@ main {
     }
     .speech-quote {
       position: absolute;
-      left: -80px;
+      left: -95px;
       top: -20px;
     }
   }
@@ -110,24 +99,33 @@ main {
     }
     .steel {
       min-height: 500px;
-      background-image: url("/steel.png");
+      background-image: url("HomePage/steel.webp");
       @include background;
       .steel-inner {
         margin-top: 100px;
       }
+      margin-bottom: 2px;
     }
     .casting {
       min-height: 350px;
-      background-image: url("/casting.jpg");
+      background-image: url("HomePage/casting.webp");
       @include background;
+      // margin-right: 2px;
+      flex-basis: 49.8%;
     }
     .power {
+      flex-basis: 50%;
       min-height: 350px;
-      background-image: url("/power.png");
+      background-image: url("HomePage/power.webp");
       @include background;
     }
   }
 
+  .news-container {
+    .top-right-bg {
+      max-width: 250px;
+    }
+  }
   .sustainability {
     padding: 100px 0 60px 0;
     .sustainability-floater {

@@ -1,278 +1,251 @@
-const React = require('react');
-const { Container, Navbar, Nav, Row, Col, Image, Card, Form, Button } = require('react-bootstrap');
-require('bootstrap/dist/css/bootstrap.min.css');
+import React from "react";
+import {
+  Container,
+  Navbar,
+  Nav,
+  Row,
+  Col,
+  Image,
+  Card,
+  Form,
+  Button,
+} from "react-bootstrap";
+import Banner from "~/common/Banner";
+import HalfHalfSection from "~/common/HalfHalfSection";
+import ImageWithText from "~/common/ImageWithText";
 
 const Partners = () => {
   return (
-    <div>
-      {/* Navbar */}
-      <Navbar bg="light" expand="lg" className="py-3">
-        <Container>
-          <Navbar.Brand href="#home">
-            <Image src="https://picsum.photos/50/50" alt="GP Agarwal Logo" />
-            <span className="ms-2">GP Agarwal</span>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="#who-we-are">Who We Are</Nav.Link>
-              <Nav.Link href="#our-businesses">Our Businesses</Nav.Link>
-              <Nav.Link href="#sustainability">Sustainability</Nav.Link>
-              <Nav.Link href="#partners">Partners</Nav.Link>
-              <Nav.Link href="#careers">Careers</Nav.Link>
-              <Nav.Link href="#contact-us">Contact Us</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
+    <div className="customers-page">
       {/* Hero Section */}
-      <section className="py-5 text-white" style={{ background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://picsum.photos/1200/600)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <Container>
-          <Row>
-            <Col md={8}>
-              <h1 className="display-4">Together, We Build the Future</h1>
-              <p className="lead">
-                At GP Agarwal Group, partnerships are the foundation of our growth—driving innovation, sustainability, and shared success across industries.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <Banner image="Customers/banner.webp">
+        <div className="" style={{ flexBasis: "50%" }}></div>
+        <div
+          className=""
+          style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
+        >
+          <div className="">
+            <h1 className="fs-2 fst-italic mb-2">
+              Your Vision, Our Commitment
+            </h1>
+            <p>
+              We are committed to understanding our customers’ unique needs and
+              delivering solutions that exceed expectations. With a focus on
+              quality, reliability, and long-term value, we partner with clients
+              across industries to power their ambitions.
+            </p>
+          </div>
+        </div>
+      </Banner>
 
       {/* Partner Ecosystem Section */}
-      <section className="py-5 bg-light">
-        <Container>
-          <Row>
-            <Col md={6}>
-              <Image src="https://picsum.photos/600/400" alt="Partner Ecosystem" fluid className="rounded shadow" />
-            </Col>
-            <Col md={6}>
-              <h2>Our Partner Ecosystem</h2>
-              <p>
-                Collaboration is at the heart of what we do. Our partners—ranging from raw material suppliers to global distributors—play a critical role in our journey to deliver high-quality steel and sustainable solutions.
+      <section className="padding-y-100">
+        <HalfHalfSection
+          leftContent={
+            <Image
+              src="Customers/trust.png"
+              alt="Work Culture"
+              fluid
+              className="shadow border-rounded"
+            />
+          }
+          rightContent={
+            <div className="d-flex flex-column gap-3">
+              <h2 className="h4 orange-text text-uppercase m-0">
+                Our Customer Philosophy
+              </h2>
+              <h3 className="h4  m-0">
+                Your Trust. <br /> Our Responsibility.
+              </h3>
+              <p style={{ maxWidth: "500px" }}>
+                For decades, GP Agarwal Group has stood as a symbol of
+                reliability for our customers across India and beyond. We serve
+                industries that demand strength, precision, and accountability —
+                from infrastructure to energy, automotive to construction.
               </p>
-              <p>
-                Through strategic alliances, we ensure a seamless supply chain, foster innovation, and create value for all stakeholders while maintaining our commitment to ethical practices and sustainability.
-              </p>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+          }
+        />
       </section>
-
       {/* Global Presence Section */}
-      <section className="py-5">
+      <section className="padding-y-100 bg-light customer-grid-collage">
         <Container>
-          <h2 className="text-center mb-5">Our Global Presence</h2>
-          <Row>
-            <Col md={4}>
-              <Card className="border-0 text-center">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="North America" />
-                <Card.Body>
-                  <Card.Title>North America</Card.Title>
-                </Card.Body>
-              </Card>
+          <div className="card-container justify-content-between grid-container-3">
+            <Col className="flex-30 d-flex ">
+              <div className="d-flex flex-column justify-content-center h-100 w-75">
+                <h3 className="h4 orange-text text-uppercase">our customers</h3>
+                <h4 className="h3">Industries that We Serve</h4>
+              </div>
             </Col>
-            <Col md={4}>
-              <Card className="border-0 text-center">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Europe" />
-                <Card.Body>
-                  <Card.Title>Europe</Card.Title>
-                </Card.Body>
-              </Card>
+            <Col className="flex-30">
+              <ImageWithText
+                src="Customers/collage1.png"
+                alt="Collage 1"
+                text="Steel & Manufacturing"
+              />
             </Col>
-            <Col md={4}>
-              <Card className="border-0 text-center">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Middle East" />
-                <Card.Body>
-                  <Card.Title>Middle East</Card.Title>
-                </Card.Body>
-              </Card>
+            <Col className="flex-30">
+              <ImageWithText
+                src="Customers/collage2.png"
+                alt="Collage 1"
+                text="Casting & Foundries"
+              />
             </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col md={6}>
-              <Card className="border-0 text-center">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Africa" />
-                <Card.Body>
-                  <Card.Title>Africa</Card.Title>
-                </Card.Body>
-              </Card>
+            <Col className="flex-30">
+              <ImageWithText
+                src="Customers/collage3.png"
+                alt="Collage 1"
+                text="Power & Utilities"
+              />
             </Col>
-            <Col md={6}>
-              <Card className="border-0 text-center">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Asia Pacific" />
-                <Card.Body>
-                  <Card.Title>Asia Pacific</Card.Title>
-                </Card.Body>
-              </Card>
+            <Col className="flex-30">
+              <ImageWithText
+                src="Customers/collage4.png"
+                alt="Collage 1"
+                text="Infrastructure & Construction"
+              />
             </Col>
-          </Row>
+            <Col className="flex-30">
+              <ImageWithText
+                src="Customers/collage5.png"
+                alt="Collage 1"
+                text="OEMs & Industry Contractors"
+              />
+            </Col>
+          </div>
+        </Container>
+      </section>
+      
+      {/* Global Presence Section */}
+      <section className="customer-grid-collage">
+        <Container
+          fluid
+          className="padding-y-100 banner-img"
+          style={{ backgroundImage: "url('Customers/promise.webp')" }}
+        >
+          <Container
+            className="my-5 py-5 px-0 bg-white infra-internal border-rounded"
+            style={{ width: "85%" }}
+          >
+            <h2 className="text-center mb-5 h2">Our Promise to Customers</h2>
+            <div className="flex-container no-gap">
+              <Col className="flex-30 border-end border-bottom">
+                <Card className="border-0 text-center p-4 ">
+                  <Card.Img
+                    variant="top"
+                    src="Customers/promise1.svg"
+                    alt="300 TPD Sponge Iron Kilns"
+                    className="my-icon mx-auto"
+                  />
+                  <Card.Body>
+                    <Card.Title className="fw-bold">Quality Product</Card.Title>
+                    <Card.Text className="fw-bold">
+                      Rigorous quality control for consistent output{" "}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col className="flex-30 border-end border-bottom">
+                <Card className="border-0 text-center p-4 ">
+                  <Card.Img
+                    variant="top"
+                    src="Customers/promise2.svg"
+                    alt="300 TPD Sponge Iron Kilns"
+                    className="my-icon mx-auto"
+                  />
+                  <Card.Body>
+                    <Card.Title className="fw-bold">
+                      Compliance-Ready
+                    </Card.Title>
+                    <Card.Text className="fw-bold">
+                      Adherence to certifications and industry norms.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col className="flex-30 border-bottom">
+                <Card className="border-0 text-center p-4 ">
+                  <Card.Img
+                    variant="top"
+                    src="Customers/promise3.svg"
+                    alt="300 TPD Sponge Iron Kilns"
+                    className="my-icon mx-auto"
+                  />
+                  <Card.Body>
+                    <Card.Title className="fw-bold">
+                      Tailored Solutions
+                    </Card.Title>
+                    <Card.Text className="fw-bold">
+                      understanding project’s needs & customize offerings.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col className="flex-30 border-end">
+                <Card className="border-0 text-center p-4 ">
+                  <Card.Img
+                    variant="top"
+                    src="Customers/promise5.svg"
+                    alt="300 TPD Sponge Iron Kilns"
+                    className="my-icon mx-auto"
+                  />
+                  <Card.Body>
+                    <Card.Title className="fw-bold">
+                      On time Delivery
+                    </Card.Title>
+                    <Card.Text className="fw-bold">
+                      Aligned values in responsibility and impact.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col className="flex-30">
+                <Card className="border-0 text-center p-4 ">
+                  <Card.Img
+                    variant="top"
+                    src="Customers/promise4.svg"
+                    alt="300 TPD Sponge Iron Kilns"
+                    className="my-icon mx-auto"
+                  />
+                  <Card.Body>
+                    <Card.Title className="fw-bold">
+                      Tech Adaptability{" "}
+                    </Card.Title>
+                    <Card.Text className="fw-bold">
+                      Openness to innovation and process upgrades.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </div>
+          </Container>
         </Container>
       </section>
 
-      {/* Partner Testimonials Section */}
-      <section className="py-5 bg-light">
-        <Container>
-          <h2 className="text-center mb-5">What Our Partners Say</h2>
-          <Row>
-            <Col md={4}>
-              <Card className="border-0">
-                <Card.Body>
-                  <Card.Text>
-                    “GP Agarwal has been a reliable partner, delivering consistent quality and sustainable steel solutions for our projects.”
-                  </Card.Text>
-                  <Card.Text><strong>John Doe, CEO of SteelCorp</strong></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="border-0">
-                <Card.Body>
-                  <Card.Text>
-                    “Their commitment to ethical practices and innovation makes them a trusted partner in our supply chain.”
-                  </Card.Text>
-                  <Card.Text><strong>Jane Smith, Procurement Head at BuildMax</strong></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="border-0">
-                <Card.Body>
-                  <Card.Text>
-                    “Working with GP Agarwal has helped us achieve our sustainability goals while meeting project deadlines.”
-                  </Card.Text>
-                  <Card.Text><strong>Ahmed Khan, Director at InfraGlobal</strong></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* Collaboration Highlights Section */}
-      <section className="py-5">
-        <Container>
-          <h2 className="text-center mb-5">Collaboration Highlights</h2>
-          <Row>
-            <Col md={4}>
-              <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Highlight 1" />
-                <Card.Body>
-                  <Card.Title>Partnered with SteelCorp for Mega Infrastructure Project</Card.Title>
-                  <Card.Text>Supplied 50,000 tons of steel for a landmark bridge project in North America.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Highlight 2" />
-                <Card.Body>
-                  <Card.Title>Sustainable Supply Chain with BuildMax</Card.Title>
-                  <Card.Text>Implemented eco-friendly logistics for steel delivery across Europe.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="border-0">
-                <Card.Img variant="top" src="https://picsum.photos/400/300" alt="Highlight 3" />
-                <Card.Body>
-                  <Card.Title>Innovation with InfraGlobal</Card.Title>
-                  <Card.Text>Developed high-tensile steel solutions for solar energy projects in the Middle East.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* Partnership Inquiry Form Section */}
-      <section className="py-5 bg-light">
-        <Container>
-          <h2 className="text-center mb-5">Interested in Partnering with Us?</h2>
-          <Row className="justify-content-center">
-            <Col md={8}>
-              <Form>
-                <Row>
-                  <Col md={6}>
-                    <Form.Group className="mb-3" controlId="companyName">
-                      <Form.Label>Company Name</Form.Label>
-                      <Form.Control type="text" placeholder="Enter company name" />
-                    </Form.Group>
-                  </Col>
-                  <Col md={6}>
-                    <Form.Group className="mb-3" controlId="contactPerson">
-                      <Form.Label>Contact Person</Form.Label>
-                      <Form.Control type="text" placeholder="Enter contact person name" />
-                    </Form.Group>
-                  </Col>
-                </Row>
-                <Form.Group className="mb-3" controlId="email">
-                  <Form.Label>Email Address</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="phone">
-                  <Form.Label>Phone Number</Form.Label>
-                  <Form.Control type="tel" placeholder="Enter phone number" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="partnershipType">
-                  <Form.Label>Type of Partnership</Form.Label>
-                  <Form.Control as="select">
-                    <option>Select Type</option>
-                    <option>Supplier</option>
-                    <option>Distributor</option>
-                    <option>Technology Partner</option>
-                    <option>Other</option>
-                  </Form.Control>
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="message">
-                  <Form.Label>Message</Form.Label>
-                  <Form.Control as="textarea" rows={3} placeholder="Tell us about your partnership interest" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                  Submit Inquiry
-                </Button>
-              </Form>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-5 bg-light">
-        <Container>
-          <Row>
-            <Col md={3}>
-              <Image src="https://picsum.photos/50/50" alt="GP Agarwal Logo" className="mb-3" />
-            </Col>
-            <Col md={3}>
-              <h5>Who We Are</h5>
-              <Nav className="flex-column">
-                <Nav.Link href="#about-us">About Us</Nav.Link>
-                <Nav.Link href="#founders-journey">Founder's Journey</Nav.Link>
-              </Nav>
-            </Col>
-            <Col md={3}>
-              <h5>Our Businesses</h5>
-              <Nav className="flex-column">
-                <Nav.Link href="#steel">Steel</Nav.Link>
-                <Nav.Link href="#casting">Casting</Nav.Link>
-                <Nav.Link href="#power">Power</Nav.Link>
-              </Nav>
-            </Col>
-            <Col md={3}>
-              <h5>Contact Us</h5>
-              <p>Rama Towers, 5-4-83, 2nd Floor, TSK Chambers, M.G. Road, Secunderabad-500003</p>
-              <p>Tel: +91 9002345678</p>
-              <p>Fax: +91 22 6359000</p>
-            </Col>
-          </Row>
-          <hr />
-          <p className="text-center">Copyright © 2025 GP Agarwal Group. All Rights Reserved.</p>
-        </Container>
-      </footer>
+      <Banner image="Customers/cta.webp">
+        <div
+          className="d-flex align-items-center"
+          style={{ maxWidth: "400px", height: "100%" }}
+        >
+          <div className="">
+            <h1 className="fs-2 ">Partner With Us</h1>
+            <p className="lead mt-3">
+              Looking for a reliable industrial partner? Connect with our team
+              today. We’re ready to power your vision with our capabilities and
+              commitment.
+            </p>
+            <Button
+              variant="light"
+              href="#contact-us"
+              className="mt-3 text-green fw-bold px-5 fs-5"
+            >
+              Get Started
+            </Button>
+          </div>
+        </div>
+      </Banner>
     </div>
   );
 };
 
-module.exports = Partners;
+export default Partners;

@@ -15,6 +15,9 @@ export default [
     route("/casting", "views/Casting/index.tsx"),
     route("/careers", "views/Career/index.tsx"),
     route("/contact-us", "views/ContactUs/index.tsx"),
+    route("/customers", "views/Customers/index.tsx"),
+    route("/suppliers", "views/Supplier/index.tsx"),
+    route("/news", "views/News/index.tsx"),
     route("/*", "views/NotFound/index.tsx"),
   ]),
 ] satisfies RouteConfig;

@@ -14,7 +14,8 @@ import Banner from "~/common/Banner";
 import HalfHalfSection from "~/common/HalfHalfSection";
 import "./styles.scss"; // Import your CSS file for custom styles
 import ImageWithText from "~/common/ImageWithText";
-import News from "~/welcome/internal/News";
+import News from "~/common/News";
+import SliderIcons from "~/common/SliderIcons";
 
 const SteelBusiness = () => {
   return (
@@ -27,7 +28,7 @@ const SteelBusiness = () => {
           style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
         >
           <div className="">
-            <h1 className="fs-2 fst-italic">
+            <h1 className="fs-2 cambria-bold-it">
               Steel – The Backbone of Our Industrial Strength
             </h1>
             <p className="lead mt-3">Forging Quality. Delivering Trust.</p>
@@ -48,13 +49,13 @@ const SteelBusiness = () => {
           }
           rightContent={
             <div className="d-flex flex-column gap-3">
-              <h2>The Steel Ecosystem</h2>
-              <p>
+              <h2 className="helvetica-neue-reg">The Steel Ecosystem</h2>
+              <p className="fs-5">
                 Steel lies at the core of GP Agarwal Group’s journey—a symbol of
                 our commitment to building India’s industrial future with
                 strength, precision, and purpose.
               </p>
-              <p>
+              <p className="fs-5">
                 Through our flagship entity, Maruti Ispat & Pipes Pvt. Ltd.
                 (MIPPL), we have emerged as one of South India’s largest
                 integrated steel plants—spread across 200+ acres in Martsalayam,
@@ -70,7 +71,7 @@ const SteelBusiness = () => {
       {/* What We Offer Section */}
       <section className="py-5 position-relative what-we-offer">
         <Container>
-          <h2 className="text-center mb-5">What We Offer</h2>
+          <h2 className="text-center mb-5 cambria-bold">What We Offer</h2>
           <Row className="flex-container">
             <Col className="flex-30">
               <Card className="border-0 text-center box-shadow-light">
@@ -80,7 +81,7 @@ const SteelBusiness = () => {
                   alt="Sponge Iron"
                 />
                 <Card.Body>
-                  <Card.Title>Sponge Iron</Card.Title>
+                  <Card.Title className="helvetica-neue-reg">Sponge Iron</Card.Title>
                 </Card.Body>
               </Card>
             </Col>
@@ -92,7 +93,7 @@ const SteelBusiness = () => {
                   alt="Steel Billets"
                 />
                 <Card.Body>
-                  <Card.Title>Steel Billets</Card.Title>
+                  <Card.Title className="helvetica-neue-reg">Steel Billets</Card.Title>
                 </Card.Body>
               </Card>
             </Col>
@@ -104,7 +105,7 @@ const SteelBusiness = () => {
                   alt="ERW Steel Pipes"
                 />
                 <Card.Body>
-                  <Card.Title>ERW Steel Pipes</Card.Title>
+                  <Card.Title className="helvetica-neue-reg">ERW Steel Pipes</Card.Title>
                 </Card.Body>
               </Card>
             </Col>
@@ -116,7 +117,7 @@ const SteelBusiness = () => {
                   alt="Hot Rolled Coils"
                 />
                 <Card.Body>
-                  <Card.Title>Hot Rolled Coils</Card.Title>
+                  <Card.Title className="helvetica-neue-reg">Hot Rolled Coils</Card.Title>
                 </Card.Body>
               </Card>
             </Col>
@@ -128,7 +129,7 @@ const SteelBusiness = () => {
                   alt="High-Tensile Solutions"
                 />
                 <Card.Body>
-                  <Card.Title>High-Tensile Solutions</Card.Title>
+                  <Card.Title className="helvetica-neue-reg">High-Tensile Solutions</Card.Title>
                 </Card.Body>
               </Card>
             </Col>
@@ -148,7 +149,7 @@ const SteelBusiness = () => {
             className="my-5 py-5 px-0 bg-white infra-internal"
             style={{ width: "85%" }}
           >
-            <h2 className="text-center mb-5 h2">Key Infrastructure</h2>
+            <h2 className="text-center mb-5 h2 cambria-bold">Key Infrastructure</h2>
             <div className="flex-container no-gap">
               <Col className="flex-30 border-end border-bottom">
                 <Card className="border-0 text-center p-4 ">
@@ -159,8 +160,8 @@ const SteelBusiness = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold">300 TPD</Card.Title>
-                    <Card.Text className="fw-bold">Sponge Iron Kilns</Card.Text>
+                    <Card.Title className="fw-bold helvetica-neue-reg">300 TPD</Card.Title>
+                    <Card.Text className="fw-bold helvetica-neue-reg">Sponge Iron Kilns</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
@@ -173,8 +174,8 @@ const SteelBusiness = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold">Concast AG</Card.Title>
-                    <Card.Text className="fw-bold">
+                    <Card.Title className="fw-bold helvetica-neue-reg">Concast AG</Card.Title>
+                    <Card.Text className="fw-bold helvetica-neue-reg">
                       Steel Melting Induction
                     </Card.Text>
                   </Card.Body>
@@ -189,8 +190,8 @@ const SteelBusiness = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold">1.7 MTPA</Card.Title>
-                    <Card.Text className="fw-bold">Hot Strip Mill</Card.Text>
+                    <Card.Title className="fw-bold helvetica-neue-reg">1.7 MTPA</Card.Title>
+                    <Card.Text className="fw-bold helvetica-neue-reg">Hot Strip Mill</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
@@ -203,8 +204,8 @@ const SteelBusiness = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold">8 MW WHRB</Card.Title>
-                    <Card.Text className="fw-bold">Clean Power</Card.Text>
+                    <Card.Title className="fw-bold helvetica-neue-reg">8 MW WHRB</Card.Title>
+                    <Card.Text className="fw-bold helvetica-neue-reg">Clean Power</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
@@ -217,8 +218,8 @@ const SteelBusiness = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold">In-house </Card.Title>
-                    <Card.Text className="fw-bold">R&D Lab</Card.Text>
+                    <Card.Title className="fw-bold helvetica-neue-reg">In-house </Card.Title>
+                    <Card.Text className="fw-bold helvetica-neue-reg">R&D Lab</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
@@ -230,7 +231,7 @@ const SteelBusiness = () => {
       {/* Industries We Serve Section */}
       <section className="py-5">
         <Container>
-          <h2 className="text-center mb-5">Industries We Serve</h2>
+          <h2 className="text-center mb-5 cambria-bold">Industries We Serve</h2>
           <div className="d-flex image-collage justify-content-between">
             <div className="flex-40">
               <ImageWithText
@@ -314,10 +315,10 @@ const SteelBusiness = () => {
               />
             </Col>
             <Col md={6}>
-              <h2 className="h3">
+              <h2 className="h3 cambria-bold ">
                 Our roadmap for building a sustainable, responsible future.
               </h2>
-              <p className="fs-6">
+              <p className="fs-5">
                 At GP Agarwal Group, our commitment to sustainability is not
                 limited to today. We are investing in long-term solutions that
                 protect our environment, empower communities, and build
@@ -331,20 +332,22 @@ const SteelBusiness = () => {
       {/* News & Features Section */}
       <section className="py-5">
         <Container>
-          <News lines={1} />
+          <div className="d-flex justify-content-between">
+            <h2 className="h3 text-uppercase  cambria-bold ">News & Features</h2>
+            <SliderIcons />
+          </div>
+          <News />
         </Container>
       </section>
 
       {/* The Road Ahead Section */}
-
       <Banner image="Steel/road.webp">
-        <div className="" style={{ flexBasis: "50%" }}></div>
         <div
-          className=""
-          style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
+          className="d-flex align-items-center"
+          style={{ maxWidth: "400px", height: "100%" }}
         >
           <div className="">
-            <h1 className="fs-2 ">The Road Ahead</h1>
+            <h1 className="fs-2  cambria-bold">The Road Ahead</h1>
             <p className="lead mt-3">
               {" "}
               At GP Agarwal Group, our commitment to sustainability is limited
