@@ -20,8 +20,8 @@ const AboutUs = () => {
     <div className="about-us-page">
       {/* Hero Section */}
       <Banner image="about/about-banner.png">
-        <div className="" style={{ flexBasis: "50%" }}></div>
-        <div className="" style={{ flexBasis: "50%", width: "45%" }}>
+        <div className="flex-50" ></div>
+        <div className="flex-50 banner-inner-text">
           <div className="">
             <h1 className="fs-2">
               A Legacy Forged in Steel, A Future Built on Purpose
@@ -48,7 +48,7 @@ const AboutUs = () => {
           }
           rightContent={
             <div className="d-flex flex-column gap-4">
-              <h2 className="fs-3 cambria-bold">What We Stand For?</h2>
+              <h2 className="fs-3 cambria-bold mt-2">What We Stand For?</h2>
               <p className="fs-5">
                 We are a company that manufactures steel—and supports the dreams
                 of a better tomorrow.
@@ -60,14 +60,16 @@ const AboutUs = () => {
               </p>
               <ul className="list-unstyled d-flex flex-column gap-2">
                 <li className="mb-2 fs-5 d-flex align-items-center">
-                  <Android className="bt-icon me-2" />
+                  <Image src="about/stand1.svg" className="me-2"/>
                   We don’t rely on coal.
                 </li>
                 <li className="mb-2 fs-5  d-flex align-items-center">
-                  <Android className="bt-icon me-2" /> We don’t cut corners.
+                  <Image src="about/stand2.svg" className="me-2"/>
+                  We don’t cut corners.
                 </li>
                 <li className="mb-2 fs-5 d-flex align-items-center">
-                  <Android className="bt-icon me-2" /> We deliver cleaner,
+                  <Image src="about/stand3.svg" className="me-2"/>
+                  We deliver cleaner,
                   ethical production, and innovation with heart.
                 </li>
               </ul>
@@ -113,7 +115,7 @@ const AboutUs = () => {
           <div className="d-flex card-container">
             <Col className="box-shadow-light p-4 my-card">
               <div className="d-flex align-items-center mb-3 ">
-                <Android className="bt-icon me-2" />
+                <Image src="about/values1.svg" className="me-2"/>
                 <h5>Integrity</h5>
               </div>
               <p>
@@ -123,31 +125,30 @@ const AboutUs = () => {
             </Col>
             <Col className="box-shadow-light p-4 my-card">
               <div className="d-flex align-items-center mb-3">
-                <Android className="bt-icon me-2" />
+                <Image src="about/values2.svg" className="me-2"/>
                 <h5>Innovation</h5>
               </div>
               <p>We solve real-world problems and shape a better future.</p>
             </Col>
             <Col className="box-shadow-light p-4 my-card">
               <div className="d-flex align-items-center mb-3">
-                <Android className="bt-icon me-2" />
+                <Image src="about/values3.svg" className="me-2"/>
                 <h5>Excellence</h5>
               </div>
-
               <p>
                 From raw material to product—we ensure quality at every stage.
               </p>
             </Col>
             <Col className="box-shadow-light p-4 my-card">
               <div className="d-flex align-items-center mb-3">
-                <Android className="bt-icon me-2" />
+                <Image src="about/values4.svg" className="me-2"/>
                 <h5>People-Centered</h5>
               </div>
               <p>We invest in people, valuing relationships with respect.</p>
             </Col>
             <Col className="box-shadow-light p-4 my-card">
               <div className="d-flex align-items-center mb-3">
-                <Android className="bt-icon me-2" />
+                <Image src="about/values5.svg" className="me-2"/>
                 <h5>Sustainability</h5>
               </div>
 
@@ -158,48 +159,53 @@ const AboutUs = () => {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-5 bg-light">
+      <section className="padding-y-100 leadership position-relative">
+        <Image src="about/bg-poly-right.svg" className="top-right-bg" />
+        <Image src="about/bg-poly-left.svg" className="bottom-left-bg" />
         <Container>
           <h2 className="text-center mb-3 h3 cambria-bold">Leadership</h2>
           <span className="d-block text-center mb-5 fs-5">
             Meet the visionaries behind the momentum — and the reason we’re
             rising
           </span>
-          <Row className="justify-content-around">
-            <Col md={3} className="text-center">
-              <Image
-                fluid
-                src="about/leadership1.webp"
-                alt="Gopal Agarwal"
-                className=""
-              />
-              <div className="light-border py-2">
-                <h5>Gopal Agarwal</h5>
-                <p className="fs-6 text-secondary mt-1">Managing Director</p>
+          <Row className="justify-content-center column-gap-5">
+            <Col lg={4} md={5} sm={6} className="text-center">
+              <div className="d-flex flex-column leader">
+                <Image
+                  fluid
+                  src="about/leadership1.webp"
+                  alt="Gopal Agarwal"
+                  className=""
+                />
+                <div className="light-border py-2">
+                  <h5>Gopal Agarwal</h5>
+                  <p className="fs-6 text-secondary mt-1">Managing Director</p>
+                  <Image
+                    fluid
+                    src="Contact/linkedin.svg"
+                    alt="Gopal Agarwal"
+                    className="my-2"
+                  />
+                </div>
               </div>
             </Col>
-            <Col md={3} className="text-center">
-              <Image
-                fluid
-                src="about/leadership2.webp"
-                alt="Abhishek Agarwal"
-              />
-              <div className="light-border py-2">
-                <h5>Abhishek Agarwal</h5>
-                <p className="fs-6 text-secondary mt-1">CEO</p>
-              </div>
-            </Col>
-            <Col md={3} className="text-center">
-              <Image
-                fluid
-                src="about/leadership3.webp"
-                alt="Vijay Kumar Natholia"
-              />
-              <div className="light-border py-2">
-                <h5>Vijay Kumar Natholia</h5>
-                <p className="fs-6 text-secondary mt-1">
-                  SENIOR VICE PRESIDENT OF SALES
-                </p>
+            <Col lg={4} md={5} sm={6} className="text-center">
+              <div className="d-flex flex-column leader">
+                <Image
+                  fluid
+                  src="about/leadership2.webp"
+                  alt="Abhishek Agarwal"
+                />
+                <div className="light-border py-2">
+                  <h5>Abhishek Agarwal</h5>
+                  <p className="fs-6 text-secondary mt-1">CEO</p>
+                  <Image
+                    fluid
+                    src="Contact/linkedin.svg"
+                    alt="Gopal Agarwal"
+                    className="my-2"
+                  />
+                </div>
               </div>
             </Col>
           </Row>
@@ -212,7 +218,7 @@ const AboutUs = () => {
           <h2 className="text-center mb-5 cambria-bold h3">
             Awards & Recognition
           </h2>
-          <Row>
+          <Row className="gap-3 gap-md-0">
             <Col md={3} className="text-center">
               <Card className="border-0 p-4  align-items-center box-shadow-light h-100">
                 <Card.Img

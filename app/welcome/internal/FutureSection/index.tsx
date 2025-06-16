@@ -37,7 +37,7 @@ const FutureSection: React.FC = () => {
       subHeading: "ISO & BIS",
       text: "Certified",
     },
-    { 
+    {
       heading: (
         <div>
           <Image src="HomePage/India.svg" className="" />
@@ -61,7 +61,7 @@ const FutureSection: React.FC = () => {
     <Container fluid className="future py-5">
       <Container>
         <Row>
-          <Col>
+          <Col md={6} lg={2}>
             <div className="d-flex flex-column justify-content-center align-items-end h-100">
               <Image src="/leaf.svg" />{" "}
               <p className="text-light cambria-bold text-end mt-2 fs-20">
@@ -70,7 +70,7 @@ const FutureSection: React.FC = () => {
             </div>
           </Col>
           {futureBoxes.map((future) => (
-            <Col>
+            <Col md={6} lg={2} className="my-3 my-lg-0">
               <WhiteBox data={future} />
             </Col>
           ))}

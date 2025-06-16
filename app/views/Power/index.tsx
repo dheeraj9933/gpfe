@@ -22,11 +22,8 @@ const SteelBusiness = () => {
     <div className="power-page">
       {/* Hero Section */}
       <Banner image="Power/banner.webp">
-        <div className="" style={{ flexBasis: "50%" }}></div>
-        <div
-          className=""
-          style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
-        >
+        <div className="flex-50"></div>
+        <div className="flex-50 banner-inner-text">
           <div className="">
             <h1 className="fs-2 cambria-bold-it mb-2">
               Power – Energizing Growth Sustainably
@@ -70,65 +67,70 @@ const SteelBusiness = () => {
 
       {/* Key Infrastructure Section 5 3 3 */}
       <section className=" ">
-        <Container
-          fluid
-          className="py-5 banner-img"
-          style={{ backgroundImage: "url('Steel/infra-bg.png')" }}
-        >
-          <Container
-            className="my-5 py-5 px-0 bg-white infra-internal"
-            style={{ width: "85%" }}
-          >
-            <h2 className="text-center mb-5 h2 cambria-bold">
-              Key Infrastructure
-            </h2>
-            <div className="flex-container no-gap">
-              <Col className="flex-30 border-end ">
-                <Card className="border-0 text-center p-4 ">
-                  <Card.Img
-                    variant="top"
-                    src="Steel/infra1.svg"
-                    alt="300 TPD Sponge Iron Kilns"
-                    className="my-icon mx-auto"
-                  />
-                  <Card.Body>
-                    <Card.Title className="fw-bold">300 TPD</Card.Title>
-                    <Card.Text className="fw-bold">Sponge Iron Kilns</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col className="flex-30 border-end ">
-                <Card className="border-0 text-center p-4 ">
-                  <Card.Img
-                    variant="top"
-                    src="Steel/infra2.svg"
-                    alt="300 TPD Sponge Iron Kilns"
-                    className="my-icon mx-auto"
-                  />
-                  <Card.Body>
-                    <Card.Title className="fw-bold">Concast AG</Card.Title>
-                    <Card.Text className="fw-bold">
-                      Steel Melting Induction
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col className="flex-30">
-                <Card className="border-0 text-center p-4 ">
-                  <Card.Img
-                    variant="top"
-                    src="Steel/infra3.svg"
-                    alt="300 TPD Sponge Iron Kilns"
-                    className="my-icon mx-auto"
-                  />
-                  <Card.Body>
-                    <Card.Title className="fw-bold">1.7 MTPA</Card.Title>
-                    <Card.Text className="fw-bold">Hot Strip Mill</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
+        <Container>
+          <h2 className="text-center mb-5 cambria-bold">Industries We Serve</h2>
+          <div className="d-flex flex-wrap image-collage justify-content-between">
+            <div className="flex-40 my-3">
+              <ImageWithText
+                src="Steel/collage-1.png"
+                alt="Collage 1"
+                text="Infrastructure & Construction"
+              />
             </div>
-          </Container>
+            <div className="flex-28 my-3">
+              <ImageWithText
+                src="Steel/collage-2.png"
+                alt="Collage 2"
+                text="Oil & Gas"
+              />
+            </div>
+            <div className="flex-28 my-3">
+              <ImageWithText
+                src="Steel/collage-3.png"
+                alt="Collage 3"
+                text="Power & Energy"
+              />
+            </div>
+          </div>
+          <div className="my-0 my-md-4 d-flex flex-wrap image-collage justify-content-between">
+            <div className="flex-49 my-3">
+              <ImageWithText
+                src="Steel/collage-4.png"
+                alt="Collage 4"
+                text="Railways"
+              />
+            </div>
+            <div className="flex-49 my-3">
+              <ImageWithText
+                src="Steel/collage-5.png"
+                alt="Collage 5"
+                text="Automotive"
+              />
+            </div>
+          </div>
+          <div className="d-flex flex-wrap image-collage justify-content-between">
+            <div className="flex-28 my-3">
+              <ImageWithText
+                src="Steel/collage-6.png"
+                alt="Collage 6"
+                text="Water"
+              />
+            </div>
+            <div className="flex-28 my-3">
+              <ImageWithText
+                src="Steel/collage-7.png"
+                alt="Collage 7"
+                text="Agriculture"
+              />
+            </div>
+            <div className="flex-40 my-3">
+              <ImageWithText
+                src="Steel/collage-8.png"
+                alt="Collage 8"
+                text="Solar"
+              />
+            </div>
+          </div>
         </Container>
       </section>
 

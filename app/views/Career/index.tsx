@@ -18,16 +18,14 @@ import Banner from "~/common/Banner";
 import HalfHalfSection from "~/common/HalfHalfSection";
 import ImageWithText from "~/common/ImageWithText";
 import SliderIcons from "~/common/SliderIcons";
+import "./styles.scss"; // Assuming you have a CSS file for styles
 
 const Careers = () => {
   return (
     <div className="career-page">
       <Banner image="Career/banner.webp">
-        <div className="" style={{ flexBasis: "50%" }}></div>
-        <div
-          className=""
-          style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
-        >
+        <div className="flex-50"></div>
+        <div className="flex-50 banner-inner-text">
           <div className="">
             <h1 className="fs-2 cambria-bold-it mb-2">
               Build Your Future with GP Agarwal Group
@@ -54,7 +52,7 @@ const Careers = () => {
           }
           rightContent={
             <div className="d-flex flex-column gap-3">
-              <h2 className="h4 text-uppercase m-0 helvetica-neue-reg">
+              <h2 className="mt-2 h4 text-uppercase m-0 helvetica-neue-reg">
                 Our Work Culture
               </h2>
               <h3
@@ -217,7 +215,9 @@ const Careers = () => {
         <Container>
           <Row className="mb-4">
             <Col>
-              <h2 className="text-uppercase h5 helvetica-neue-reg">Current Openings</h2>
+              <h2 className="text-uppercase h5 helvetica-neue-reg">
+                Current Openings
+              </h2>
               <h3 className="h4 cambria-bold">At GP Agarwal Group</h3>
             </Col>
             <Col className="d-flex justify-content-end px-5">
@@ -274,7 +274,9 @@ const Careers = () => {
       {/* Life at GP Agarwal Section */}
       <section className="padding-y-100">
         <Container>
-          <h2 className="text-center mb-5 cambria-bold">Life at GP Agarwal Group</h2>
+          <h2 className="text-center mb-5 cambria-bold">
+            Life at GP Agarwal Group
+          </h2>
           <div className="custom-grid">
             <div className="grid-item-6 bg-muted-blue rounded-4 p-3 ">
               <Card className="border-0 bg-transparent text-white">

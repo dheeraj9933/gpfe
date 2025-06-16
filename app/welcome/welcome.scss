@@ -1,4 +1,5 @@
 @use "../common/colors";
+@use "../common/media";
 
 @mixin background {
   background-repeat: no-repeat;
@@ -11,7 +12,7 @@ main {
   // sections
   .banner-text {
     position: relative;
-    top: 45%;
+    top: 40%;
     .inner-text-container {
       width: 400px;
       padding: 25px 0 25px 25px;
@@ -31,6 +32,21 @@ main {
       border-left: 4px solid #fff;
       border-top: 4px solid #fff;
       border-bottom: 4px solid #fff;
+    }
+    @include media.respond-to(sm) {
+      .inner-text-container {
+        width: 90%;
+      }
+    }
+  }
+
+  .founder-speech {
+    @media screen and (max-width: "992px") {
+      flex-basis: 80%;
+      width: 80%;
+      margin-left: auto;
+      max-width: 600px;
+      align-self: flex-end;
     }
   }
   .founder-img {
@@ -83,6 +99,29 @@ main {
       left: 0;
       bottom: -70px;
     }
+    @include media.respond-to(lg) {
+      padding-bottom: 100px;
+      .about-img-2 {
+        left: auto;
+        right: 200px;
+      }
+      .bottom-left-bg {
+        max-width: 200px;
+      }
+    }
+    @include media.respond-to(md) {
+      .about-us-section-container {
+        padding: 100px 10px 250px 10px;
+      }
+      padding: 0 10px;
+      .about-img-2 {
+        right: 0;
+        left: 0;
+      }
+      .about-img-1 {
+        width: 100%;
+      }
+    }
   }
 
   .industry-section {
@@ -99,7 +138,7 @@ main {
     }
     .steel {
       min-height: 500px;
-      background-image: url("HomePage/steel.webp");
+      background-image: url("/HomePage/steel.webp");
       @include background;
       .steel-inner {
         margin-top: 100px;
@@ -108,7 +147,7 @@ main {
     }
     .casting {
       min-height: 350px;
-      background-image: url("HomePage/casting.webp");
+      background-image: url("/HomePage/casting.webp");
       @include background;
       // margin-right: 2px;
       flex-basis: 49.8%;
@@ -116,7 +155,7 @@ main {
     .power {
       flex-basis: 50%;
       min-height: 350px;
-      background-image: url("HomePage/power.webp");
+      background-image: url("/HomePage/power.webp");
       @include background;
     }
   }
@@ -125,7 +164,14 @@ main {
     .top-right-bg {
       max-width: 250px;
     }
+
+    @media screen and (max-width: "992px") {
+      .top-right-bg {
+        max-width: 150px;
+      }
+    }
   }
+
   .sustainability {
     padding: 100px 0 60px 0;
     .sustainability-floater {
@@ -139,25 +185,15 @@ main {
     .bottom-right-bg {
       width: 250px;
     }
-  }
-
-  .career {
-    // padding: 100px 0 450px 0;
-    padding: 80px 0;
-    min-height: 750px;
-    overflow: hidden;
-    .career-container {
-      position: relative;
-      .career-text {
-        position: relative;
-        z-index: 1;
+    @media screen and (max-width: "992px") {
+      padding-bottom: 100px;
+      .bottom-right-bg {
+        width: 150px;
       }
-      .career-img-1 {
-        width: 600px;
-        position: absolute;
-        z-index: 0;
+      .sustainability-floater {
+        position: static;
         top: 0;
-        right: 0;
+        margin-top: 10px;
       }
     }
   }
@@ -178,8 +214,50 @@ main {
     .top-left-bg {
       width: 350px;
     }
+    @media screen and (max-width: "992px") {
+      .top-left-bg {
+        max-width: 200px;
+      }
+    }
   }
   .clients {
     padding: 0px 0 150px 0;
+  }
+  .career {
+    // padding: 100px 0 450px 0;
+    padding: 80px 0;
+    min-height: 750px;
+    overflow: hidden;
+    .career-container {
+      position: relative;
+      .career-text {
+        position: relative;
+        z-index: 1;
+        width: 50%;
+      }
+      .career-img-1 {
+        width: 600px;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    @media screen and (max-width: "992px") {
+      min-height: 800px;
+      .career-container {
+        min-height: 700px;
+        // height: 100%;
+        .career-text {
+          width: 90%;
+        }
+        .career-img-1 {
+          top: auto;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
   }
 }

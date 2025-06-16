@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Outlet } from "react-router";
 
 import { ChevronDown, Search } from "react-bootstrap-icons";
-import "./style.scss";
 import Navbar from "react-bootstrap/Navbar";
 import {
   Button,
@@ -16,7 +14,8 @@ import {
   NavDropdown,
   Row,
 } from "react-bootstrap";
-const Header = () => {
+
+const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -38,85 +37,71 @@ const Header = () => {
     // You can put any logic here (e.g., analytics, fetch, scroll)
   }, [location.pathname]);
   return (
-    <>
-      <header className="header">
-        <Navbar
-          data-bs-theme="transparent"
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            right: 0,
-            zIndex: 1000,
-            backgroundColor: "transparent",
-            padding: "14px 20px",
-          }}
-          className={scrolled ? "bg-white shadow-sm" : ""}
-        >
-          <Container className="d-flex justify-content-between align-items-center text-white nav-container">
-            <div className="flex-shrink-0 ">
-              <Navbar.Brand
-                href="/"
-                className="position-absolute"
-                style={{ top: "0", padding: "0px" }}
-              >
-                <Image src="/logo2.png" />
-              </Navbar.Brand>
-            </div>
-
-            {/* Middle section (slightly right of center) */}
-            <div
-              className={`position-absolute start-50 translate-middle-x ${
-                scrolled ? "" : ""
-              }`}
-              style={{ left: "55%" }}
+    <header className="header">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        data-bs-theme="transparent"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1000,
+          backgroundColor: "transparent",
+          padding: "0px 20px",
+        }}
+        className={scrolled ? "bg-white shadow-sm" : ""}
+      >
+        <Container className="d-flex justify-content-between align-items-center text-white nav-container p-0">
+          <div className="flex-shrink-0 ">
+            <Navbar.Brand
+              href="/"
+              className=""
+              style={{ top: "0", padding: "0px" }}
             >
-              <Nav className="me-auto">
-                <NavDropdown
-                  title={
-                    <span>
-                      Who we are <ChevronDown />
-                    </span>
-                  }
-                  id="basic-nav-dropdown"
-                >
-                  <NavDropdown.Item href="/about-us">About us</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Founders Journey
-                  </NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown
-                  title={
-                    <span>
-                      Our Business <ChevronDown />
-                    </span>
-                  }
-                  id="basic-nav-dropdown"
-                >
-                  <NavDropdown.Item href="/steel">Steel</NavDropdown.Item>
-                  <NavDropdown.Item href="/casting">Casting</NavDropdown.Item>
-                  <NavDropdown.Item href="/power">Power</NavDropdown.Item>
-                </NavDropdown>
-                <Nav.Link href="/Sustainability">Sustainability</Nav.Link>
-                <Nav.Link href="/careers">Careers</Nav.Link>
-                <NavDropdown
-                  title={
-                    <span>
-                      Partners <ChevronDown />
-                    </span>
-                  }
-                  id="basic-nav-dropdown"
-                >
-                  <NavDropdown.Item href="/suppliers">
-                    Suppliers
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="/customers">
-                    Customers
-                  </NavDropdown.Item>
-                </NavDropdown>
-                <Nav.Link href="/contact-us">Contact Us</Nav.Link>
-              </Nav>
-            </div>
+              <Image src="/logo.png" style={{}} />
+            </Navbar.Brand>
+          </div>
+          {/* Navbar expand button */}
+          <Navbar.Toggle className="" aria-controls="responsive-navbar-nav" />
+
+          {/* Middle section */}
+          <Navbar.Collapse
+            id="responsive-navbar-nav"
+            className="justify-content-between"
+          >
+            <Nav className="mx-auto column-gap-2">
+              <NavDropdown
+                title={
+                  <span>
+                    Who we are <ChevronDown />
+                  </span>
+                }
+                id="basic-nav-dropdown"
+              >
+                <NavDropdown.Item href="/about-us">About us</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Founders Journey
+                </NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown
+                title={
+                  <span>
+                    Our Business <ChevronDown />
+                  </span>
+                }
+                id="basic-nav-dropdown"
+              >
+                <NavDropdown.Item href="/steel">Steel</NavDropdown.Item>
+                <NavDropdown.Item href="/casting">Casting</NavDropdown.Item>
+                <NavDropdown.Item href="/power">Power</NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="/Sustainability">Sustainability</Nav.Link>
+              <Nav.Link href="/careers">Careers</Nav.Link>
+
+              <Nav.Link href="/contact-us">Contact Us</Nav.Link>
+            </Nav>
 
             {/* Right section */}
             <div
@@ -136,6 +121,7 @@ const Header = () => {
                 style={{
                   backgroundColor: `${scrolled ? "white" : "transparent"}`,
                   color: `${scrolled ? "black" : "white"}`,
+                  maxWidth: "100px",
                 }}
               >
                 <option>Eng</option>
@@ -144,127 +130,41 @@ const Header = () => {
                 <option value="3">Spanish</option>
               </Form.Select>
             </div>
-          </Container>
-        </Navbar>
-      </header>
-      <main>
-        <Outlet />
-      </main>
-      <footer className="">
-        <Container className="d-flex flex-column align-items-center">
-          <Image
-            src="logo.png"
-            alt="GP Agarwal Logo"
-            className="footer-logo mb-3"
-          />
+          </Navbar.Collapse>
         </Container>
+      </Navbar>
+      {/* <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
         <Container>
-          <Row className="footer-links-container">
-            <Col md={2}>
-              <h5 className="cambria-bold">Who We Are</h5>
-              <Nav className="flex-column">
-                <Nav.Link href="#about-us">About Us</Nav.Link>
-                <Nav.Link href="#founders-journey">Founder's Journey</Nav.Link>
-              </Nav>
-            </Col>
-            <Col md={2}>
-              <h5 className="cambria-bold">Our Businesses</h5>
-              <Nav className="flex-column">
-                <Nav.Link href="#steel">Steel</Nav.Link>
-                <Nav.Link href="#casting">Casting</Nav.Link>
-                <Nav.Link href="#power">Power</Nav.Link>
-              </Nav>
-            </Col>
-            <Col md={2}>
-              <h5 className="cambria-bold">Sustainability</h5>
-              <Nav className="flex-column">
-                <Nav.Link href="#steel">Steel</Nav.Link>
-                <Nav.Link href="#casting">Casting</Nav.Link>
-                <Nav.Link href="#power">Power</Nav.Link>
-              </Nav>
-            </Col>
-            <Col md={2}>
-              <h5 className="cambria-bold">Partners</h5>
-              <Nav className="flex-column">
-                <Nav.Link href="#steel">Steel</Nav.Link>
-                <Nav.Link href="#casting">Casting</Nav.Link>
-                <Nav.Link href="#power">Power</Nav.Link>
-              </Nav>
-            </Col>
-            <Col md={2}>
-              <h5 className="cambria-bold">Careers</h5>
-              <Nav className="flex-column">
-                <Nav.Link href="#steel" className="bold-link">
-                  Media
-                </Nav.Link>
-                <Nav.Link href="#casting" className="bold-link">
-                  Contact Us
-                </Nav.Link>
-                <Nav.Link href="#power" className="bold-link">
-                  News & Features
-                </Nav.Link>
-              </Nav>
-            </Col>
-            <Col md={2}>
-              <p className="">
-                Rama Towers, 5-4-83, 2nd Floor, TSK Chambers, M.G. Road,
-                Secunderabad-500003
-              </p>
-              <a
-                href="tel:+919002345678"
-                className="text-decoration-none text-black mt-2"
-              >
-                Tel: +91 9002345678
-              </a>
-              <br />
-              <a
-                href="mailto:info@gpagarwalgroup.com"
-                className="text-decoration-none text-black mt-2"
-              >
-                Email:info@gpagarwal.com
-              </a>
-            </Col>
-          </Row>
-          <Row className="my-4">
-            <Col>
-              <ul className="helvetica-neue-reg-it">
-                <li className="">Terms and condition</li>
-                <li>Legal Notice</li>
-                <li>Privacy Policy</li>
-              </ul>
-            </Col>
-            <Col className="d-flex justify-content-end column-gap-3">
-              <a href="http://www.google.com" target="__blank">
-                <Image
-                  src="social/LogoInstagram.svg"
-                  alt="Linked In"
-                  className=""
-                />
-              </a>
-              <a href="http://www.google.com" target="__blank">
-                <Image src="social/X.svg" alt="Linked In" className="" />
-              </a>
-              <a href="http://www.google.com" target="__blank">
-                <Image
-                  src="social/LogoYouTube.svg"
-                  alt="Linked In"
-                  className=""
-                />
-              </a>
-              <a href="http://www.google.com" target="__blank">
-                <Image src="social/LinkedIn.svg" alt="Linked In" className="" />
-              </a>
-            </Col>
-          </Row>
+          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="#features">Features</Nav.Link>
+              <Nav.Link href="#pricing">Pricing</Nav.Link>
+              <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Something
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">
+                  Separated link
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+            <Nav>
+              <Nav.Link href="#deets">More deets</Nav.Link>
+              <Nav.Link eventKey={2} href="#memes">
+                Dank memes
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
-        <p
-          className="text-center p-2  fs-7"
-          style={{ backgroundColor: "#F0F0F0", color: "#979797" }}
-        >
-          Copyright © 2025 GP Agarwal Group. All Rights Reserved.
-        </p>
-      </footer>
-    </>
+      </Navbar> */}
+    </header>
   );
 };
 

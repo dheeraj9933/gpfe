@@ -2,6 +2,7 @@
   .clients-inner-container {
     overflow: hidden;
 
+
     .clients-scroll {
       position: relative;
       overflow: hidden;
@@ -34,6 +35,12 @@
         }
       }
     }
+     @media screen and (max-width: "992px") {
+      flex-wrap: wrap;
+      .client-text {
+        margin-bottom: 20px;
+      }
+     }
   }
 }
 

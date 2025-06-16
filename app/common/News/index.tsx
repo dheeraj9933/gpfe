@@ -42,21 +42,21 @@ const News: React.FC = (props) => {
   return (
     <div className="news-section">
       
-      <Row className="my-3">
-        <Col md={12}>
-          <Row className="gap-3 flex-nowrap">
-            <Col xs={6} className="light-grey-bg news-item">
+      {/* <Row className="my-3"> */}
+        {/* <Col md={12}> */}
+          <Row className="gap-row-3 gap-lg-3 flex-wrap flex-lg-nowrap my-3">
+            <Col md={12} lg={6} className="light-grey-bg news-item my-3">
               <NewsBig data={newsData2} />
             </Col>
-            <Col md={3} className="light-grey-bg news-item">
+            <Col md={6} lg={3} className="light-grey-bg news-item">
               <NewsSmall data={newsData} />
             </Col>
-            <Col md={3} className="light-grey-bg news-item">
+            <Col md={6} lg={3} className="light-grey-bg news-item">
               <NewsSmall data={newsData} />
             </Col>
           </Row>
-        </Col>
-      </Row>
+        {/* </Col> */}
+      {/* </Row> */}
     </div>
   );
 };

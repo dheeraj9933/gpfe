@@ -6,7 +6,7 @@ const Sustainability: React.FC = () => {
     <Container fluid className="sustainability position-relative dark-blue-bg">
       <Container className="">
         <Image src="/sustain-1.png" alt="Sustainability" className="w-100" />
-        <div className="d-flex gap-4 bg-body text-dark sustainability-floater ">
+        <div className="d-flex gap-4 bg-body text-dark sustainability-floater flex-wrap flex-lg-nowrap">
           <Image src="/sustain-2.png" alt="Sustainability" className="" />
           <div className="d-flex flex-column gap-2">
             <h3 className="h5 text-uppercase m-0 mt-3 orange-text helvetica-neue-reg">

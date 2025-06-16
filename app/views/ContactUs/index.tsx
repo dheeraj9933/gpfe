@@ -31,8 +31,8 @@ const ContactUs = () => {
             />
           }
           rightContent={
-            <div className="d-flex flex-column gap-3">
-              <h2 className="orange-text h4 m-0 helvetica-neue-reg">CONTACT US</h2>
+            <div className="d-flex flex-column gap-3 w-100">
+              <h2 className="orange-text h4 m-0 helvetica-neue-reg mt-3 mt-md-0">CONTACT US</h2>
               <h1 className="h2 cambria-bold ">Let's Get in Touch</h1>
               <p className="fs-5">
                 Or reach out manually to{" "}
@@ -135,7 +135,7 @@ const ContactUs = () => {
             </a>
           </p>
           <Row className="mt-5">
-            <Col md={4}>
+            <Col md={4} className="my-2">
               <Card className="border-0 light-border p-2 border-rounded">
                 <Card.Body>
                   <Card.Img
@@ -158,7 +158,7 @@ const ContactUs = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={4}>
+            <Col md={4} className="my-2">
               <Card className="border-0 light-border p-2 border-rounded">
                 <Card.Body>
                   <Card.Img
@@ -176,7 +176,7 @@ const ContactUs = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={4}>
+            <Col md={4} className="my-2">
               <Card className="border-0 light-border  p-2 border-rounded">
                 <Card.Body>
                   <Card.Img

@@ -19,7 +19,7 @@ const Clients: React.FC = () => {
     <Container fluid className="clients">
       <Container className="clients-text d-flex gap-4 align-items-end">
         <div className="d-flex clients-inner-container">
-          <div className="client-text d-flex flex-column gap-2">
+          <div className="client-text d-flex flex-column gap-2 ">
             <h3 className="h5 text-uppercase m-0 mt-3 orange-text helvetica-neue-reg">
               CLIENTS
             </h3>

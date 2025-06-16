@@ -3,4 +3,34 @@
     font-family: "Cambria";
     font-weight: bold;
   }
+  .arrow-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    border: 2px solid #fff;
+    padding: 7px 1px 5px 1px;
+    border-radius: 15px;
+    svg {
+      position: relative;
+      font-size: 20px;
+      animation: bounce 2s ease-in-out infinite;
+    }
+  }
+  @keyframes bounce {
+    0% {
+      bottom: 0px;
+    }
+    10% {
+      bottom: 0px;
+    }
+    40% {
+      bottom: 8px;
+    }
+    60% {
+      bottom: 8px;
+    }
+    100% {
+      bottom: 0px;
+    }
+  }
 }

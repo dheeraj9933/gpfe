@@ -22,13 +22,13 @@ const Partners = () => {
         <div className="" style={{ flexBasis: "50%" }}></div>
         <div
           className=""
-          style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
+          style={{ flexBasis: "50%", width: "50%", maxWidth: "500px" }}
         >
           <div className="">
-            <h1 className="fs-2 fst-italic mb-2">
+            <h1 className="fs-2  cambria-bold-it mb-2">
               Your Vision, Our Commitment
             </h1>
-            <p>
+            <p className="fs-5">
               We are committed to understanding our customers’ unique needs and
               delivering solutions that exceed expectations. With a focus on
               quality, reliability, and long-term value, we partner with clients
@@ -51,13 +51,13 @@ const Partners = () => {
           }
           rightContent={
             <div className="d-flex flex-column gap-3">
-              <h2 className="h4 orange-text text-uppercase m-0">
+              <h2 className="h5 orange-text text-uppercase m-0 helvetica-neue-reg">
                 Our Customer Philosophy
               </h2>
-              <h3 className="h4  m-0">
+              <h3 className="h3 cambria-bold m-0">
                 Your Trust. <br /> Our Responsibility.
               </h3>
-              <p style={{ maxWidth: "500px" }}>
+              <p className="fs-5" style={{ maxWidth: "500px" }}>
                 For decades, GP Agarwal Group has stood as a symbol of
                 reliability for our customers across India and beyond. We serve
                 industries that demand strength, precision, and accountability —
@@ -73,8 +73,8 @@ const Partners = () => {
           <div className="card-container justify-content-between grid-container-3">
             <Col className="flex-30 d-flex ">
               <div className="d-flex flex-column justify-content-center h-100 w-75">
-                <h3 className="h4 orange-text text-uppercase">our customers</h3>
-                <h4 className="h3">Industries that We Serve</h4>
+                <h3 className="h5 orange-text text-uppercase helvetica-neue-reg">our customers</h3>
+                <h4 className="h3 cambria-bold">Industries that We Serve</h4>
               </div>
             </Col>
             <Col className="flex-30">
@@ -127,7 +127,7 @@ const Partners = () => {
             className="my-5 py-5 px-0 bg-white infra-internal border-rounded"
             style={{ width: "85%" }}
           >
-            <h2 className="text-center mb-5 h2">Our Promise to Customers</h2>
+            <h2 className="text-center mb-5 h2 cambria-bold">Our Promise to Customers</h2>
             <div className="flex-container no-gap">
               <Col className="flex-30 border-end border-bottom">
                 <Card className="border-0 text-center p-4 ">
@@ -228,7 +228,7 @@ const Partners = () => {
           style={{ maxWidth: "400px", height: "100%" }}
         >
           <div className="">
-            <h1 className="fs-2 ">Partner With Us</h1>
+            <h1 className="fs-2 cambria-bold">Partner With Us</h1>
             <p className="lead mt-3">
               Looking for a reliable industrial partner? Connect with our team
               today. We’re ready to power your vision with our capabilities and

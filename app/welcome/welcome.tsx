@@ -1,4 +1,4 @@
-import { Button, Col, Container, Image, Row } from "react-bootstrap";
+import { Button, Carousel, Col, Container, Image, Row } from "react-bootstrap";
 import "./welcome.scss";
 import FutureSection from "./internal/FutureSection";
 import AboutUs from "./internal/About Us";
@@ -11,54 +11,61 @@ import News from "../common/News";
 import Tags from "~/common/Tags";
 import { Link } from "react-router";
 import { ArrowRight } from "react-bootstrap-icons";
+import Banner from "~/common/Banner";
 
 export function Welcome() {
   return (
     <>
       <main className="">
         {/* Hero section */}
-        <Container
-          fluid
-          className="p-0 text-white min-vh-100"
-          style={{
-            backgroundImage: `url('HomePage/banner.webp')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            width: "100%",
-            height: "300px", // or whatever height you need
-          }}
-          data-bs-theme="dark"
-        >
-          <Container className="banner-text">
-            <div className="inner-text-container ">
-              <h2 className="cambria-bold-it mb-3">Strength in Every Load. Progress in Every Pipe.</h2>
-              <p className="myriad-reg">
-                At GP Agarwal Group, our steel pipes move more than material —
-                they carry the vision of a stronger, better-connected India.
-                From production to project delivery, every load represents
-                precision, trust, and the backbone of infrastructure.
-              </p>
-            </div>
-          </Container>
-        </Container>
+        <Carousel fade controls={false} indicators={false} pause={false}>
+          <Carousel.Item>
+            <Banner image="HomePage/banner.webp" className="">
+              <div className="banner-text">
+                <div className="inner-text-container">
+                  <h2 className="cambria-bold-it mb-3">
+                    Strength in Every Load. Progress in Every Pipe.
+                  </h2>
+                  <p className="myriad-reg">
+                    At GP Agarwal Group, our steel pipes move more than material
+                    — they carry the vision of a stronger, better-connected
+                    India. From production to project delivery, every load
+                    represents precision, trust, and the backbone of
+                    infrastructure.
+                  </p>
+                </div>
+              </div>
+            </Banner>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Banner image="HomePage/banner2.webp" className="">
+              <div className="banner-text">
+                <div className="inner-text-container">
+                  <h2 className="cambria-bold-it mb-3">
+                    Piping Life Forward, Sustainably.
+                  </h2>
+                  <p className="myriad-reg">
+                    Clean water, clean energy, and a cleaner tomorrow — our
+                    steel infrastructure powers smart cities with sustainability
+                    at their core. Steel pipelines that connect not just places,
+                    but possibilities.
+                  </p>
+                </div>
+              </div>
+            </Banner>
+          </Carousel.Item>
+        </Carousel>
 
         {/* Founder section */}
         <section className="founder-section">
           <Container>
             <Row className="py-5 my-5">
-              <Col style={{ flexBasis: "50%", flexGrow: "0" }}>
+              <Col className="flex-50 mobile-100">
                 <div className="founder-img d-flex justify-content-center">
                   <Image src="HomePage/founder.webp" className="w-50" />
                 </div>
               </Col>
-              <Col
-                className=""
-                style={{
-                  flexBasis: "45%",
-                  flexGrow: "0",
-                  position: "relative",
-                }}
-              >
+              <Col className="position-relative flex-45 mt-4 mt-lg-0 founder-speech">
                 <Image src="/annotations.png" className="speech-quote" />
                 <h2 className="helvetica-neue-reg-it">
                   Cherish every day. We have adapted the journey as our
@@ -104,11 +111,15 @@ export function Welcome() {
         {/* News */}
         <section className="padding-y-100 position-relative news-container">
           <Container>
-            <h2 className="orange-text h3 text-uppercase helvetica-neue-reg">News & Features</h2>
+            <h2 className="orange-text h3 text-uppercase helvetica-neue-reg">
+              News & Features
+            </h2>
             <div className="d-flex justify-content-between my-4">
               <Tags />
               <div className="fw-bold">
-                <Link to='/news' className="text-black text-decoration-none">View More <ArrowRight className="fs-5"/></Link>
+                <Link to="/news" className="text-black text-decoration-none">
+                  View More <ArrowRight className="fs-5" />
+                </Link>
               </div>
             </div>
             <News />

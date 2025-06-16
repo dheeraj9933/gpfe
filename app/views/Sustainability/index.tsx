@@ -19,11 +19,8 @@ const Sustainability = () => {
     <div className="sustainability-page">
       {/* Hero Section */}
       <Banner image="Sustainability/banner.webp">
-        <div className="" style={{ flexBasis: "50%" }}></div>
-        <div
-          className=""
-          style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
-        >
+        <div className="flex-50"></div>
+        <div className="flex-50 banner-inner-text">
           <div className="">
             <h1 className="fs-2 cambria-bold-it">
               Growing Responsibly, Building Sustainably
@@ -66,7 +63,7 @@ const Sustainability = () => {
                 and every forward step leaves a positive legacy for generations
                 to come.
               </p>
-              <p className="text-white green-bg p-3 rounded commitment w-75">
+              <p className="text-white green-bg p-3 rounded commitment w-100 w-md-75">
                 <strong>Our vision is clear:</strong> To create an India where
                 every innovation fuels resilience, every investment strengthens
                 the planet, and every step forward leaves a positive legacy for
@@ -84,7 +81,7 @@ const Sustainability = () => {
             Three Sustainability Pillars
           </h2>
           <Row className="justify-content-around align-items-stretch">
-            <Col className="flex-30">
+            <Col className="flex-100 flex-md-30">
               <Card className="border-0 text-center px-2 pt-5 box-shadow-light h-100">
                 <Card.Img
                   variant="top"
@@ -107,7 +104,7 @@ const Sustainability = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col className="flex-30">
+            <Col className="flex-100 flex-md-30 my-2">
               <Card className="border-0 text-center px-2 pt-5 box-shadow-light h-100">
                 <Card.Img
                   variant="top"
@@ -130,7 +127,7 @@ const Sustainability = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col className="flex-30">
+            <Col className="flex-100 flex-md-30">
               <Card className="border-0 text-center px-2 pt-5 box-shadow-light h-100">
                 <Card.Img
                   variant="top"
@@ -164,9 +161,10 @@ const Sustainability = () => {
       {/* CSR and ESG Section */}
       <section className="">
         <Container fluid className="">
-          <Row className="text-white flex-nowrap" style={{ gap: "5px" }}>
+          <Row className="text-white flex-wrap flex-md-nowrap" style={{ gap: "5px" }}>
             <Col
               md={6}
+              xs={12}
               className="banner-img py-2 d-flex flex-column justify-content-around flex-shrink-1"
               style={{
                 backgroundImage: "url('/Sustainability/csr.webp')",
@@ -181,7 +179,9 @@ const Sustainability = () => {
                   className="rounded shadow"
                 />
                 <hr className="border border-white border-2 opacity-100 w-25"></hr>
-                <span className="text-center h4 helvetica-neue-reg">Our CSR </span>
+                <span className="text-center h4 helvetica-neue-reg">
+                  Our CSR{" "}
+                </span>
               </div>
               <a
                 href="#explore"
@@ -193,8 +193,9 @@ const Sustainability = () => {
             </Col>
             <Col
               md={6}
+              xs={12}
               className="banner-img py-2 d-flex flex-column justify-content-around"
-              style={{ backgroundImage: "url('/Sustainability/esg.webp')" }}
+              style={{ backgroundImage: "url('/Sustainability/esg.webp')" , minHeight: "400px",}}
             >
               <div className="d-flex flex-column align-items-center">
                 <Image
@@ -204,7 +205,9 @@ const Sustainability = () => {
                   className="rounded shadow"
                 />
                 <hr className="border border-white border-2 opacity-100 w-25"></hr>
-                <span className="text-center h4 helvetica-neue-reg">Our ESG </span>
+                <span className="text-center h4 helvetica-neue-reg">
+                  Our ESG{" "}
+                </span>
               </div>
 
               <a
@@ -248,24 +251,26 @@ const Sustainability = () => {
           </Row>
           {/* Cards */}
           <Row className="card-container justify-content-between">
-            <Col className="flex-24">
+            <Col className="flex-24 my-2">
               <Card className="border-0 p-4 box-shadow-light h-100">
-                  <Card.Img
-                    variant="top"
-                    src="Sustainability/roadmap1.svg"
-                    alt="Clean Manufacturing"
-                    className="rounded-circle mb-2"
-                    style={{ width: "50px", height: "50px" }}
-                  />
+                <Card.Img
+                  variant="top"
+                  src="Sustainability/roadmap1.svg"
+                  alt="Clean Manufacturing"
+                  className="rounded-circle mb-2"
+                  style={{ width: "50px", height: "50px" }}
+                />
                 <Card.Body className="p-0 mt-2">
-                  <Card.Title className="cambria-bold">Expand Clean Energy</Card.Title>
+                  <Card.Title className="cambria-bold">
+                    Expand Clean Energy
+                  </Card.Title>
                   <Card.Text>
                     Transition more operations to renewable energy sources.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
-            <Col className="flex-24">
+            <Col className="flex-24 my-2">
               <Card className="border-0 p-4 box-shadow-light h-100">
                 <Card.Img
                   variant="top"
@@ -275,14 +280,16 @@ const Sustainability = () => {
                   style={{ width: "50px", height: "50px" }}
                 />
                 <Card.Body className="p-0 mt-2">
-                  <Card.Title className="cambria-bold">Achieve Net-Zero by 2030</Card.Title>
+                  <Card.Title className="cambria-bold">
+                    Achieve Net-Zero by 2030
+                  </Card.Title>
                   <Card.Text>
                     Reduce emissions through greener practices.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
-            <Col className="flex-24">
+            <Col className="flex-24 my-2">
               <Card className="border-0 p-4 box-shadow-light h-100">
                 <Card.Img
                   variant="top"
@@ -292,14 +299,16 @@ const Sustainability = () => {
                   style={{ width: "50px", height: "50px" }}
                 />
                 <Card.Body className="p-0 mt-2">
-                  <Card.Title className="cambria-bold">Strengthen Community Development</Card.Title>
+                  <Card.Title className="cambria-bold">
+                    Strengthen Community Development
+                  </Card.Title>
                   <Card.Text>
                     Enhance education and livelihood programs.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
-            <Col className="flex-24">
+            <Col className="flex-24 my-2">
               <Card className="border-0 p-4 box-shadow-light h-100">
                 <Card.Img
                   variant="top"
@@ -309,7 +318,9 @@ const Sustainability = () => {
                   style={{ width: "50px", height: "50px" }}
                 />
                 <Card.Body className="p-0 mt-2">
-                  <Card.Title className="cambria-bold">Adopt Circular Economy Principles</Card.Title>
+                  <Card.Title className="cambria-bold">
+                    Adopt Circular Economy Principles
+                  </Card.Title>
                   <Card.Text>Reduce waste in all operations.</Card.Text>
                 </Card.Body>
               </Card>

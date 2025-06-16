@@ -22,11 +22,8 @@ const SteelBusiness = () => {
     <div className="steel-page">
       {/* Hero Section */}
       <Banner image="Steel/banner.webp">
-        <div className="" style={{ flexBasis: "50%" }}></div>
-        <div
-          className=""
-          style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
-        >
+        <div className="flex-50"></div>
+        <div className="flex-50 banner-inner-text">
           <div className="">
             <h1 className="fs-2 cambria-bold-it">
               Steel – The Backbone of Our Industrial Strength
@@ -81,7 +78,9 @@ const SteelBusiness = () => {
                   alt="Sponge Iron"
                 />
                 <Card.Body>
-                  <Card.Title className="helvetica-neue-reg">Sponge Iron</Card.Title>
+                  <Card.Title className="helvetica-neue-reg">
+                    Sponge Iron
+                  </Card.Title>
                 </Card.Body>
               </Card>
             </Col>
@@ -93,7 +92,9 @@ const SteelBusiness = () => {
                   alt="Steel Billets"
                 />
                 <Card.Body>
-                  <Card.Title className="helvetica-neue-reg">Steel Billets</Card.Title>
+                  <Card.Title className="helvetica-neue-reg">
+                    Steel Billets
+                  </Card.Title>
                 </Card.Body>
               </Card>
             </Col>
@@ -105,7 +106,9 @@ const SteelBusiness = () => {
                   alt="ERW Steel Pipes"
                 />
                 <Card.Body>
-                  <Card.Title className="helvetica-neue-reg">ERW Steel Pipes</Card.Title>
+                  <Card.Title className="helvetica-neue-reg">
+                    ERW Steel Pipes
+                  </Card.Title>
                 </Card.Body>
               </Card>
             </Col>
@@ -117,7 +120,9 @@ const SteelBusiness = () => {
                   alt="Hot Rolled Coils"
                 />
                 <Card.Body>
-                  <Card.Title className="helvetica-neue-reg">Hot Rolled Coils</Card.Title>
+                  <Card.Title className="helvetica-neue-reg">
+                    Hot Rolled Coils
+                  </Card.Title>
                 </Card.Body>
               </Card>
             </Col>
@@ -129,7 +134,9 @@ const SteelBusiness = () => {
                   alt="High-Tensile Solutions"
                 />
                 <Card.Body>
-                  <Card.Title className="helvetica-neue-reg">High-Tensile Solutions</Card.Title>
+                  <Card.Title className="helvetica-neue-reg">
+                    High-Tensile Solutions
+                  </Card.Title>
                 </Card.Body>
               </Card>
             </Col>
@@ -149,7 +156,9 @@ const SteelBusiness = () => {
             className="my-5 py-5 px-0 bg-white infra-internal"
             style={{ width: "85%" }}
           >
-            <h2 className="text-center mb-5 h2 cambria-bold">Key Infrastructure</h2>
+            <h2 className="text-center mb-5 h2 cambria-bold">
+              Key Infrastructure
+            </h2>
             <div className="flex-container no-gap">
               <Col className="flex-30 border-end border-bottom">
                 <Card className="border-0 text-center p-4 ">
@@ -160,8 +169,12 @@ const SteelBusiness = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold helvetica-neue-reg">300 TPD</Card.Title>
-                    <Card.Text className="fw-bold helvetica-neue-reg">Sponge Iron Kilns</Card.Text>
+                    <Card.Title className="fw-bold helvetica-neue-reg">
+                      300 TPD
+                    </Card.Title>
+                    <Card.Text className="fw-bold helvetica-neue-reg">
+                      Sponge Iron Kilns
+                    </Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
@@ -174,7 +187,9 @@ const SteelBusiness = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold helvetica-neue-reg">Concast AG</Card.Title>
+                    <Card.Title className="fw-bold helvetica-neue-reg">
+                      Concast AG
+                    </Card.Title>
                     <Card.Text className="fw-bold helvetica-neue-reg">
                       Steel Melting Induction
                     </Card.Text>
@@ -190,8 +205,12 @@ const SteelBusiness = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold helvetica-neue-reg">1.7 MTPA</Card.Title>
-                    <Card.Text className="fw-bold helvetica-neue-reg">Hot Strip Mill</Card.Text>
+                    <Card.Title className="fw-bold helvetica-neue-reg">
+                      1.7 MTPA
+                    </Card.Title>
+                    <Card.Text className="fw-bold helvetica-neue-reg">
+                      Hot Strip Mill
+                    </Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
@@ -204,8 +223,12 @@ const SteelBusiness = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold helvetica-neue-reg">8 MW WHRB</Card.Title>
-                    <Card.Text className="fw-bold helvetica-neue-reg">Clean Power</Card.Text>
+                    <Card.Title className="fw-bold helvetica-neue-reg">
+                      8 MW WHRB
+                    </Card.Title>
+                    <Card.Text className="fw-bold helvetica-neue-reg">
+                      Clean Power
+                    </Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
@@ -218,8 +241,12 @@ const SteelBusiness = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold helvetica-neue-reg">In-house </Card.Title>
-                    <Card.Text className="fw-bold helvetica-neue-reg">R&D Lab</Card.Text>
+                    <Card.Title className="fw-bold helvetica-neue-reg">
+                      In-house{" "}
+                    </Card.Title>
+                    <Card.Text className="fw-bold helvetica-neue-reg">
+                      R&D Lab
+                    </Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
@@ -232,22 +259,22 @@ const SteelBusiness = () => {
       <section className="py-5">
         <Container>
           <h2 className="text-center mb-5 cambria-bold">Industries We Serve</h2>
-          <div className="d-flex image-collage justify-content-between">
-            <div className="flex-40">
+          <div className="d-flex flex-wrap image-collage justify-content-between">
+            <div className="flex-40 my-3">
               <ImageWithText
                 src="Steel/collage-1.png"
                 alt="Collage 1"
                 text="Infrastructure & Construction"
               />
             </div>
-            <div className="flex-28">
+            <div className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-2.png"
                 alt="Collage 2"
                 text="Oil & Gas"
               />
             </div>
-            <div className="flex-28">
+            <div className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-3.png"
                 alt="Collage 3"
@@ -255,15 +282,15 @@ const SteelBusiness = () => {
               />
             </div>
           </div>
-          <div className="my-4 d-flex image-collage justify-content-between">
-            <div className="flex-49">
+          <div className="my-0 my-md-4 d-flex flex-wrap image-collage justify-content-between">
+            <div className="flex-49 my-3">
               <ImageWithText
                 src="Steel/collage-4.png"
                 alt="Collage 4"
                 text="Railways"
               />
             </div>
-            <div className="flex-49">
+            <div className="flex-49 my-3">
               <ImageWithText
                 src="Steel/collage-5.png"
                 alt="Collage 5"
@@ -271,22 +298,22 @@ const SteelBusiness = () => {
               />
             </div>
           </div>
-          <div className="d-flex image-collage justify-content-between">
-            <div className="flex-28">
+          <div className="d-flex flex-wrap image-collage justify-content-between">
+            <div className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-6.png"
                 alt="Collage 6"
                 text="Water"
               />
             </div>
-            <div className="flex-28">
+            <div className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-7.png"
                 alt="Collage 7"
                 text="Agriculture"
               />
             </div>
-            <div className="flex-40">
+            <div className="flex-40 my-3">
               <ImageWithText
                 src="Steel/collage-8.png"
                 alt="Collage 8"
@@ -333,7 +360,9 @@ const SteelBusiness = () => {
       <section className="py-5">
         <Container>
           <div className="d-flex justify-content-between">
-            <h2 className="h3 text-uppercase  cambria-bold ">News & Features</h2>
+            <h2 className="h3 text-uppercase  cambria-bold ">
+              News & Features
+            </h2>
             <SliderIcons />
           </div>
           <News />

@@ -22,13 +22,13 @@ const Partners = () => {
         <div className="" style={{ flexBasis: "50%" }}></div>
         <div
           className=""
-          style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
+          style={{ flexBasis: "50%", width: "50%", maxWidth: "500px" }}
         >
           <div className="">
-            <h1 className="fs-2 fst-italic mb-2">
+            <h1 className="fs-2  cambria-bold-it mb-2">
               Partnering for Progress: Our Suppliers
             </h1>
-            <p>
+            <p className="fs-5">
               At GP Agarwal Group, we believe strong partnerships with our
               suppliers are the foundation of our continued success. By working
               with trusted, ethical, and innovative suppliers, we ensure the
@@ -51,11 +51,11 @@ const Partners = () => {
           }
           rightContent={
             <div className="d-flex flex-column gap-3">
-              <h2 className="h4 orange-text text-uppercase m-0">
+              <h2 className="h5 orange-text text-uppercase m-0 helvetica-neue-reg">
                 Strengthening Foundations
               </h2>
-              <h3 className="h4  m-0">Building a Network of Excellence</h3>
-              <p style={{ maxWidth: "500px" }}>
+              <h3 className=" cambria-bold m-0">Building a Network of Excellence</h3>
+              <p className="fs-5" style={{ maxWidth: "500px" }}>
                 At GP Agarwal Group, our suppliers are more than just vendors —
                 they are strategic partners in our journey toward innovation,
                 quality, and growth. We rely on a robust network of reliable,
@@ -72,10 +72,10 @@ const Partners = () => {
           <div className="card-container justify-content-between grid-container-3">
             <Col className="flex-30 d-flex ">
               <div className="d-flex flex-column justify-content-center h-100 w-75">
-                <h3 className="h4 orange-text text-uppercase">
+                <h3 className="h5 orange-text text-uppercase helvetica-neue-reg">
                   Why Partner With Us
                 </h3>
-                <h4 className="h3">Our Terms & Value Proposition</h4>
+                <h4 className="h3 cambria-bold">Our Terms & Value Proposition</h4>
               </div>
             </Col>
             <Col className="flex-30">
@@ -203,8 +203,8 @@ const Partners = () => {
             className="my-5 py-5 px-0 bg-white infra-internal border-rounded"
             style={{ width: "85%" }}
           >
-            <h2 className="text-center mb-5 h2">What We Look For</h2>
-            <div className="flex-container no-gap">
+            <h2 className="text-center mb-5 h2 cambria-bold">What We Look For</h2>
+            <div className="flex-container no-gap helvetica-neue-bold">
               <Col className="flex-30 border-end border-bottom">
                 <Card className="border-0 text-center p-4 ">
                   <Card.Img
@@ -214,8 +214,8 @@ const Partners = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold">Quality Product</Card.Title>
-                    <Card.Text className="fw-bold">
+                    <Card.Title className="">Quality Product</Card.Title>
+                    <Card.Text className="">
                       Rigorous quality control for consistent output{" "}
                     </Card.Text>
                   </Card.Body>
@@ -230,10 +230,10 @@ const Partners = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold">
+                    <Card.Title className="">
                       Compliance-Ready
                     </Card.Title>
-                    <Card.Text className="fw-bold">
+                    <Card.Text className="">
                       Adherence to certifications and industry norms.
                     </Card.Text>
                   </Card.Body>
@@ -248,10 +248,10 @@ const Partners = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold">
+                    <Card.Title className="">
                       Tailored Solutions
                     </Card.Title>
-                    <Card.Text className="fw-bold">
+                    <Card.Text className="">
                       understanding project’s needs & customize offerings.
                     </Card.Text>
                   </Card.Body>
@@ -266,10 +266,10 @@ const Partners = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold">
+                    <Card.Title className="">
                       On time Delivery
                     </Card.Title>
-                    <Card.Text className="fw-bold">
+                    <Card.Text className="">
                       Aligned values in responsibility and impact.
                     </Card.Text>
                   </Card.Body>
@@ -284,10 +284,10 @@ const Partners = () => {
                     className="my-icon mx-auto"
                   />
                   <Card.Body>
-                    <Card.Title className="fw-bold">
+                    <Card.Title className="">
                       Tech Adaptability{" "}
                     </Card.Title>
-                    <Card.Text className="fw-bold">
+                    <Card.Text className="">
                       Openness to innovation and process upgrades.
                     </Card.Text>
                   </Card.Body>
@@ -304,7 +304,7 @@ const Partners = () => {
           style={{ maxWidth: "400px", height: "100%" }}
         >
           <div className="">
-            <h1 className="fs-2 ">Be a Supplier</h1>
+            <h1 className="fs-2 cambria-bold ">Be a Supplier</h1>
             <p className="lead mt-3">
               If you are interested in partnering with us, kindly reach out via
               our contact page or drop an email. Let’s create lasting impact

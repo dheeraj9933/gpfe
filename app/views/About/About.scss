@@ -1,3 +1,5 @@
+@use '../../common/media';
+
 .about-us-page {
   .stand-for-section {
     .bottom-right-bg {
@@ -15,6 +17,32 @@
     h5 {
       font-family: "Helvetica Neue";
       font-weight: normal;
+    }
+    @include media.respond-to(lg) {
+      flex-basis: 50%;
+    }
+    @include media.respond-to(sm) {
+      flex-basis: 100%;
+    }
+  }
+
+  .leader {
+    img {
+      border-top-left-radius: 22px;
+      border-top-right-radius: 22px;
+    }
+    .light-border {
+      border-bottom-left-radius: 22px;
+      border-bottom-right-radius: 22px;
+    }
+  }
+  .leadership {
+    .top-right-bg,
+    .bottom-left-bg {
+      max-width: 150px;
+       @include media.respond-to(sm) {
+        max-width: 100px;
+       }
     }
   }
 }

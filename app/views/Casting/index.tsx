@@ -23,11 +23,8 @@ const SteelBusiness = () => {
     <div className="casting-page">
       {/* Hero Section */}
       <Banner image="Casting/banner.webp">
-        <div className="" style={{ flexBasis: "50%" }}></div>
-        <div
-          className=""
-          style={{ flexBasis: "50%", width: "45%", maxWidth: "400px" }}
-        >
+        <div className="flex-50"></div>
+        <div className="flex-50 banner-inner-text">
           <div className="">
             <h1 className="fs-2 cambria-bold-it">
               Casting – Precision That Powers Progress
@@ -181,22 +178,22 @@ const SteelBusiness = () => {
       <section className="py-5">
         <Container>
           <h2 className="text-center mb-5 cambria-bold">Industries We Serve</h2>
-          <div className="d-flex image-collage justify-content-between">
-            <div className="flex-40">
+          <div className="d-flex flex-wrap image-collage justify-content-between">
+            <div className="flex-40 my-3">
               <ImageWithText
                 src="Steel/collage-1.png"
                 alt="Collage 1"
                 text="Infrastructure & Construction"
               />
             </div>
-            <div className="flex-28">
+            <div className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-2.png"
                 alt="Collage 2"
                 text="Oil & Gas"
               />
             </div>
-            <div className="flex-28">
+            <div className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-3.png"
                 alt="Collage 3"
@@ -204,15 +201,15 @@ const SteelBusiness = () => {
               />
             </div>
           </div>
-          <div className="my-4 d-flex image-collage justify-content-between">
-            <div className="flex-49">
+          <div className="my-0 my-md-4 d-flex flex-wrap image-collage justify-content-between">
+            <div className="flex-49 my-3">
               <ImageWithText
                 src="Steel/collage-4.png"
                 alt="Collage 4"
                 text="Railways"
               />
             </div>
-            <div className="flex-49">
+            <div className="flex-49 my-3">
               <ImageWithText
                 src="Steel/collage-5.png"
                 alt="Collage 5"
@@ -220,22 +217,22 @@ const SteelBusiness = () => {
               />
             </div>
           </div>
-          <div className="d-flex image-collage justify-content-between">
-            <div className="flex-28">
+          <div className="d-flex flex-wrap image-collage justify-content-between">
+            <div className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-6.png"
                 alt="Collage 6"
                 text="Water"
               />
             </div>
-            <div className="flex-28">
+            <div className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-7.png"
                 alt="Collage 7"
                 text="Agriculture"
               />
             </div>
-            <div className="flex-40">
+            <div className="flex-40 my-3">
               <ImageWithText
                 src="Steel/collage-8.png"
                 alt="Collage 8"

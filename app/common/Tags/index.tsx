@@ -24,7 +24,7 @@ const Tags: React.FC = () => {
     },
   ];
   return (
-    <div className="d-flex gap-3">
+    <div className="d-flex gap-3 flex-wrap">
       {tagList.map((tag) => (
         <span
           role="button"
