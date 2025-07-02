@@ -1,5 +1,5 @@
+import { useEffect, useState } from "react";
 import { Button, Carousel, Col, Container, Image, Row } from "react-bootstrap";
-import "./welcome.scss";
 import FutureSection from "./internal/FutureSection";
 import AboutUs from "./internal/About Us";
 import Industry from "./internal/Industry";
@@ -12,8 +12,31 @@ import Tags from "~/common/Tags";
 import { Link } from "react-router";
 import { ArrowRight } from "react-bootstrap-icons";
 import Banner from "~/common/Banner";
+import axios from "axios";
+
+import "./welcome.scss";
 
 export function Welcome() {
+  const [news, setNews] = useState<Array<any>>([]);
+  const url = `${import.meta.env.VITE_API_URL}api/news/`;
+  const getNews = () =>
+    axios
+      .get(url)
+      .then(function (response) {
+        if(response.data && Array.isArray(response.data)) {
+          setNews(response.data.slice(0, 6));
+        } else {
+          console.error("Unexpected data format:", response.data);
+        }
+      })
+      .catch(function (error) {
+        console.error("There was an error fetching the news!", error);
+      });
+
+  useEffect(() => {
+    getNews();
+  }, []);
+  
   return (
     <>
       <main className="">
@@ -122,8 +145,7 @@ export function Welcome() {
                 </Link>
               </div>
             </div>
-            <News />
-            <News />
+            <News newsItems={news}/>
           </Container>
           <Image src="HomePage/bg-poly-top.svg" className="top-right-bg" />
         </section>

@@ -1,11 +1,38 @@
-import { ArrowRight } from "react-bootstrap-icons";
-import { Link } from "react-router";
 import Banner from "~/common/Banner";
 import Tags from "~/common/Tags";
 import News from "~/common/News";
-import { Container, Form } from "react-bootstrap";
+import { Button, Container, Form } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router";
 
 const NewsPage = () => {
+  const [news, setNews] = useState<Array<any>>([]);
+  const isAuthenticated = !!localStorage.getItem("token");
+  const navigate = useNavigate();
+  const url = `${import.meta.env.VITE_API_URL}api/news`;
+  const getNews = () =>
+    axios
+      .get(url)
+      .then(function (response) {
+        if (response.data) {
+          setNews(response.data);
+        } else {
+          console.error("Unexpected data format:", response.data);
+        }
+      })
+      .catch(function (error) {
+        if (error.response && error.response.status === 401) {
+          localStorage.removeItem("token");
+          navigate("/login");
+        }
+        console.error("There was an error fetching the news!", error);
+      });
+
+  useEffect(() => {
+    getNews();
+  }, []);
+
   return (
     <div>
       <Banner image="News/banner.webp">
@@ -31,6 +58,20 @@ const NewsPage = () => {
 
       <section className="padding-y-100">
         <Container>
+          {isAuthenticated && (
+            <div className="d-flex justify-content-end">
+              <Button
+                variant="danger"
+                type="submit"
+                onClick={() => {
+                  navigate("/add-news");
+                }}
+                className="mb-4"
+              >
+                Add News
+              </Button>
+            </div>
+          )}
           <h2 className="orange-text h3 text-uppercase">News & Features</h2>
           <div className="d-flex justify-content-between my-4">
             <Tags />
@@ -49,9 +90,7 @@ const NewsPage = () => {
               </Form.Select>
             </div>
           </div>
-          <News />
-          <News />
-          <News />
+          <News newsItems={news} />
         </Container>
       </section>
     </div>
