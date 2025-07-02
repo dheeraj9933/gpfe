@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <footer className="">
       <Container className="d-flex flex-column align-items-center">
         <Image
-          src="logo.png"
+          src="/logo.png"
           alt="GP Agarwal Logo"
           className="footer-logo mb-3"
         />
@@ -94,23 +94,23 @@ const Footer: React.FC = () => {
           <Col className="d-flex justify-content-end column-gap-3 flex-shrink-1  flex-grow-0 mt-2">
             <a href="http://www.google.com" target="__blank">
               <Image
-                src="social/LogoInstagram.svg"
+                src="/social/LogoInstagram.svg"
                 alt="Linked In"
                 className=""
               />
             </a>
             <a href="http://www.google.com" target="__blank">
-              <Image src="social/X.svg" alt="Linked In" className="" />
+              <Image src="/social/X.svg" alt="Linked In" className="" />
             </a>
             <a href="http://www.google.com" target="__blank">
               <Image
-                src="social/LogoYouTube.svg"
+                src="/social/LogoYouTube.svg"
                 alt="Linked In"
                 className=""
               />
             </a>
             <a href="http://www.google.com" target="__blank">
-              <Image src="social/LinkedIn.svg" alt="Linked In" className="" />
+              <Image src="/social/LinkedIn.svg" alt="Linked In" className="" />
             </a>
           </Col>
         </Row>

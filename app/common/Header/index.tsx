@@ -2,25 +2,24 @@ import React, { useEffect, useState } from "react";
 
 import { ChevronDown, Search } from "react-bootstrap-icons";
 import Navbar from "react-bootstrap/Navbar";
-import {
-  Button,
-  Col,
-  Container,
-  Dropdown,
-  DropdownButton,
-  Form,
-  Image,
-  Nav,
-  NavDropdown,
-  Row,
-} from "react-bootstrap";
+import { Container, Form, Image, Nav, NavDropdown } from "react-bootstrap";
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
+  const CheckIfHeaderShouldBeWhite = () => {
+    const path = window.location.pathname;
+    return (
+      path === "/contact-us" ||
+      path.includes("/news/") ||
+      path.includes("/add-news") ||
+      path.includes("login")
+    );
+  };
+
   useEffect(() => {
     const handleScroll = () => {
-      if (location.pathname === "/contact-us") return;
+      if (CheckIfHeaderShouldBeWhite()) return;
       setScrolled(window.scrollY > 50); // adjust threshold as needed
     };
 
@@ -30,7 +29,7 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     // This runs on every URL change
-    if (location.pathname === "/contact-us") {
+    if (CheckIfHeaderShouldBeWhite()) {
       setScrolled(true);
     }
 

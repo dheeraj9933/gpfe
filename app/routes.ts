@@ -18,6 +18,9 @@ export default [
     route("/customers", "views/Customers/index.tsx"),
     route("/suppliers", "views/Supplier/index.tsx"),
     route("/news", "views/News/index.tsx"),
+    route("/add-news", "views/AddNews/index.tsx"),
+    route("/news/:newsId", "views/NewsItem/index.tsx"),
+    route("/login", "views/Login/index.tsx"),
     route("/*", "views/NotFound/index.tsx"),
   ]),
 ] satisfies RouteConfig;
