@@ -1,5 +1,8 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import { Col, Container, Image, Row } from "react-bootstrap";
+import { animationValues } from "~/utils/animateValues";
 
 interface WhiteBoxProps {
   data: {
@@ -57,21 +60,42 @@ const FutureSection: React.FC = () => {
       text: "Legacy",
     },
   ];
+
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   return (
     <Container fluid className="future py-5">
       <Container>
         <Row>
           <Col md={6} lg={2}>
-            <div className="d-flex flex-column justify-content-center align-items-end h-100">
-              <Image src="/leaf.svg" />{" "}
-              <p className="text-light cambria-bold text-end mt-2 fs-20">
-                We are commited towards the Future
-              </p>
-            </div>
+            <motion.div
+              className="h-100"
+              {...animationValues({
+                ref: ref,
+                inView,
+                fromLeft: true,
+              })}
+            >
+              <div className="d-flex flex-column justify-content-center align-items-end h-100">
+                <Image src="/leaf.svg" />{" "}
+                <p className="text-light cambria-bold text-end mt-2 fs-20">
+                  We are commited towards the Future
+                </p>
+              </div>
+            </motion.div>
           </Col>
+
           {futureBoxes.map((future) => (
             <Col md={6} lg={2} className="my-3 my-lg-0">
-              <WhiteBox data={future} />
+              <motion.div
+                className="h-100"
+                {...animationValues({
+                  ref: ref,
+                  inView,
+                  fromBottom: true,
+                })}
+              >
+                <WhiteBox data={future} />
+              </motion.div>
             </Col>
           ))}
         </Row>

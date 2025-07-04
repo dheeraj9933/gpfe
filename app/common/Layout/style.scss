@@ -10,10 +10,14 @@
 .extra-padding {
   padding-bottom: 50px;
 }
+
 .nav-container {
   padding: 10px 0;
 }
 .header {
+  * {
+    transition: all 0.3s ease;
+  }
   a,
   span {
     font-family: "Helvetica Neue";
@@ -122,13 +126,13 @@ footer {
     }
     @media screen and (max-width: "992px") {
       flex-wrap: wrap;
-       .footer-col {
+      .footer-col {
         flex-basis: 49%;
         margin-bottom: 20px;
-       }
-       .footer-col-2 {
+      }
+      .footer-col-2 {
         flex-basis: 50%;
-       }
+      }
     }
   }
 }

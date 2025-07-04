@@ -71,9 +71,7 @@ body {
   /* @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   } */
-  * {
-    transition: all 0.3s ease;
-  }
+  overflow-x: hidden;
   button {
     outline: none;
     border: none;
@@ -313,13 +311,13 @@ body {
   }
   .grid-item-4 {
     grid-column: span 4;
-     @include media.respond-to(lg) {
+    @include media.respond-to(lg) {
       grid-column: span 14;
     }
   }
   .grid-item-7 {
     grid-column: span 7;
-     @include media.respond-to(lg) {
+    @include media.respond-to(lg) {
       grid-column: span 14;
     }
   }

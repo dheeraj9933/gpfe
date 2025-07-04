@@ -12,15 +12,20 @@ import Tags from "~/common/Tags";
 import { Link } from "react-router";
 import { ArrowRight } from "react-bootstrap-icons";
 import Banner from "~/common/Banner";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { animationValues } from "../utils/animateValues";
 
 export function Welcome() {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true, threshold: 0.1 });
   return (
     <>
       <main className="">
         {/* Hero section */}
         <Carousel fade controls={false} indicators={false} pause={false}>
           <Carousel.Item>
-            <Banner image="HomePage/banner.webp" className="">
+            <Banner image="HomePage/banner.webp">
               <div className="banner-text">
                 <div className="inner-text-container">
                   <h2 className="cambria-bold-it mb-3">
@@ -38,7 +43,7 @@ export function Welcome() {
             </Banner>
           </Carousel.Item>
           <Carousel.Item>
-            <Banner image="HomePage/banner2.webp" className="">
+            <Banner image="HomePage/banner2.webp">
               <div className="banner-text">
                 <div className="inner-text-container">
                   <h2 className="cambria-bold-it mb-3">
@@ -61,32 +66,40 @@ export function Welcome() {
           <Container>
             <Row className="py-5 my-5">
               <Col className="flex-50 mobile-100">
-                <div className="founder-img d-flex justify-content-center">
-                  <Image src="HomePage/founder.webp" className="w-50" />
-                </div>
+                <motion.div
+                  {...animationValues({ ref: ref1, inView: inView1, fromLeft: true })}
+                >
+                  <div className="founder-img d-flex justify-content-center">
+                    <Image src="HomePage/founder.webp" className="w-50" />
+                  </div>
+                </motion.div>
               </Col>
               <Col className="position-relative flex-45 mt-4 mt-lg-0 founder-speech">
                 <Image src="/annotations.png" className="speech-quote" />
-                <h2 className="helvetica-neue-reg-it">
-                  Cherish every day. We have adapted the journey as our
-                  destination.
-                </h2>
-                <p>
-                  At GP Agarwal Group, our mission is rooted in passion,
-                  purpose, and people. Our founder, Late Shri Maneklal Agarwal
-                  Ji, instilled in us the values of perseverance, moral
-                  strength, and a commitment to uplift society.
-                </p>
-                <div className="d-flex flex-column my-4">
-                  <h3 className="helvetica-neue-reg">Shri. Gopal Agarwal </h3>
-                  <p className="helvetica-neue-reg">Shri. Gopal Agarwal </p>
-                  <span>Managing Director , GP Agarwal Group</span>
-                </div>
-                <div>
-                  <Button className="px-4" variant="danger">
-                    Know More
-                  </Button>
-                </div>
+                <motion.div
+                  {...animationValues({ ref: ref1, inView: inView1, fromRight: true })}
+                >
+                  <h2 className="helvetica-neue-reg-it">
+                    Cherish every day. We have adapted the journey as our
+                    destination.
+                  </h2>
+                  <p>
+                    At GP Agarwal Group, our mission is rooted in passion,
+                    purpose, and people. Our founder, Late Shri Maneklal Agarwal
+                    Ji, instilled in us the values of perseverance, moral
+                    strength, and a commitment to uplift society.
+                  </p>
+                  <div className="d-flex flex-column my-4">
+                    <h3 className="helvetica-neue-reg">Shri. Gopal Agarwal </h3>
+                    <p className="helvetica-neue-reg">Shri. Gopal Agarwal </p>
+                    <span>Managing Director , GP Agarwal Group</span>
+                  </div>
+                  <div>
+                    <Button className="px-4" variant="danger">
+                      Know More
+                    </Button>
+                  </div>
+                </motion.div>
               </Col>
             </Row>
           </Container>
@@ -122,8 +135,25 @@ export function Welcome() {
                 </Link>
               </div>
             </div>
-            <News />
-            <News />
+            <motion.div
+              {...animationValues({
+                ref: ref,
+                inView,
+                fromBottom: true,
+              })}
+            >
+              <News />
+            </motion.div>
+            <motion.div
+              {...animationValues({
+                ref: ref,
+                inView,
+                fromBottom: true,
+                delay: 0.8,
+              })}
+            >
+              <News />
+            </motion.div>
           </Container>
           <Image src="HomePage/bg-poly-top.svg" className="top-right-bg" />
         </section>

@@ -1,7 +1,10 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { ArrowDown } from "react-bootstrap-icons";
-import './styles.scss'
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { animationValues } from "~/utils/animateValues";
+import "./styles.scss";
 
 const Banner = ({
   children,
@@ -12,6 +15,7 @@ const Banner = ({
   image: string;
   className?: string;
 }) => {
+  const { ref } = useInView({ triggerOnce: true, threshold: 0.1 });
   return (
     <section
       className={`py-5 text-white banner d-flex ${className}`}
@@ -23,7 +27,18 @@ const Banner = ({
         backgroundRepeat: "no-repeat",
       }}
     >
-      <Container className="d-flex flex-column">{children}</Container>
+      <Container>
+        <motion.div
+          {...animationValues({
+            ref: ref,
+            inView: true,
+            fromRight: true,
+          })}
+           className="d-flex flex-column h-100"
+        >
+          {children}
+        </motion.div>
+      </Container>
       <div className="arrow-container">
         <ArrowDown />
       </div>
