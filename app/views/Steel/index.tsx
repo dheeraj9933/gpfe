@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Container,
-  Navbar,
-  Nav,
-  Row,
-  Col,
-  Image,
-  Card,
-  Button,
-} from "react-bootstrap";
+import { Container, Row, Col, Image, Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Banner from "~/common/Banner";
 import HalfHalfSection from "~/common/HalfHalfSection";
@@ -16,8 +7,32 @@ import "./styles.scss"; // Import your CSS file for custom styles
 import ImageWithText from "~/common/ImageWithText";
 import News from "~/common/News";
 import SliderIcons from "~/common/SliderIcons";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { animationValues } from "~/utils/animateValues";
+import Reveal from "~/common/Reveal";
 
 const SteelBusiness = () => {
+  const { ref: offerRef, inView: offerInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const { ref: industriesRef, inView: industriesInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const { ref: roadMapRef, inView: roadMapInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const { ref: newsRef, inView: newsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const { ref: bannerRef, inView: bannerInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
   return (
     <div className="steel-page">
       {/* Hero Section */}
@@ -71,74 +86,84 @@ const SteelBusiness = () => {
           <h2 className="text-center mb-5 cambria-bold">What We Offer</h2>
           <Row className="flex-container">
             <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Steel/offer-1.webp"
-                  alt="Sponge Iron"
-                />
-                <Card.Body>
-                  <Card.Title className="helvetica-neue-reg">
-                    Sponge Iron
-                  </Card.Title>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true }}>
+                <Card className="border-0 text-center box-shadow-light">
+                  <Card.Img
+                    variant="top"
+                    src="Steel/offer-1.webp"
+                    alt="Sponge Iron"
+                  />
+                  <Card.Body>
+                    <Card.Title className="helvetica-neue-reg">
+                      Sponge Iron
+                    </Card.Title>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
             <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Steel/offer-2.webp"
-                  alt="Steel Billets"
-                />
-                <Card.Body>
-                  <Card.Title className="helvetica-neue-reg">
-                    Steel Billets
-                  </Card.Title>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true }}>
+                <Card className="border-0 text-center box-shadow-light">
+                  <Card.Img
+                    variant="top"
+                    src="Steel/offer-2.webp"
+                    alt="Steel Billets"
+                  />
+                  <Card.Body>
+                    <Card.Title className="helvetica-neue-reg">
+                      Steel Billets
+                    </Card.Title>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
             <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Steel/offer-3.webp"
-                  alt="ERW Steel Pipes"
-                />
-                <Card.Body>
-                  <Card.Title className="helvetica-neue-reg">
-                    ERW Steel Pipes
-                  </Card.Title>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true }}>
+                <Card className="border-0 text-center box-shadow-light">
+                  <Card.Img
+                    variant="top"
+                    src="Steel/offer-3.webp"
+                    alt="ERW Steel Pipes"
+                  />
+                  <Card.Body>
+                    <Card.Title className="helvetica-neue-reg">
+                      ERW Steel Pipes
+                    </Card.Title>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
             <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Steel/offer-4.webp"
-                  alt="Hot Rolled Coils"
-                />
-                <Card.Body>
-                  <Card.Title className="helvetica-neue-reg">
-                    Hot Rolled Coils
-                  </Card.Title>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true }}>
+                <Card className="border-0 text-center box-shadow-light">
+                  <Card.Img
+                    variant="top"
+                    src="Steel/offer-4.webp"
+                    alt="Hot Rolled Coils"
+                  />
+                  <Card.Body>
+                    <Card.Title className="helvetica-neue-reg">
+                      Hot Rolled Coils
+                    </Card.Title>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
             <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Steel/offer-5.webp"
-                  alt="High-Tensile Solutions"
-                />
-                <Card.Body>
-                  <Card.Title className="helvetica-neue-reg">
-                    High-Tensile Solutions
-                  </Card.Title>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true }}>
+                <Card className="border-0 text-center box-shadow-light">
+                  <Card.Img
+                    variant="top"
+                    src="Steel/offer-5.webp"
+                    alt="High-Tensile Solutions"
+                  />
+                  <Card.Body>
+                    <Card.Title className="helvetica-neue-reg">
+                      High-Tensile Solutions
+                    </Card.Title>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
           </Row>
         </Container>
@@ -147,179 +172,69 @@ const SteelBusiness = () => {
 
       {/* Key Infrastructure Section 5 3 3 */}
       <section className=" ">
-        <Container
-          fluid
-          className="py-5 banner-img"
-          style={{ backgroundImage: "url('Steel/infra-bg.png')" }}
-        >
-          <Container
-            className="my-5 py-5 px-0 bg-white infra-internal"
-            style={{ width: "85%" }}
-          >
-            <h2 className="text-center mb-5 h2 cambria-bold">
-              Key Infrastructure
-            </h2>
-            <div className="flex-container no-gap">
-              <Col className="flex-30 border-end border-bottom">
-                <Card className="border-0 text-center p-4 ">
-                  <Card.Img
-                    variant="top"
-                    src="Steel/infra1.svg"
-                    alt="300 TPD Sponge Iron Kilns"
-                    className="my-icon mx-auto"
-                  />
-                  <Card.Body>
-                    <Card.Title className="fw-bold helvetica-neue-reg">
-                      300 TPD
-                    </Card.Title>
-                    <Card.Text className="fw-bold helvetica-neue-reg">
-                      Sponge Iron Kilns
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col className="flex-30 border-end border-bottom">
-                <Card className="border-0 text-center p-4 ">
-                  <Card.Img
-                    variant="top"
-                    src="Steel/infra2.svg"
-                    alt="300 TPD Sponge Iron Kilns"
-                    className="my-icon mx-auto"
-                  />
-                  <Card.Body>
-                    <Card.Title className="fw-bold helvetica-neue-reg">
-                      Concast AG
-                    </Card.Title>
-                    <Card.Text className="fw-bold helvetica-neue-reg">
-                      Steel Melting Induction
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col className="flex-30 border-bottom">
-                <Card className="border-0 text-center p-4 ">
-                  <Card.Img
-                    variant="top"
-                    src="Steel/infra3.svg"
-                    alt="300 TPD Sponge Iron Kilns"
-                    className="my-icon mx-auto"
-                  />
-                  <Card.Body>
-                    <Card.Title className="fw-bold helvetica-neue-reg">
-                      1.7 MTPA
-                    </Card.Title>
-                    <Card.Text className="fw-bold helvetica-neue-reg">
-                      Hot Strip Mill
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col className="flex-30 border-end">
-                <Card className="border-0 text-center p-4 ">
-                  <Card.Img
-                    variant="top"
-                    src="Steel/infra4.svg"
-                    alt="300 TPD Sponge Iron Kilns"
-                    className="my-icon mx-auto"
-                  />
-                  <Card.Body>
-                    <Card.Title className="fw-bold helvetica-neue-reg">
-                      8 MW WHRB
-                    </Card.Title>
-                    <Card.Text className="fw-bold helvetica-neue-reg">
-                      Clean Power
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col className="flex-30">
-                <Card className="border-0 text-center p-4 ">
-                  <Card.Img
-                    variant="top"
-                    src="Steel/infra5.svg"
-                    alt="300 TPD Sponge Iron Kilns"
-                    className="my-icon mx-auto"
-                  />
-                  <Card.Body>
-                    <Card.Title className="fw-bold helvetica-neue-reg">
-                      In-house{" "}
-                    </Card.Title>
-                    <Card.Text className="fw-bold helvetica-neue-reg">
-                      R&D Lab
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </div>
-          </Container>
-        </Container>
-      </section>
-
-      {/* Industries We Serve Section */}
-      <section className="py-5">
         <Container>
           <h2 className="text-center mb-5 cambria-bold">Industries We Serve</h2>
           <div className="d-flex flex-wrap image-collage justify-content-between">
-            <div className="flex-40 my-3">
+            <Reveal config={{ popIn: true }} className="flex-40 my-3">
               <ImageWithText
                 src="Steel/collage-1.png"
                 alt="Collage 1"
                 text="Infrastructure & Construction"
               />
-            </div>
-            <div className="flex-28 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-2.png"
                 alt="Collage 2"
                 text="Oil & Gas"
               />
-            </div>
-            <div className="flex-28 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-3.png"
                 alt="Collage 3"
                 text="Power & Energy"
               />
-            </div>
+            </Reveal>
           </div>
           <div className="my-0 my-md-4 d-flex flex-wrap image-collage justify-content-between">
-            <div className="flex-49 my-3">
+            <Reveal config={{ popIn: true }} className="flex-49 my-3">
               <ImageWithText
                 src="Steel/collage-4.png"
                 alt="Collage 4"
                 text="Railways"
               />
-            </div>
-            <div className="flex-49 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-49 my-3">
               <ImageWithText
                 src="Steel/collage-5.png"
                 alt="Collage 5"
                 text="Automotive"
               />
-            </div>
+            </Reveal>
           </div>
           <div className="d-flex flex-wrap image-collage justify-content-between">
-            <div className="flex-28 my-3">
+            <Reveal config={{ popIn: true }} className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-6.png"
                 alt="Collage 6"
                 text="Water"
               />
-            </div>
-            <div className="flex-28 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-7.png"
                 alt="Collage 7"
                 text="Agriculture"
               />
-            </div>
-            <div className="flex-40 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-40 my-3">
               <ImageWithText
                 src="Steel/collage-8.png"
                 alt="Collage 8"
                 text="Solar"
               />
-            </div>
+            </Reveal>
           </div>
         </Container>
       </section>
@@ -334,23 +249,39 @@ const SteelBusiness = () => {
         <Container>
           <Row className="align-items-center">
             <Col md={6}>
-              <Image
-                src="Steel/roadmap.png"
-                alt="Roadmap"
-                fluid
-                className="rounded shadow"
-              />
+              <motion.div
+                {...animationValues({
+                  ref: roadMapRef,
+                  inView: roadMapInView,
+                  fromLeft: true,
+                })}
+              >
+                <Image
+                  src="Steel/roadmap.png"
+                  alt="Roadmap"
+                  fluid
+                  className="rounded shadow"
+                />
+              </motion.div>
             </Col>
             <Col md={6}>
-              <h2 className="h3 cambria-bold ">
-                Our roadmap for building a sustainable, responsible future.
-              </h2>
-              <p className="fs-5">
-                At GP Agarwal Group, our commitment to sustainability is not
-                limited to today. We are investing in long-term solutions that
-                protect our environment, empower communities, and build
-                resilience for the generations to come.
-              </p>
+              <motion.div
+                {...animationValues({
+                  ref: roadMapRef,
+                  inView: roadMapInView,
+                  fromRight: true,
+                })}
+              >
+                <h2 className="h3 cambria-bold ">
+                  Our roadmap for building a sustainable, responsible future.
+                </h2>
+                <p className="fs-5">
+                  At GP Agarwal Group, our commitment to sustainability is not
+                  limited to today. We are investing in long-term solutions that
+                  protect our environment, empower communities, and build
+                  resilience for the generations to come.
+                </p>
+              </motion.div>
             </Col>
           </Row>
         </Container>
@@ -365,13 +296,26 @@ const SteelBusiness = () => {
             </h2>
             <SliderIcons />
           </div>
-          <News />
+          <motion.div
+            {...animationValues({
+              ref: newsRef,
+              inView: newsInView,
+              popIn: true,
+            })}
+          >
+            <News />
+          </motion.div>
         </Container>
       </section>
 
       {/* The Road Ahead Section */}
       <Banner image="Steel/road.webp">
-        <div
+        <motion.div
+          {...animationValues({
+            ref: bannerRef,
+            inView: bannerInView,
+            fromRight: true,
+          })}
           className="d-flex align-items-center"
           style={{ maxWidth: "400px", height: "100%" }}
         >
@@ -391,7 +335,7 @@ const SteelBusiness = () => {
               Contact Us
             </Button>
           </div>
-        </div>
+        </motion.div>
       </Banner>
     </div>
   );

@@ -1,24 +1,34 @@
 import React from "react";
-import {
-  Container,
-  Navbar,
-  Nav,
-  Row,
-  Col,
-  Image,
-  Card,
-  Button,
-} from "react-bootstrap";
+import { Container, Row, Col, Image, Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Banner from "~/common/Banner";
 import HalfHalfSection from "~/common/HalfHalfSection";
 import "./styles.scss"; // Import your CSS file for custom styles
 import ImageWithText from "~/common/ImageWithText";
 import News from "~/common/News";
-import { Android, Android2 } from "react-bootstrap-icons";
 import SliderIcons from "~/common/SliderIcons";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { animationValues } from "~/utils/animateValues";
+import Reveal from "~/common/Reveal";
 
 const SteelBusiness = () => {
+  const { ref: offerRef, inView: offerInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const { ref: industriesRef, inView: industriesInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const { ref: bannerRef, inView: bannerInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const { ref: newsRef, inView: newsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
   return (
     <div className="casting-page">
       {/* Hero Section */}
@@ -73,64 +83,74 @@ const SteelBusiness = () => {
           <h2 className="text-center mb-5 cambria-bold">What We Offer</h2>
           <Row className="flex-container">
             <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Casting/offer1.webp"
-                  alt="Grey & Ductile Iron Castings"
-                />
-                <Card.Body>
-                  <Card.Title>Grey & Ductile Iron Castings</Card.Title>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true }}>
+                <Card className="border-0 text-center box-shadow-light">
+                  <Card.Img
+                    variant="top"
+                    src="Casting/offer1.webp"
+                    alt="Grey & Ductile Iron Castings"
+                  />
+                  <Card.Body>
+                    <Card.Title>Grey & Ductile Iron Castings</Card.Title>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
             <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Casting/offer2.webp"
-                  alt="Non-ferrous Components"
-                />
-                <Card.Body>
-                  <Card.Title>Non-ferrous Components</Card.Title>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true }}>
+                <Card className="border-0 text-center box-shadow-light">
+                  <Card.Img
+                    variant="top"
+                    src="Casting/offer2.webp"
+                    alt="Non-ferrous Components"
+                  />
+                  <Card.Body>
+                    <Card.Title>Non-ferrous Components</Card.Title>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
             <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Casting/offer3.webp"
-                  alt="Custom Engineering Casts"
-                />
-                <Card.Body>
-                  <Card.Title>Custom Engineering Casts</Card.Title>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true }}>
+                <Card className="border-0 text-center box-shadow-light">
+                  <Card.Img
+                    variant="top"
+                    src="Casting/offer3.webp"
+                    alt="Custom Engineering Casts"
+                  />
+                  <Card.Body>
+                    <Card.Title>Custom Engineering Casts</Card.Title>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
             <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Casting/offer4.webp"
-                  alt="Structural Cast Parts"
-                />
-                <Card.Body>
-                  <Card.Title>Structural Cast Parts</Card.Title>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true }}>
+                <Card className="border-0 text-center box-shadow-light">
+                  <Card.Img
+                    variant="top"
+                    src="Casting/offer4.webp"
+                    alt="Structural Cast Parts"
+                  />
+                  <Card.Body>
+                    <Card.Title>Structural Cast Parts</Card.Title>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
             <Col className="flex-30">
-              <Card className="border-0 text-center box-shadow-light">
-                <Card.Img
-                  variant="top"
-                  src="Casting/offer5.webp"
-                  alt="Corrosion-Resistant Grades"
-                />
-                <Card.Body>
-                  <Card.Title>Corrosion-Resistant Grades</Card.Title>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true }}>
+                <Card className="border-0 text-center box-shadow-light">
+                  <Card.Img
+                    variant="top"
+                    src="Casting/offer5.webp"
+                    alt="Corrosion-Resistant Grades"
+                  />
+                  <Card.Body>
+                    <Card.Title>Corrosion-Resistant Grades</Card.Title>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
           </Row>
         </Container>
@@ -179,66 +199,66 @@ const SteelBusiness = () => {
         <Container>
           <h2 className="text-center mb-5 cambria-bold">Industries We Serve</h2>
           <div className="d-flex flex-wrap image-collage justify-content-between">
-            <div className="flex-40 my-3">
+            <Reveal config={{ popIn: true }} className="flex-40 my-3">
               <ImageWithText
                 src="Steel/collage-1.png"
                 alt="Collage 1"
                 text="Infrastructure & Construction"
               />
-            </div>
-            <div className="flex-28 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-2.png"
                 alt="Collage 2"
                 text="Oil & Gas"
               />
-            </div>
-            <div className="flex-28 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-3.png"
                 alt="Collage 3"
                 text="Power & Energy"
               />
-            </div>
+            </Reveal>
           </div>
           <div className="my-0 my-md-4 d-flex flex-wrap image-collage justify-content-between">
-            <div className="flex-49 my-3">
+            <Reveal config={{ popIn: true }} className="flex-49 my-3">
               <ImageWithText
                 src="Steel/collage-4.png"
                 alt="Collage 4"
                 text="Railways"
               />
-            </div>
-            <div className="flex-49 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-49 my-3">
               <ImageWithText
                 src="Steel/collage-5.png"
                 alt="Collage 5"
                 text="Automotive"
               />
-            </div>
+            </Reveal>
           </div>
           <div className="d-flex flex-wrap image-collage justify-content-between">
-            <div className="flex-28 my-3">
+            <Reveal config={{ popIn: true }} className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-6.png"
                 alt="Collage 6"
                 text="Water"
               />
-            </div>
-            <div className="flex-28 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-7.png"
                 alt="Collage 7"
                 text="Agriculture"
               />
-            </div>
-            <div className="flex-40 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-40 my-3">
               <ImageWithText
                 src="Steel/collage-8.png"
                 alt="Collage 8"
                 text="Solar"
               />
-            </div>
+            </Reveal>
           </div>
         </Container>
       </section>
@@ -250,14 +270,27 @@ const SteelBusiness = () => {
             <h2 className="h3 text-uppercase cambria-bold">News & Features</h2>
             <SliderIcons />
           </div>
-          <News />
+          <motion.div
+            {...animationValues({
+              ref: newsRef,
+              inView: newsInView,
+              fromBottom: true,
+            })}
+          >
+            <News />
+          </motion.div>
         </Container>
       </section>
 
       {/* The Road Ahead Section */}
 
       <Banner image="Casting/road.webp">
-        <div
+        <motion.div
+          {...animationValues({
+            ref: bannerRef,
+            inView: bannerInView,
+            fromRight: true,
+          })}
           className="d-flex align-items-center"
           style={{ maxWidth: "500px", height: "100%" }}
         >
@@ -279,7 +312,7 @@ const SteelBusiness = () => {
               Contact Us
             </Button>
           </div>
-        </div>
+        </motion.div>
       </Banner>
     </div>
   );

@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { animationValues } from "~/utils/animateValues";
+import Reveal from "~/common/Reveal";
 
 interface WhiteBoxProps {
   data: {
@@ -14,7 +15,7 @@ interface WhiteBoxProps {
 
 const WhiteBox: React.FC<WhiteBoxProps> = ({ data }) => {
   return (
-    <div className="white-box d-flex flex-column justify-content-center align-items-center h-100">
+    <div className="white-box d-flex flex-column justify-content-center align-items-center h-100 hover-effect">
       <div>{data.heading}</div>
       <span className="fw-bold">{data.subHeading}</span>
       <span>{data.text}</span>
@@ -62,37 +63,50 @@ const FutureSection: React.FC = () => {
   ];
 
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+
+  const x = 0;
+  const y = -100;
+  const containerVariants = {
+    initial: {},
+    animate: {
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3, // optional
+      },
+    },
+  };
+
+  const itemVariants = {
+    initial: { opacity: 0, y: 100 },
+    animate: { opacity: 1, y: 0 },
+  };
   return (
     <Container fluid className="future py-5">
       <Container>
         <Row>
           <Col md={6} lg={2}>
-            <motion.div
-              className="h-100"
-              {...animationValues({
-                ref: ref,
-                inView,
-                fromLeft: true,
-              })}
-            >
+            <Reveal config={{ fromLeft: true }}>
               <div className="d-flex flex-column justify-content-center align-items-end h-100">
                 <Image src="/leaf.svg" />{" "}
                 <p className="text-light cambria-bold text-end mt-2 fs-20">
                   We are commited towards the Future
                 </p>
               </div>
-            </motion.div>
+            </Reveal>
           </Col>
 
-          {futureBoxes.map((future) => (
+          {futureBoxes.map((future, index) => (
             <Col md={6} lg={2} className="my-3 my-lg-0">
               <motion.div
                 className="h-100"
-                {...animationValues({
-                  ref: ref,
-                  inView,
-                  fromBottom: true,
-                })}
+                ref={ref}
+                initial={{ opacity: 0, x, y: 50 }}
+                animate={inView ? { opacity: 1, x: 0, y: 0, scale: 1 } : {}}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut", 
+                  delay: index/5, 
+                }}
               >
                 <WhiteBox data={future} />
               </motion.div>

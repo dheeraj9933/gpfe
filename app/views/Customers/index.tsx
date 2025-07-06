@@ -13,6 +13,7 @@ import {
 import Banner from "~/common/Banner";
 import HalfHalfSection from "~/common/HalfHalfSection";
 import ImageWithText from "~/common/ImageWithText";
+import Reveal from "~/common/Reveal";
 
 const Partners = () => {
   return (
@@ -73,49 +74,61 @@ const Partners = () => {
           <div className="card-container justify-content-between grid-container-3">
             <Col className="flex-30 d-flex ">
               <div className="d-flex flex-column justify-content-center h-100 w-75">
-                <h3 className="h5 orange-text text-uppercase helvetica-neue-reg">our customers</h3>
+                <h3 className="h5 orange-text text-uppercase helvetica-neue-reg">
+                  our customers
+                </h3>
                 <h4 className="h3 cambria-bold">Industries that We Serve</h4>
               </div>
             </Col>
             <Col className="flex-30">
-              <ImageWithText
-                src="Customers/collage1.png"
-                alt="Collage 1"
-                text="Steel & Manufacturing"
-              />
+              <Reveal config={{ popIn: true }}>
+                <ImageWithText
+                  src="Customers/collage1.png"
+                  alt="Collage 1"
+                  text="Steel & Manufacturing"
+                />
+              </Reveal>
             </Col>
             <Col className="flex-30">
-              <ImageWithText
-                src="Customers/collage2.png"
-                alt="Collage 1"
-                text="Casting & Foundries"
-              />
+              <Reveal config={{ popIn: true }}>
+                <ImageWithText
+                  src="Customers/collage2.png"
+                  alt="Collage 1"
+                  text="Casting & Foundries"
+                />
+              </Reveal>
             </Col>
             <Col className="flex-30">
-              <ImageWithText
-                src="Customers/collage3.png"
-                alt="Collage 1"
-                text="Power & Utilities"
-              />
+              <Reveal config={{ popIn: true }}>
+                <ImageWithText
+                  src="Customers/collage3.png"
+                  alt="Collage 1"
+                  text="Power & Utilities"
+                />
+              </Reveal>
             </Col>
             <Col className="flex-30">
-              <ImageWithText
-                src="Customers/collage4.png"
-                alt="Collage 1"
-                text="Infrastructure & Construction"
-              />
+              <Reveal config={{ popIn: true }}>
+                <ImageWithText
+                  src="Customers/collage4.png"
+                  alt="Collage 1"
+                  text="Infrastructure & Construction"
+                />
+              </Reveal>
             </Col>
             <Col className="flex-30">
-              <ImageWithText
-                src="Customers/collage5.png"
-                alt="Collage 1"
-                text="OEMs & Industry Contractors"
-              />
+              <Reveal config={{ popIn: true }}>
+                <ImageWithText
+                  src="Customers/collage5.png"
+                  alt="Collage 1"
+                  text="OEMs & Industry Contractors"
+                />
+              </Reveal>
             </Col>
           </div>
         </Container>
       </section>
-      
+
       {/* Global Presence Section */}
       <section className="customer-grid-collage">
         <Container
@@ -127,7 +140,9 @@ const Partners = () => {
             className="my-5 py-5 px-0 bg-white infra-internal border-rounded"
             style={{ width: "85%" }}
           >
-            <h2 className="text-center mb-5 h2 cambria-bold">Our Promise to Customers</h2>
+            <h2 className="text-center mb-5 h2 cambria-bold">
+              Our Promise to Customers
+            </h2>
             <div className="flex-container no-gap">
               <Col className="flex-30 border-end border-bottom">
                 <Card className="border-0 text-center p-4 ">
@@ -223,26 +238,28 @@ const Partners = () => {
       </section>
 
       <Banner image="Customers/cta.webp">
-        <div
-          className="d-flex align-items-center"
-          style={{ maxWidth: "400px", height: "100%" }}
-        >
-          <div className="">
-            <h1 className="fs-2 cambria-bold">Partner With Us</h1>
-            <p className="lead mt-3">
-              Looking for a reliable industrial partner? Connect with our team
-              today. We’re ready to power your vision with our capabilities and
-              commitment.
-            </p>
-            <Button
-              variant="light"
-              href="#contact-us"
-              className="mt-3 text-green fw-bold px-5 fs-5"
-            >
-              Get Started
-            </Button>
+        <Reveal config={{ fromRight: true }} className="h-100">
+          <div
+            className="d-flex align-items-center"
+            style={{ maxWidth: "400px", height: "100%" }}
+          >
+            <div className="">
+              <h1 className="fs-2 cambria-bold">Partner With Us</h1>
+              <p className="lead mt-3">
+                Looking for a reliable industrial partner? Connect with our team
+                today. We’re ready to power your vision with our capabilities
+                and commitment.
+              </p>
+              <Button
+                variant="light"
+                href="#contact-us"
+                className="mt-3 text-green fw-bold px-5 fs-5"
+              >
+                Get Started
+              </Button>
+            </div>
           </div>
-        </div>
+        </Reveal>
       </Banner>
     </div>
   );

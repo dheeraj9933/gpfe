@@ -16,6 +16,7 @@ import "./styles.scss"; // Import your CSS file for custom styles
 import ImageWithText from "~/common/ImageWithText";
 import News from "~/common/News";
 import SliderIcons from "~/common/SliderIcons";
+import Reveal from "~/common/Reveal";
 
 const SteelBusiness = () => {
   return (
@@ -70,114 +71,117 @@ const SteelBusiness = () => {
         <Container>
           <h2 className="text-center mb-5 cambria-bold">Industries We Serve</h2>
           <div className="d-flex flex-wrap image-collage justify-content-between">
-            <div className="flex-40 my-3">
+            <Reveal config={{ popIn: true }} className="flex-40 my-3">
               <ImageWithText
                 src="Steel/collage-1.png"
                 alt="Collage 1"
                 text="Infrastructure & Construction"
               />
-            </div>
-            <div className="flex-28 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-2.png"
                 alt="Collage 2"
                 text="Oil & Gas"
               />
-            </div>
-            <div className="flex-28 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-3.png"
                 alt="Collage 3"
                 text="Power & Energy"
               />
-            </div>
+            </Reveal>
           </div>
           <div className="my-0 my-md-4 d-flex flex-wrap image-collage justify-content-between">
-            <div className="flex-49 my-3">
+            <Reveal config={{ popIn: true }} className="flex-49 my-3">
               <ImageWithText
                 src="Steel/collage-4.png"
                 alt="Collage 4"
                 text="Railways"
               />
-            </div>
-            <div className="flex-49 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-49 my-3">
               <ImageWithText
                 src="Steel/collage-5.png"
                 alt="Collage 5"
                 text="Automotive"
               />
-            </div>
+            </Reveal>
           </div>
           <div className="d-flex flex-wrap image-collage justify-content-between">
-            <div className="flex-28 my-3">
+            <Reveal config={{ popIn: true }} className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-6.png"
                 alt="Collage 6"
                 text="Water"
               />
-            </div>
-            <div className="flex-28 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-28 my-3">
               <ImageWithText
                 src="Steel/collage-7.png"
                 alt="Collage 7"
                 text="Agriculture"
               />
-            </div>
-            <div className="flex-40 my-3">
+            </Reveal>
+            <Reveal config={{ popIn: true }} className="flex-40 my-3">
               <ImageWithText
                 src="Steel/collage-8.png"
                 alt="Collage 8"
                 text="Solar"
               />
-            </div>
+            </Reveal>
           </div>
         </Container>
       </section>
 
       {/* Sustainability Highlights Section */}
       <section className="lightgreen-bg highlight">
-        <Container>
-          <h2 className="h4 text-uppercase text-green helvetica-neue-reg">
-            Applications & Impact
-          </h2>
-          <p className="w-75 fs-5">
-            Our integrated energy systems are designed not just to power
-            operations, but to create measurable impact across the value chain.
-            From meeting the energy needs of core steel and casting facilities
-            to reducing carbon dependency, every initiative contributes to
-            long-term efficiency and sustainability. These efforts also lay the
-            groundwork for future-ready, multi-vertical clean energy ecosystems
-            that support innovation, resilience, and responsible growth.
-          </p>
-          <Row className="mt-4 align-items-end">
-            <Col md={3}>
-              <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
-                Integrated Power
-              </h4>
-              <p className="fs-6">Recycled eco-friendly material used</p>
-            </Col>
-            <Col md={3}>
-              <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
-                Unit-Wide Supply
-              </h4>
-              <p className="fs-6">Renewable energy used</p>
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col md={3}>
-              <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
-                Grid Independence
-              </h4>
-              <p className="fs-6">Of revenue</p>
-            </Col>
-            <Col md={3}>
-              <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
-                Scalable Energy
-              </h4>
-              <p className="fs-6">Reduction in energy intensity FY</p>
-            </Col>
-          </Row>
-        </Container>
+        <Reveal config={{ fromRight: true }}>
+          <Container>
+            <h2 className="h4 text-uppercase text-green helvetica-neue-reg">
+              Applications & Impact
+            </h2>
+            <p className="w-75 fs-5">
+              Our integrated energy systems are designed not just to power
+              operations, but to create measurable impact across the value
+              chain. From meeting the energy needs of core steel and casting
+              facilities to reducing carbon dependency, every initiative
+              contributes to long-term efficiency and sustainability. These
+              efforts also lay the groundwork for future-ready, multi-vertical
+              clean energy ecosystems that support innovation, resilience, and
+              responsible growth.
+            </p>
+            <Row className="mt-4 align-items-end">
+              <Col md={3}>
+                <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
+                  Integrated Power
+                </h4>
+                <p className="fs-6">Recycled eco-friendly material used</p>
+              </Col>
+              <Col md={3}>
+                <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
+                  Unit-Wide Supply
+                </h4>
+                <p className="fs-6">Renewable energy used</p>
+              </Col>
+            </Row>
+            <Row className="mt-4">
+              <Col md={3}>
+                <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
+                  Grid Independence
+                </h4>
+                <p className="fs-6">Of revenue</p>
+              </Col>
+              <Col md={3}>
+                <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
+                  Scalable Energy
+                </h4>
+                <p className="fs-6">Reduction in energy intensity FY</p>
+              </Col>
+            </Row>
+          </Container>
+        </Reveal>
         <Image src="Power/impact.png" className="bottom-right-bg" />
       </section>
 
@@ -226,34 +230,38 @@ const SteelBusiness = () => {
             <h2 className="h3 text-uppercase cambria-bold">News & Features</h2>
             <SliderIcons />
           </div>
-          <News />
+          <Reveal config={{ fromBottom: true }} className="h-100">
+            <News />
+          </Reveal>
         </Container>
       </section>
 
       {/* The Road Ahead Section */}
 
       <Banner image="Power/road.webp">
-        <div
-          className="d-flex align-items-center"
-          style={{ maxWidth: "500px", height: "100%" }}
-        >
-          <div className="">
-            <h1 className="fs-2 cambria-bold">The Road Ahead</h1>
-            <p className="lead mt-3">
-              We are committed to expanding our clean power capacity as our
-              business scales. With sustainability at the core, our power
-              division will continue to evolve — integrating smarter, cleaner
-              technologies to energize every part of the value chain.
-            </p>
-            <Button
-              variant="light"
-              href="#contact-us"
-              className="mt-3 text-green fw-bold px-5 fs-5"
-            >
-              Contact Us
-            </Button>
+        <Reveal config={{ fromRight: true }} className="h-100">
+          <div
+            className="d-flex align-items-center"
+            style={{ maxWidth: "500px", height: "100%" }}
+          >
+            <div className="">
+              <h1 className="fs-2 cambria-bold">The Road Ahead</h1>
+              <p className="lead mt-3">
+                We are committed to expanding our clean power capacity as our
+                business scales. With sustainability at the core, our power
+                division will continue to evolve — integrating smarter, cleaner
+                technologies to energize every part of the value chain.
+              </p>
+              <Button
+                variant="light"
+                href="#contact-us"
+                className="mt-3 text-green fw-bold px-5 fs-5"
+              >
+                Contact Us
+              </Button>
+            </div>
           </div>
-        </div>
+        </Reveal>
       </Banner>
     </div>
   );

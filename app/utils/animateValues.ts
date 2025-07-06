@@ -28,6 +28,6 @@ export const animationValues = (config: AnimationConfig): AnimationValues => {
       ease: "easeInOut", // 👈 cast to satisfy TS
       delay: delay, // Adjust delay as needed
     },
-    style: { willChange: "opacity, transform" },
+    // style: { willChange: "opacity, transform" },
   } as AnimationValues;
 };

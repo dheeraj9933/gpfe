@@ -13,6 +13,7 @@ import Banner from "~/common/Banner";
 import HalfHalfSection from "~/common/HalfHalfSection";
 import "./style.scss";
 import { ArrowRight } from "react-bootstrap-icons";
+import Reveal from "~/common/Reveal";
 
 const Sustainability = () => {
   return (
@@ -82,73 +83,79 @@ const Sustainability = () => {
           </h2>
           <Row className="justify-content-around align-items-stretch">
             <Col className="flex-100 flex-md-30">
-              <Card className="border-0 text-center px-2 pt-5 box-shadow-light h-100">
-                <Card.Img
-                  variant="top"
-                  src="Sustainability/pillar1.png"
-                  alt="Clean Manufacturing"
-                  className="rounded-circle mx-auto mb-4"
-                  style={{ width: "150px", height: "150px" }}
-                />
-                <Card.Body>
-                  <Card.Title className="text-green cambria-bold">
-                    Clean Manufacturing
-                  </Card.Title>
-                  <Card.Text>
-                    <ul className="text-start">
-                      <li>8 MW Energy from Waste Heat</li>
-                      <li>Minimum Carbon Footprint</li>
-                      <li>Product Efficiency</li>
-                    </ul>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ fromLeft: true }} className="h-100">
+                <Card className="border-0 text-center px-2 pt-5 box-shadow-light h-100 hover-effect">
+                  <Card.Img
+                    variant="top"
+                    src="Sustainability/pillar1.png"
+                    alt="Clean Manufacturing"
+                    className="rounded-circle mx-auto mb-4"
+                    style={{ width: "150px", height: "150px" }}
+                  />
+                  <Card.Body>
+                    <Card.Title className="text-green cambria-bold">
+                      Clean Manufacturing
+                    </Card.Title>
+                    <Card.Text>
+                      <ul className="text-start">
+                        <li>8 MW Energy from Waste Heat</li>
+                        <li>Minimum Carbon Footprint</li>
+                        <li>Product Efficiency</li>
+                      </ul>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
-            <Col className="flex-100 flex-md-30 my-2">
-              <Card className="border-0 text-center px-2 pt-5 box-shadow-light h-100">
-                <Card.Img
-                  variant="top"
-                  src="Sustainability/pillar2.png"
-                  alt="Community Development"
-                  className="rounded-circle mx-auto mb-4"
-                  style={{ width: "150px", height: "150px" }}
-                />
-                <Card.Body>
-                  <Card.Title className="text-green cambria-bold">
-                    Community Development
-                  </Card.Title>
-                  <Card.Text>
-                    <ul className="text-start">
-                      <li>Daily Meals for Need</li>
-                      <li>Education for All</li>
-                      <li>Healthcare and Assistance</li>
-                    </ul>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+            <Col className="flex-100 flex-md-30 my-2 my-lg-0">
+              <Reveal config={{ fromBottom: true, delay: 0.4 }} className="h-100">
+                <Card className="border-0 text-center px-2 pt-5 box-shadow-light h-100 hover-effect">
+                  <Card.Img
+                    variant="top"
+                    src="Sustainability/pillar2.png"
+                    alt="Community Development"
+                    className="rounded-circle mx-auto mb-4"
+                    style={{ width: "150px", height: "150px" }}
+                  />
+                  <Card.Body>
+                    <Card.Title className="text-green cambria-bold">
+                      Community Development
+                    </Card.Title>
+                    <Card.Text>
+                      <ul className="text-start">
+                        <li>Daily Meals for Need</li>
+                        <li>Education for All</li>
+                        <li>Healthcare and Assistance</li>
+                      </ul>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
             <Col className="flex-100 flex-md-30">
-              <Card className="border-0 text-center px-2 pt-5 box-shadow-light h-100">
-                <Card.Img
-                  variant="top"
-                  src="Sustainability/pillar3.png"
-                  alt="Environmental Responsibility"
-                  className="rounded-circle mx-auto mb-4"
-                  style={{ width: "150px", height: "150px" }}
-                />
-                <Card.Body>
-                  <Card.Title className="text-green cambria-bold">
-                    Environmental Responsibility
-                  </Card.Title>
-                  <Card.Text>
-                    <ul className="text-start">
-                      <li>Water Reuse Conservation</li>
-                      <li>Solar Energy and Green Innovation</li>
-                      <li>Reforestation Efforts</li>
-                    </ul>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ fromRight: true, delay: 0.6 }} className="h-100">
+                <Card className="border-0 text-center px-2 pt-5 box-shadow-light h-100 hover-effect">
+                  <Card.Img
+                    variant="top"
+                    src="Sustainability/pillar3.png"
+                    alt="Environmental Responsibility"
+                    className="rounded-circle mx-auto mb-4"
+                    style={{ width: "150px", height: "150px" }}
+                  />
+                  <Card.Body>
+                    <Card.Title className="text-green cambria-bold">
+                      Environmental Responsibility
+                    </Card.Title>
+                    <Card.Text>
+                      <ul className="text-start">
+                        <li>Water Reuse Conservation</li>
+                        <li>Solar Energy and Green Innovation</li>
+                        <li>Reforestation Efforts</li>
+                      </ul>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
           </Row>
         </Container>
@@ -161,7 +168,10 @@ const Sustainability = () => {
       {/* CSR and ESG Section */}
       <section className="">
         <Container fluid className="">
-          <Row className="text-white flex-wrap flex-md-nowrap" style={{ gap: "5px" }}>
+          <Row
+            className="text-white flex-wrap flex-md-nowrap"
+            style={{ gap: "5px" }}
+          >
             <Col
               md={6}
               xs={12}
@@ -195,7 +205,10 @@ const Sustainability = () => {
               md={6}
               xs={12}
               className="banner-img py-2 d-flex flex-column justify-content-around"
-              style={{ backgroundImage: "url('/Sustainability/esg.webp')" , minHeight: "400px",}}
+              style={{
+                backgroundImage: "url('/Sustainability/esg.webp')",
+                minHeight: "400px",
+              }}
             >
               <div className="d-flex flex-column align-items-center">
                 <Image
@@ -227,103 +240,115 @@ const Sustainability = () => {
         <Container>
           <Row className="mb-5">
             <Col md={6} className="pe-5">
-              <h2 className="text-green h4 text-uppercase helvetica-neue-reg">
-                Forging a Greener Tomorrow
-              </h2>
-              <h3 className="h4 cambria-bold">
-                Our roadmap for building a sustainable, responsible future.
-              </h3>
-              <p className="fs-5">
-                At GP Agarwal Group, we are committed to creating a future we
-                are investing in long-term solutions that protect our
-                environment, generations to come, and build resilience for the
-                future.
-              </p>
+              <Reveal config={{ fromLeft: true }}>
+                <h2 className="text-green h4 text-uppercase helvetica-neue-reg">
+                  Forging a Greener Tomorrow
+                </h2>
+                <h3 className="h4 cambria-bold">
+                  Our roadmap for building a sustainable, responsible future.
+                </h3>
+                <p className="fs-5">
+                  At GP Agarwal Group, we are committed to creating a future we
+                  are investing in long-term solutions that protect our
+                  environment, generations to come, and build resilience for the
+                  future.
+                </p>
+              </Reveal>
             </Col>
             <Col md={6}>
-              <Image
-                src="Sustainability/garden.png"
-                alt="Greener Tomorrow"
-                fluid
-                className="shadow border-rounded"
-              />
+              <Reveal config={{ fromRight: true }}>
+                <Image
+                  src="Sustainability/garden.png"
+                  alt="Greener Tomorrow"
+                  fluid
+                  className="shadow border-rounded"
+                />
+              </Reveal>
             </Col>
           </Row>
           {/* Cards */}
           <Row className="card-container justify-content-between">
             <Col className="flex-24 my-2">
-              <Card className="border-0 p-4 box-shadow-light h-100">
-                <Card.Img
-                  variant="top"
-                  src="Sustainability/roadmap1.svg"
-                  alt="Clean Manufacturing"
-                  className="rounded-circle mb-2"
-                  style={{ width: "50px", height: "50px" }}
-                />
-                <Card.Body className="p-0 mt-2">
-                  <Card.Title className="cambria-bold">
-                    Expand Clean Energy
-                  </Card.Title>
-                  <Card.Text>
-                    Transition more operations to renewable energy sources.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true }} className="h-100">
+                <Card className="border-0 p-4 box-shadow-light h-100">
+                  <Card.Img
+                    variant="top"
+                    src="Sustainability/roadmap1.svg"
+                    alt="Clean Manufacturing"
+                    className="rounded-circle mb-2"
+                    style={{ width: "50px", height: "50px" }}
+                  />
+                  <Card.Body className="p-0 mt-2">
+                    <Card.Title className="cambria-bold">
+                      Expand Clean Energy
+                    </Card.Title>
+                    <Card.Text>
+                      Transition more operations to renewable energy sources.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
             <Col className="flex-24 my-2">
-              <Card className="border-0 p-4 box-shadow-light h-100">
-                <Card.Img
-                  variant="top"
-                  src="Sustainability/roadmap2.svg"
-                  alt="Clean Manufacturing"
-                  className="rounded-circle mb-2"
-                  style={{ width: "50px", height: "50px" }}
-                />
-                <Card.Body className="p-0 mt-2">
-                  <Card.Title className="cambria-bold">
-                    Achieve Net-Zero by 2030
-                  </Card.Title>
-                  <Card.Text>
-                    Reduce emissions through greener practices.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true, delay: 0.4 }} className="h-100">
+                <Card className="border-0 p-4 box-shadow-light h-100">
+                  <Card.Img
+                    variant="top"
+                    src="Sustainability/roadmap2.svg"
+                    alt="Clean Manufacturing"
+                    className="rounded-circle mb-2"
+                    style={{ width: "50px", height: "50px" }}
+                  />
+                  <Card.Body className="p-0 mt-2">
+                    <Card.Title className="cambria-bold">
+                      Achieve Net-Zero by 2030
+                    </Card.Title>
+                    <Card.Text>
+                      Reduce emissions through greener practices.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
             <Col className="flex-24 my-2">
-              <Card className="border-0 p-4 box-shadow-light h-100">
-                <Card.Img
-                  variant="top"
-                  src="Sustainability/roadmap3.svg"
-                  alt="Clean Manufacturing"
-                  className="rounded-circle mb-2"
-                  style={{ width: "50px", height: "50px" }}
-                />
-                <Card.Body className="p-0 mt-2">
-                  <Card.Title className="cambria-bold">
-                    Strengthen Community Development
-                  </Card.Title>
-                  <Card.Text>
-                    Enhance education and livelihood programs.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true, delay: 0.6 }} className="h-100">
+                <Card className="border-0 p-4 box-shadow-light h-100">
+                  <Card.Img
+                    variant="top"
+                    src="Sustainability/roadmap3.svg"
+                    alt="Clean Manufacturing"
+                    className="rounded-circle mb-2"
+                    style={{ width: "50px", height: "50px" }}
+                  />
+                  <Card.Body className="p-0 mt-2">
+                    <Card.Title className="cambria-bold">
+                      Strengthen Community Development
+                    </Card.Title>
+                    <Card.Text>
+                      Enhance education and livelihood programs.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
             <Col className="flex-24 my-2">
-              <Card className="border-0 p-4 box-shadow-light h-100">
-                <Card.Img
-                  variant="top"
-                  src="Sustainability/roadmap4.svg"
-                  alt="Clean Manufacturing"
-                  className="rounded-circle mb-2"
-                  style={{ width: "50px", height: "50px" }}
-                />
-                <Card.Body className="p-0 mt-2">
-                  <Card.Title className="cambria-bold">
-                    Adopt Circular Economy Principles
-                  </Card.Title>
-                  <Card.Text>Reduce waste in all operations.</Card.Text>
-                </Card.Body>
-              </Card>
+              <Reveal config={{ popIn: true, delay: 0.8 }} className="h-100">
+                <Card className="border-0 p-4 box-shadow-light h-100">
+                  <Card.Img
+                    variant="top"
+                    src="Sustainability/roadmap4.svg"
+                    alt="Clean Manufacturing"
+                    className="rounded-circle mb-2"
+                    style={{ width: "50px", height: "50px" }}
+                  />
+                  <Card.Body className="p-0 mt-2">
+                    <Card.Title className="cambria-bold">
+                      Adopt Circular Economy Principles
+                    </Card.Title>
+                    <Card.Text>Reduce waste in all operations.</Card.Text>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
           </Row>
         </Container>
@@ -332,68 +357,70 @@ const Sustainability = () => {
       {/* Sustainability Highlights Section */}
       <section className="py-5 lightgreen-bg highlight">
         <Container>
-          <h2 className="h4 text-uppercase text-green helvetica-neue-reg">
-            Sustainability Highlights of FY 2023-24
-          </h2>
-          <p className="w-75 fs-5">
-            We drive environmental responsibility by integrating sustainable
-            practices across our operations. Our initiatives focus on clean
-            manufacturing, renewable energy adoption, resource conservation and
-            promoting circular economy for a better tomorrow.
-          </p>
-          <Row className="mt-4 align-items-end">
-            <Col md={3}>
-              <h4 className="h6 text">
-                Material <br /> Management
-              </h4>
-              <h3 className="text-green fw-bold">32%</h3>
-              <p className="fs-7">Recycled eco-friendly material used</p>
-            </Col>
-            <Col md={2}>
-              <h4 className="h6">
-                Renewable <br /> Resource
-              </h4>
-              <h3 className="text-green fw-bold">0.16 Mn GJ</h3>
-              <p className="fs-7">Renewable energy used</p>
-            </Col>
-            <Col md={3}>
-              <h3 className="text-green fw-bold">9.2%</h3>
-              <p className="fs-7">of total electricity consumption</p>
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col md={3}>
-              <h4 className="h6">
-                Green <br /> Business
-              </h4>
-              <h3 className="text-green fw-bold">50%</h3>
-              <p className="fs-7">Of revenue</p>
-            </Col>
-            <Col md={3}>
-              <h4 className="h6">
-                Energy <br /> Efficiency
-              </h4>
+          <Reveal config={{ fromRight: true }}>
+            <h2 className="h4 text-uppercase text-green helvetica-neue-reg">
+              Sustainability Highlights of FY 2023-24
+            </h2>
+            <p className="w-75 fs-5">
+              We drive environmental responsibility by integrating sustainable
+              practices across our operations. Our initiatives focus on clean
+              manufacturing, renewable energy adoption, resource conservation
+              and promoting circular economy for a better tomorrow.
+            </p>
+            <Row className="mt-4 align-items-end">
+              <Col md={3}>
+                <h4 className="h6 text">
+                  Material <br /> Management
+                </h4>
+                <h3 className="text-green fw-bold">32%</h3>
+                <p className="fs-7">Recycled eco-friendly material used</p>
+              </Col>
+              <Col md={2}>
+                <h4 className="h6">
+                  Renewable <br /> Resource
+                </h4>
+                <h3 className="text-green fw-bold">0.16 Mn GJ</h3>
+                <p className="fs-7">Renewable energy used</p>
+              </Col>
+              <Col md={3}>
+                <h3 className="text-green fw-bold">9.2%</h3>
+                <p className="fs-7">of total electricity consumption</p>
+              </Col>
+            </Row>
+            <Row className="mt-4">
+              <Col md={3}>
+                <h4 className="h6">
+                  Green <br /> Business
+                </h4>
+                <h3 className="text-green fw-bold">50%</h3>
+                <p className="fs-7">Of revenue</p>
+              </Col>
+              <Col md={3}>
+                <h4 className="h6">
+                  Energy <br /> Efficiency
+                </h4>
 
-              <h3 className="text-green fw-bold">16%</h3>
-              <p className="fs-7">Reduction in energy intensity FY</p>
-            </Col>
-          </Row>
-          <Row className="align-items-end">
-            <Col md={3}>
-              <h4 className="h6">
-                Protecting <br /> Nature
-              </h4>
-              <h3 className="text-green fw-bold">~4M</h3>
-              <p className="fs-7">Saplings planted across the region</p>
-            </Col>
-            <Col md={3}>
-              <h3 className="text-green fw-bold">&gt;50%</h3>
-              <p className="fs-7">Water reused</p>
-            </Col>
-          </Row>
-          <h2 className="text-green w-50 text-center mt-5 ms-5">
-            "Sustainability is not a choice — it’s the future we build today."
-          </h2>
+                <h3 className="text-green fw-bold">16%</h3>
+                <p className="fs-7">Reduction in energy intensity FY</p>
+              </Col>
+            </Row>
+            <Row className="align-items-end">
+              <Col md={3}>
+                <h4 className="h6">
+                  Protecting <br /> Nature
+                </h4>
+                <h3 className="text-green fw-bold">~4M</h3>
+                <p className="fs-7">Saplings planted across the region</p>
+              </Col>
+              <Col md={3}>
+                <h3 className="text-green fw-bold">&gt;50%</h3>
+                <p className="fs-7">Water reused</p>
+              </Col>
+            </Row>
+            <h2 className="text-green w-50 text-center mt-5 ms-5">
+              "Sustainability is not a choice — it’s the future we build today."
+            </h2>
+          </Reveal>
         </Container>
         <Image src="Sustainability/tree.png" className="bottom-right-bg" />
       </section>
@@ -406,18 +433,23 @@ const Sustainability = () => {
           minHeight: "800px",
         }}
       >
-        <Container className="align-items-center d-flex flex-column justify-content-center h-100">
-          <h3 className="text-white h1 w-75 cambria-bold">
-            Together, we can build a future that is strong, sustainable, and
-            full of opportunity.
-          </h3>
-          <Button
-            variant="light"
-            href="#contact-us"
-            className="mt-3 text-green fw-bold px-5 fs-5"
+        <Container>
+          <Reveal
+            config={{ fromBottom: true }}
+            className="align-items-center d-flex flex-column justify-content-center h-100"
           >
-            Contact Us
-          </Button>
+            <h3 className="text-white h1 w-75 cambria-bold">
+              Together, we can build a future that is strong, sustainable, and
+              full of opportunity.
+            </h3>
+            <Button
+              variant="light"
+              href="#contact-us"
+              className="mt-3 text-green fw-bold px-5 fs-5"
+            >
+              Contact Us
+            </Button>
+          </Reveal>
         </Container>
       </section>
     </div>
