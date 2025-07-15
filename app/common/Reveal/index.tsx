@@ -18,7 +18,7 @@ type RevealProps = React.PropsWithChildren<{
 
 const Reveal: React.FC<RevealProps> = ({ children, config, className }) => {
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.1,
   });
   const {

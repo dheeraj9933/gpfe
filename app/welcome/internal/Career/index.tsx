@@ -1,21 +1,12 @@
 import React from "react";
 import { Button, Container, Image } from "react-bootstrap";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-import { animationValues } from "~/utils/animateValues";
+import Reveal from "~/common/Reveal";
 
 const Career: React.FC = () => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   return (
     <Container fluid className="career dark-blue-bg">
       <Container className="career-container">
-        <motion.div
-          {...animationValues({
-            ref: ref,
-            inView,
-            fromLeft: true,
-          })}
-        >
+        <Reveal config={{ fromLeft: true }} className="position-relative z-1">
           <div className="career-text d-flex justify-content-center flex-column gap-2 text-white ">
             <h2 className="orange-text fs-5  helvetica-neue-reg">Career</h2>
             <h2 className="fs-3 cambria-bold">
@@ -33,7 +24,7 @@ const Career: React.FC = () => {
               </Button>
             </div>
           </div>
-        </motion.div>
+        </Reveal>
 
         <Image src="HomePage/career.png" className="career-img-1" />
       </Container>

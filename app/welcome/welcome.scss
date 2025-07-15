@@ -238,7 +238,8 @@ main {
         width: 50%;
       }
       .career-img-1 {
-        width: 600px;
+        width: 100%;
+        max-width: 600px;
         position: absolute;
         z-index: 0;
         top: 0;

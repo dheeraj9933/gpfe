@@ -7,32 +7,10 @@ import "./styles.scss"; // Import your CSS file for custom styles
 import ImageWithText from "~/common/ImageWithText";
 import News from "~/common/News";
 import SliderIcons from "~/common/SliderIcons";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-import { animationValues } from "~/utils/animateValues";
 import Reveal from "~/common/Reveal";
 
 const SteelBusiness = () => {
-  const { ref: offerRef, inView: offerInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-  const { ref: industriesRef, inView: industriesInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-  const { ref: roadMapRef, inView: roadMapInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-  const { ref: newsRef, inView: newsInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-  const { ref: bannerRef, inView: bannerInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+
   return (
     <div className="steel-page">
       {/* Hero Section */}
@@ -170,7 +148,7 @@ const SteelBusiness = () => {
         <Image src="Steel/poly-bottom-right.png" className="bottom-right-bg" />
       </section>
 
-      {/* Key Infrastructure Section 5 3 3 */}
+      {/* Industries we serve 5 3 3 */}
       <section className=" ">
         <Container>
           <h2 className="text-center mb-5 cambria-bold">Industries We Serve</h2>
@@ -249,29 +227,17 @@ const SteelBusiness = () => {
         <Container>
           <Row className="align-items-center">
             <Col md={6}>
-              <motion.div
-                {...animationValues({
-                  ref: roadMapRef,
-                  inView: roadMapInView,
-                  fromLeft: true,
-                })}
-              >
+              <Reveal config={{ fromLeft: true, delay: 0.2 }}>
                 <Image
                   src="Steel/roadmap.png"
                   alt="Roadmap"
                   fluid
                   className="rounded shadow"
                 />
-              </motion.div>
+              </Reveal>
             </Col>
             <Col md={6}>
-              <motion.div
-                {...animationValues({
-                  ref: roadMapRef,
-                  inView: roadMapInView,
-                  fromRight: true,
-                })}
-              >
+              <Reveal config={{ fromRight: true, delay: 0.2 }}>
                 <h2 className="h3 cambria-bold ">
                   Our roadmap for building a sustainable, responsible future.
                 </h2>
@@ -281,7 +247,7 @@ const SteelBusiness = () => {
                   protect our environment, empower communities, and build
                   resilience for the generations to come.
                 </p>
-              </motion.div>
+              </Reveal>
             </Col>
           </Row>
         </Container>
@@ -296,46 +262,37 @@ const SteelBusiness = () => {
             </h2>
             <SliderIcons />
           </div>
-          <motion.div
-            {...animationValues({
-              ref: newsRef,
-              inView: newsInView,
-              popIn: true,
-            })}
-          >
+          <Reveal config={{ fromBottom: true, delay: 0.2 }}>
             <News />
-          </motion.div>
+          </Reveal>
         </Container>
       </section>
 
       {/* The Road Ahead Section */}
       <Banner image="Steel/road.webp">
-        <motion.div
-          {...animationValues({
-            ref: bannerRef,
-            inView: bannerInView,
-            fromRight: true,
-          })}
-          className="d-flex align-items-center"
-          style={{ maxWidth: "400px", height: "100%" }}
-        >
-          <div className="">
-            <h1 className="fs-2  cambria-bold">The Road Ahead</h1>
-            <p className="lead mt-3">
-              {" "}
-              At GP Agarwal Group, our commitment to sustainability is limited
-              to empowering communities, and it builds resilience for the
-              generations to come.
-            </p>
-            <Button
-              variant="light"
-              href="#contact-us"
-              className="mt-3 text-green fw-bold px-5 fs-5"
-            >
-              Contact Us
-            </Button>
+        <Reveal config={{ fromRight: true, delay: 0.2 }} className="h-100">
+          <div
+            className="d-flex align-items-center"
+            style={{ maxWidth: "400px", height: "100%" }}
+          >
+            <div className="">
+              <h1 className="fs-2  cambria-bold">The Road Ahead</h1>
+              <p className="lead mt-3">
+                {" "}
+                At GP Agarwal Group, our commitment to sustainability is limited
+                to empowering communities, and it builds resilience for the
+                generations to come.
+              </p>
+              <Button
+                variant="light"
+                href="#contact-us"
+                className="mt-3 text-green fw-bold px-5 fs-5"
+              >
+                Contact Us
+              </Button>
+            </div>
           </div>
-        </motion.div>
+        </Reveal>
       </Banner>
     </div>
   );

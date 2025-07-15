@@ -12,13 +12,10 @@ import Tags from "~/common/Tags";
 import { Link } from "react-router";
 import { ArrowRight } from "react-bootstrap-icons";
 import Banner from "~/common/Banner";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { animationValues } from "../utils/animateValues";
+import Reveal from "~/common/Reveal";
 
 export function Welcome() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true, threshold: 0.1 });
+  
   return (
     <>
       <main className="">
@@ -66,18 +63,18 @@ export function Welcome() {
           <Container>
             <Row className="py-5 my-5">
               <Col className="flex-50 mobile-100">
-                <motion.div
-                  {...animationValues({ ref: ref1, inView: inView1, fromLeft: true })}
+                <Reveal
+                  config={{ fromLeft: true, delay: 0.4 }}
                 >
                   <div className="founder-img d-flex justify-content-center">
                     <Image src="HomePage/founder.webp" className="w-50" />
                   </div>
-                </motion.div>
+                </Reveal>
               </Col>
               <Col className="position-relative flex-45 mt-4 mt-lg-0 founder-speech">
                 <Image src="/annotations.png" className="speech-quote" />
-                <motion.div
-                  {...animationValues({ ref: ref1, inView: inView1, fromRight: true })}
+                <Reveal
+                  config={{ fromRight: true, delay: 0.4 }}
                 >
                   <h2 className="helvetica-neue-reg-it">
                     Cherish every day. We have adapted the journey as our
@@ -99,7 +96,7 @@ export function Welcome() {
                       Know More
                     </Button>
                   </div>
-                </motion.div>
+                </Reveal>
               </Col>
             </Row>
           </Container>
@@ -135,25 +132,12 @@ export function Welcome() {
                 </Link>
               </div>
             </div>
-            <motion.div
-              {...animationValues({
-                ref: ref,
-                inView,
-                fromBottom: true,
-              })}
-            >
+            <Reveal config={{ fromBottom: true, delay: 0.2 }}>
               <News />
-            </motion.div>
-            <motion.div
-              {...animationValues({
-                ref: ref,
-                inView,
-                fromBottom: true,
-                delay: 0.8,
-              })}
-            >
+            </Reveal>
+             <Reveal config={{ fromBottom: true, delay: 0.2 }}>
               <News />
-            </motion.div>
+            </Reveal>
           </Container>
           <Image src="HomePage/bg-poly-top.svg" className="top-right-bg" />
         </section>

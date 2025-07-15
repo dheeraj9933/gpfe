@@ -2,27 +2,10 @@ import React from "react";
 import { Container, Row, Col, Image, Card } from "react-bootstrap";
 import Banner from "~/common/Banner";
 import HalfHalfSection from "~/common/HalfHalfSection";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-import { animationValues } from "~/utils/animateValues";
 import "./About.scss";
 import Reveal from "~/common/Reveal";
 
 const AboutUs = () => {
-  const { ref: ourMissionRef, inView: missinView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const { ref: leadershipRef, inView: leadershipInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const { ref: businessRef, inView: businessInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
   return (
     <div className="about-us-page">
       {/* Hero Section */}
@@ -96,36 +79,24 @@ const AboutUs = () => {
         <Container className="py-5">
           <Row className="justify-content-between">
             <Col md={5}>
-              <motion.div
-                {...animationValues({
-                  ref: ourMissionRef,
-                  inView: missinView,
-                  fromLeft: true,
-                })}
-              >
+              <Reveal config={{ fromLeft: true, delay: 0.2 }}>
                 <h3 className="cambria-bold mb-3">Our Mission</h3>
                 <p>
                   To empower industries and communities by delivering
                   high-quality, sustainable engineering solutions that inspire
                   trust, growth, and long-term value.
                 </p>
-              </motion.div>
+              </Reveal>
             </Col>
             <Col md={5}>
-              <motion.div
-                {...animationValues({
-                  ref: ourMissionRef,
-                  inView: missinView,
-                  fromRight: true,
-                })}
-              >
+              <Reveal config={{ fromRight: true, delay: 0.2 }}>
                 <h3 className="cambria-bold mb-3">Our Vision</h3>
                 <p>
                   To empower industries and communities by delivering
                   high-quality, sustainable engineering solutions that inspire
                   trust, growth, and long-term value.
                 </p>
-              </motion.div>
+              </Reveal>
             </Col>
           </Row>
         </Container>
@@ -351,13 +322,7 @@ const AboutUs = () => {
           </h2>
           <Row>
             <Col md={4}>
-              <motion.div
-                {...animationValues({
-                  ref: businessRef,
-                  inView: businessInView,
-                  fromLeft: true,
-                })}
-              >
+              <Reveal config={{ fromLeft: true, delay: 0.2 }}>
                 <Card className="border-0 h-100">
                   <Card.Img
                     className="rounded"
@@ -372,16 +337,10 @@ const AboutUs = () => {
                     </Card.Text>
                   </Card.Body>
                 </Card>
-              </motion.div>
+              </Reveal>
             </Col>
             <Col md={4}>
-              <motion.div
-                {...animationValues({
-                  ref: businessRef,
-                  inView: businessInView,
-                  fromBottom: true,
-                })}
-              >
+              <Reveal config={{ fromBottom: true, delay: 0.2 }}>
                 <Card className="border-0 h-100">
                   <Card.Img
                     className="rounded"
@@ -397,16 +356,10 @@ const AboutUs = () => {
                     </Card.Text>
                   </Card.Body>
                 </Card>
-              </motion.div>
+              </Reveal>
             </Col>
             <Col md={4}>
-              <motion.div
-                {...animationValues({
-                  ref: businessRef,
-                  inView: businessInView,
-                  fromRight: true,
-                })}
-              >
+              <Reveal config={{ fromRight: true, delay: 0.2 }}>
                 <Card className="border-0">
                   <Card.Img
                     className="rounded"
@@ -421,7 +374,7 @@ const AboutUs = () => {
                     </Card.Text>
                   </Card.Body>
                 </Card>
-              </motion.div>
+              </Reveal>
             </Col>
           </Row>
         </Container>
@@ -430,4 +383,4 @@ const AboutUs = () => {
   );
 };
 
-export default  AboutUs;
+export default AboutUs;

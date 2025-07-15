@@ -110,7 +110,7 @@ const ContactUs = () => {
                     />
                   </Form.Group>
                 </Reveal>
-                <Reveal config={{ fromRight: true, delay: 0.6 }}>
+                <Reveal config={{ fromRight: true, delay: 0.6 }} className="position-relative z-1">
                   <Form.Group className="mb-3" controlId="phone">
                     <Form.Label className="fw-semi-bold">
                       Phone Number

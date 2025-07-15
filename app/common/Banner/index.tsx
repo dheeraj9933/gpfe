@@ -1,10 +1,8 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { ArrowDown } from "react-bootstrap-icons";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-import { animationValues } from "~/utils/animateValues";
 import "./styles.scss";
+import Reveal from "../Reveal";
 
 const Banner = ({
   children,
@@ -15,7 +13,6 @@ const Banner = ({
   image: string;
   className?: string;
 }) => {
-  const { ref } = useInView({ triggerOnce: true, threshold: 0.1 });
   return (
     <section
       className={`py-5 text-white banner d-flex ${className}`}
@@ -28,16 +25,12 @@ const Banner = ({
       }}
     >
       <Container>
-        <motion.div
-          {...animationValues({
-            ref: ref,
-            inView: true,
-            fromRight: true,
-          })}
-           className="d-flex flex-column h-100"
+        <Reveal
+          config={{ fromRight: true, delay: 0.2 }}
+          className="d-flex flex-column h-100"
         >
           {children}
-        </motion.div>
+        </Reveal>
       </Container>
       <div className="arrow-container">
         <ArrowDown />

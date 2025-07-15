@@ -1,22 +1,13 @@
 import React from "react";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-import { animationValues } from "~/utils/animateValues";
+import Reveal from "~/common/Reveal";
 
 const AboutUs: React.FC = () => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   return (
     <Container className="about-us-section-container">
       <Row className="">
         <Col className="flex-50">
-          <motion.div
-            {...animationValues({
-              ref: ref,
-              inView,
-              fromLeft: true,
-            })}
-          >
+           <Reveal config={{ fromLeft: true }}>
             <div className="d-flex justify-content-center flex-column gap-2">
               <h2 className="orange-text helvetica-neue-reg text-uppercase h4">
                 About Us
@@ -37,7 +28,7 @@ const AboutUs: React.FC = () => {
                 </Button>
               </div>
             </div>
-          </motion.div>
+          </Reveal>
         </Col>
         <Col className="d-flex justify-content-end flex-50 position-relative w-50 mt-2 mt-lg-0">
           <Image src="/about1.png" className="about-img-1" />

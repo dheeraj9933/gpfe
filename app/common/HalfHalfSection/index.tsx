@@ -1,8 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-import { animationValues } from "~/utils/animateValues";
+import Reveal from "../Reveal";
 
 interface HalfHalfSectionProps {
   leftContent: React.ReactNode;
@@ -13,31 +11,18 @@ const HalfHalfSection: React.FC<HalfHalfSectionProps> = ({
   leftContent,
   rightContent,
 }) => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   return (
     <Container>
       <Row className="align-items-center justify-content-around">
         <Col xs={12} md={6} className="d-flex ">
-          <motion.div
-            {...animationValues({
-              ref: ref,
-              inView,
-              fromLeft: true,
-            })}
-          >
+          <Reveal config={{ fromLeft: true, delay: 0.2 }}>
             {leftContent}
-          </motion.div>
+          </Reveal>
         </Col>
         <Col xs={12} md={6} className="d-flex ">
-          <motion.div
-            {...animationValues({
-              ref: ref,
-              inView,
-              fromRight: true,
-            })}
-          >
+          <Reveal config={{ fromRight: true, delay: 0.2 }}>
             {rightContent}
-          </motion.div>
+          </Reveal>
         </Col>
       </Row>
     </Container>
