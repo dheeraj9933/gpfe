@@ -1,30 +1,19 @@
 import React from "react";
 import { Container, Image } from "react-bootstrap";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-import { animationValues } from "~/utils/animateValues";
+import Reveal from "~/common/Reveal";
 
 const WorkCulture: React.FC = () => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   return (
     <Container fluid className="work-culture">
       <Image src="/bg-poly-3.png" className="top-left-bg" />
       <Container className="work-culture-container d-flex flex-column">
-        <motion.div
-          {...animationValues({
-            ref: ref,
-            inView,
-            fromUp: true,
-            delay: 0.7,
-          })}
-          className="d-flex justify-content-end"
-        >
+         <Reveal config={{ fromUp: true }} className="d-flex justify-content-end">
           <Image
             src="work-culture.png"
             alt="work culture"
             className="work-culture-img w-50"
           />
-        </motion.div>
+        </Reveal>
 
         <div className="d-flex gap-4 text-dark dark-blue-bg work-culture-text">
           <div className="d-flex flex-column gap-2">

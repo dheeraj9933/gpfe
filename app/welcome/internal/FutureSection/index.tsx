@@ -62,24 +62,6 @@ const FutureSection: React.FC = () => {
     },
   ];
 
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-
-  const x = 0;
-  const y = -100;
-  const containerVariants = {
-    initial: {},
-    animate: {
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3, // optional
-      },
-    },
-  };
-
-  const itemVariants = {
-    initial: { opacity: 0, y: 100 },
-    animate: { opacity: 1, y: 0 },
-  };
   return (
     <Container fluid className="future py-5">
       <Container>
@@ -97,19 +79,9 @@ const FutureSection: React.FC = () => {
 
           {futureBoxes.map((future, index) => (
             <Col md={6} lg={2} className="my-3 my-lg-0">
-              <motion.div
-                className="h-100"
-                ref={ref}
-                initial={{ opacity: 0, x, y: 50 }}
-                animate={inView ? { opacity: 1, x: 0, y: 0, scale: 1 } : {}}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeInOut", 
-                  delay: index/5, 
-                }}
-              >
+              <Reveal config={{ fromBottom: true, delay: index/4 }} className="h-100">
                 <WhiteBox data={future} />
-              </motion.div>
+              </Reveal>
             </Col>
           ))}
         </Row>

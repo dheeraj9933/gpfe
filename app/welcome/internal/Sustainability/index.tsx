@@ -1,30 +1,17 @@
 import React from "react";
 import { Container, Image } from "react-bootstrap";
 import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-import { animationValues } from "~/utils/animateValues";
+import Reveal from "~/common/Reveal";
 
 const Sustainability: React.FC = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   return (
     <Container fluid className="sustainability position-relative dark-blue-bg">
       <Container className="">
-        <motion.div
-          {...animationValues({
-            ref: ref,
-            inView,
-            fromLeft: true,
-          })}
-        >
+        <Reveal config={{ popIn: true }}>
           <Image src="/sustain-1.png" alt="Sustainability" className="w-100" />
-        </motion.div>
-        <motion.div
-          {...animationValues({
-            ref: ref,
-            inView,
-            popIn: true,
-          })}
-        >
+        </Reveal>
+         <Reveal config={{ fromLeft: true }}>
           <div className="d-flex gap-4 bg-body text-dark sustainability-floater flex-wrap flex-lg-nowrap">
             <Image src="/sustain-2.png" alt="Sustainability" className="" />
 
@@ -40,7 +27,7 @@ const Sustainability: React.FC = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </Reveal>
       </Container>
       <Image
         src="/bg-poly-2.png"
