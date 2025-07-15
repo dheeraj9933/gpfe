@@ -59,9 +59,7 @@ main {
       line-height: 1;
       // font-family: 'Helvetica Neue';
     }
-    p {
-      // font-family: 'Myriad Pro';
-    }
+
     h3 {
       margin: 0;
       font-size: 20px;
@@ -71,6 +69,11 @@ main {
       position: absolute;
       left: -95px;
       top: -20px;
+      @include media.respond-to(sm) {
+        left: -55px;
+        top: -20px;
+        width: 60px;
+      }
     }
   }
 
@@ -82,8 +85,7 @@ main {
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       // margin: 20px;
-       transition: all 0.3s ease;
-     
+      transition: all 0.3s ease;
     }
   }
 

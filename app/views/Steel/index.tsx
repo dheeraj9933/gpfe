@@ -149,25 +149,25 @@ const SteelBusiness = () => {
       </section>
 
       {/* Industries we serve 5 3 3 */}
-      <section className=" ">
+      <section className="padding-y-100">
         <Container>
           <h2 className="text-center mb-5 cambria-bold">Industries We Serve</h2>
           <div className="d-flex flex-wrap image-collage justify-content-between">
-            <Reveal config={{ popIn: true }} className="flex-40 my-3">
+            <Reveal config={{ popIn: true }} className="flex-40">
               <ImageWithText
                 src="Steel/collage-1.png"
                 alt="Collage 1"
                 text="Infrastructure & Construction"
               />
             </Reveal>
-            <Reveal config={{ popIn: true }} className="flex-28 my-3">
+            <Reveal config={{ popIn: true }} className="flex-28">
               <ImageWithText
                 src="Steel/collage-2.png"
                 alt="Collage 2"
                 text="Oil & Gas"
               />
             </Reveal>
-            <Reveal config={{ popIn: true }} className="flex-28 my-3">
+            <Reveal config={{ popIn: true }} className="flex-28">
               <ImageWithText
                 src="Steel/collage-3.png"
                 alt="Collage 3"
@@ -176,14 +176,14 @@ const SteelBusiness = () => {
             </Reveal>
           </div>
           <div className="my-0 my-md-4 d-flex flex-wrap image-collage justify-content-between">
-            <Reveal config={{ popIn: true }} className="flex-49 my-3">
+            <Reveal config={{ popIn: true }} className="flex-49">
               <ImageWithText
                 src="Steel/collage-4.png"
                 alt="Collage 4"
                 text="Railways"
               />
             </Reveal>
-            <Reveal config={{ popIn: true }} className="flex-49 my-3">
+            <Reveal config={{ popIn: true }} className="flex-49">
               <ImageWithText
                 src="Steel/collage-5.png"
                 alt="Collage 5"
@@ -192,21 +192,21 @@ const SteelBusiness = () => {
             </Reveal>
           </div>
           <div className="d-flex flex-wrap image-collage justify-content-between">
-            <Reveal config={{ popIn: true }} className="flex-28 my-3">
+            <Reveal config={{ popIn: true }} className="flex-28">
               <ImageWithText
                 src="Steel/collage-6.png"
                 alt="Collage 6"
                 text="Water"
               />
             </Reveal>
-            <Reveal config={{ popIn: true }} className="flex-28 my-3">
+            <Reveal config={{ popIn: true }} className="flex-28">
               <ImageWithText
                 src="Steel/collage-7.png"
                 alt="Collage 7"
                 text="Agriculture"
               />
             </Reveal>
-            <Reveal config={{ popIn: true }} className="flex-40 my-3">
+            <Reveal config={{ popIn: true }} className="flex-40">
               <ImageWithText
                 src="Steel/collage-8.png"
                 alt="Collage 8"

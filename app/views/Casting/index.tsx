@@ -7,28 +7,9 @@ import "./styles.scss"; // Import your CSS file for custom styles
 import ImageWithText from "~/common/ImageWithText";
 import News from "~/common/News";
 import SliderIcons from "~/common/SliderIcons";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-import { animationValues } from "~/utils/animateValues";
 import Reveal from "~/common/Reveal";
 
-const SteelBusiness = () => {
-  const { ref: offerRef, inView: offerInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-  const { ref: industriesRef, inView: industriesInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-  const { ref: bannerRef, inView: bannerInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-  const { ref: newsRef, inView: newsInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+const Casting = () => {
   return (
     <div className="casting-page">
       {/* Hero Section */}
@@ -199,21 +180,21 @@ const SteelBusiness = () => {
         <Container>
           <h2 className="text-center mb-5 cambria-bold">Industries We Serve</h2>
           <div className="d-flex flex-wrap image-collage justify-content-between">
-            <Reveal config={{ popIn: true }} className="flex-40 my-3">
+            <Reveal config={{ popIn: true }} className="flex-40">
               <ImageWithText
                 src="Steel/collage-1.png"
                 alt="Collage 1"
                 text="Infrastructure & Construction"
               />
             </Reveal>
-            <Reveal config={{ popIn: true }} className="flex-28 my-3">
+            <Reveal config={{ popIn: true }} className="flex-28">
               <ImageWithText
                 src="Steel/collage-2.png"
                 alt="Collage 2"
                 text="Oil & Gas"
               />
             </Reveal>
-            <Reveal config={{ popIn: true }} className="flex-28 my-3">
+            <Reveal config={{ popIn: true }} className="flex-28">
               <ImageWithText
                 src="Steel/collage-3.png"
                 alt="Collage 3"
@@ -222,14 +203,14 @@ const SteelBusiness = () => {
             </Reveal>
           </div>
           <div className="my-0 my-md-4 d-flex flex-wrap image-collage justify-content-between">
-            <Reveal config={{ popIn: true }} className="flex-49 my-3">
+            <Reveal config={{ popIn: true }} className="flex-49">
               <ImageWithText
                 src="Steel/collage-4.png"
                 alt="Collage 4"
                 text="Railways"
               />
             </Reveal>
-            <Reveal config={{ popIn: true }} className="flex-49 my-3">
+            <Reveal config={{ popIn: true }} className="flex-49">
               <ImageWithText
                 src="Steel/collage-5.png"
                 alt="Collage 5"
@@ -238,21 +219,21 @@ const SteelBusiness = () => {
             </Reveal>
           </div>
           <div className="d-flex flex-wrap image-collage justify-content-between">
-            <Reveal config={{ popIn: true }} className="flex-28 my-3">
+            <Reveal config={{ popIn: true }} className="flex-28">
               <ImageWithText
                 src="Steel/collage-6.png"
                 alt="Collage 6"
                 text="Water"
               />
             </Reveal>
-            <Reveal config={{ popIn: true }} className="flex-28 my-3">
+            <Reveal config={{ popIn: true }} className="flex-28">
               <ImageWithText
                 src="Steel/collage-7.png"
                 alt="Collage 7"
                 text="Agriculture"
               />
             </Reveal>
-            <Reveal config={{ popIn: true }} className="flex-40 my-3">
+            <Reveal config={{ popIn: true }} className="flex-40">
               <ImageWithText
                 src="Steel/collage-8.png"
                 alt="Collage 8"
@@ -270,52 +251,43 @@ const SteelBusiness = () => {
             <h2 className="h3 text-uppercase cambria-bold">News & Features</h2>
             <SliderIcons />
           </div>
-          <motion.div
-            {...animationValues({
-              ref: newsRef,
-              inView: newsInView,
-              fromBottom: true,
-            })}
-          >
+          <Reveal config={{ fromBottom: true }}>
             <News />
-          </motion.div>
+          </Reveal>
         </Container>
       </section>
 
       {/* The Road Ahead Section */}
 
       <Banner image="Casting/road.webp">
-        <motion.div
-          {...animationValues({
-            ref: bannerRef,
-            inView: bannerInView,
-            fromRight: true,
-          })}
-          className="d-flex align-items-center"
-          style={{ maxWidth: "500px", height: "100%" }}
-        >
-          <div className="">
-            <h1 className="fs-2 cambria-bold ">The Road Ahead</h1>
-            <p className="lead mt-3">
-              {" "}
-              With plans to expand capacity and adopt green casting techniques,
-              we are on a mission to become a preferred supplier of
-              precision-engineered castings not just across India, but globally.
-              Our focus remains clear: to deliver castings that enable
-              real-world performance, durability, and progress.
-            </p>
-            <Button
-              variant="light"
-              href="#contact-us"
-              className="mt-3 text-green fw-bold px-5 fs-5"
-            >
-              Contact Us
-            </Button>
+        <Reveal config={{ fromRight: true, delay: 0.2 }} className="h-100">
+          <div
+            className="d-flex align-items-center"
+            style={{ maxWidth: "500px", height: "100%" }}
+          >
+            <div className="">
+              <h1 className="fs-2 cambria-bold ">The Road Ahead</h1>
+              <p className="lead mt-3">
+                {" "}
+                With plans to expand capacity and adopt green casting
+                techniques, we are on a mission to become a preferred supplier
+                of precision-engineered castings not just across India, but
+                globally. Our focus remains clear: to deliver castings that
+                enable real-world performance, durability, and progress.
+              </p>
+              <Button
+                variant="light"
+                href="#contact-us"
+                className="mt-3 text-green fw-bold px-5 fs-5"
+              >
+                Contact Us
+              </Button>
+            </div>
           </div>
-        </motion.div>
+        </Reveal>
       </Banner>
     </div>
   );
 };
 
-export default SteelBusiness;
+export default Casting;
