@@ -44,10 +44,11 @@ const Partners = () => {
         <HalfHalfSection
           leftContent={
             <Image
-              src="Customers/trust.png"
+              src="Customers/trust.webp"
               alt="Work Culture"
               fluid
               className="shadow border-rounded"
+               style={{ minHeight: "500px", objectFit: 'cover' }}
             />
           }
           rightContent={

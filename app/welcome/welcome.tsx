@@ -136,7 +136,7 @@ export function Welcome() {
               <News />
             </Reveal>
              <Reveal config={{ fromBottom: true, delay: 0.2 }}>
-              <News />
+              <News img='news2.png'/>
             </Reveal>
           </Container>
           <Image src="HomePage/bg-poly-top.svg" className="top-right-bg" />

@@ -4,23 +4,57 @@ import { Button, Container } from "react-bootstrap";
 const Industry: React.FC = () => {
   return (
     <Container fluid className="p-0">
-      <div className="steel w-100 d-flex justify-content-center">
-        <div className="steel-inner d-flex flex-column align-items-center gap-3">
-          <span className="orange-text helvetica-neue-reg fs-4">Industry</span>
-          <h2 className="cambria-bold">Steel</h2>
-          <Button className="px-4" variant="btn btn-outline-light">
-            Know More
-          </Button>
+      <div className=" justify-content-between img-container">
+        <div className="steel text-center d-flex flex-column justify-content-center row-gap-3">
+          <h3 className="text-center cambria-bold">Steel</h3>
+          <div>
+            <Button className="px-4" variant="btn btn-outline-light">
+              Know More
+            </Button>
+          </div>
+        </div>
+        <div className="power text-center d-flex flex-column justify-content-center row-gap-3">
+          <h3 className="text-center cambria-bold">Power</h3>
+          <div>
+            <Button className="px-4" variant="btn btn-outline-light">
+              Know More
+            </Button>
+          </div>
+        </div>
+        <div className="chemicals text-center d-flex flex-column justify-content-center row-gap-3">
+          <h3 className="text-center mt-5 cambria-bold">Chemicals</h3>
+          <div>
+            <Button className="px-4" variant="btn btn-outline-light">
+              Know More
+            </Button>
+          </div>
+        </div>
+        <div className="water text-center d-flex flex-column justify-content-center row-gap-3">
+          <h3 className="text-center mt-5 cambria-bold">Water</h3>
+          <div>
+            <Button className="px-4" variant="btn btn-outline-light">
+              Know More
+            </Button>
+          </div>
+        </div>
+        <div className="railways text-center d-flex flex-column justify-content-center row-gap-3">
+          <h3 className="text-center mt-5 cambria-bold">Railways</h3>
+          <div>
+            <Button className="px-4" variant="btn btn-outline-light">
+              Know More
+            </Button>
+          </div>
+        </div>
+        <div className="defence text-center d-flex flex-column justify-content-center row-gap-3">
+          <h3 className="text-center mt-5 cambria-bold">Defence</h3>
+          <div>
+            <Button className="px-4" variant="btn btn-outline-light">
+              Know More
+            </Button>
+          </div>
         </div>
       </div>
-      <div className="d-flex justify-content-between">
-        <div className="casting">
-          <h3 className="text-center mt-5 cambria-bold">Casting</h3>
-        </div>
-        <div className="power">
-          <h3 className="text-center mt-5 cambria-bold">Power</h3>
-        </div>
-      </div>
+      
     </Container>
   );
 };

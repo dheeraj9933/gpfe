@@ -45,10 +45,11 @@ const Careers = () => {
         <HalfHalfSection
           leftContent={
             <Image
-              src="Career/culture.png"
+              src="Career/culture.webp"
               alt="Work Culture"
               fluid
               className="shadow border-rounded"
+               style={{ minHeight: "500px", objectFit: 'cover' }}
             />
           }
           rightContent={

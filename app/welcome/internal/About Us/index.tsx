@@ -31,9 +31,9 @@ const AboutUs: React.FC = () => {
           </Reveal>
         </Col>
         <Col className="d-flex justify-content-end flex-50 position-relative w-50 mt-2 mt-lg-0">
-          <Image src="/about1.png" className="about-img-1" />
+          <Image src="/HomePage/about1.webp" className="about-img-1" />
 
-          <Image src="/about2.png" className="about-img-2" />
+          <Image src="/HomePage/about2.webp" className="about-img-2" />
 
           <div></div>
         </Col>

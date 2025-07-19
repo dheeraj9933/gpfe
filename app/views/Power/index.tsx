@@ -40,6 +40,7 @@ const SteelBusiness = () => {
               alt="Hands with Plant"
               fluid
               className="shadow border-rounded"
+               style={{ minHeight: "600px", objectFit: 'cover' }}
             />
           }
           rightContent={
@@ -221,7 +222,7 @@ const SteelBusiness = () => {
       </section>
 
       {/* News & Features Section */}
-      <section className="py-5">
+      {/* <section className="py-5">
         <Container>
           <div className="d-flex justify-content-between">
             <h2 className="h3 text-uppercase cambria-bold">News & Features</h2>
@@ -231,7 +232,7 @@ const SteelBusiness = () => {
             <News />
           </Reveal>
         </Container>
-      </section>
+      </section> */}
 
       {/* The Road Ahead Section */}
 

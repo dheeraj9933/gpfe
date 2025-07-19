@@ -44,7 +44,7 @@ const Partners = () => {
         <HalfHalfSection
           leftContent={
             <Image
-              src="Supplier/foundation.png"
+              src="Supplier/foundation.webp"
               alt="Work Culture"
               fluid
               className="shadow border-rounded"

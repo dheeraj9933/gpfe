@@ -10,7 +10,6 @@ import SliderIcons from "~/common/SliderIcons";
 import Reveal from "~/common/Reveal";
 
 const SteelBusiness = () => {
-
   return (
     <div className="steel-page">
       {/* Hero Section */}
@@ -31,10 +30,11 @@ const SteelBusiness = () => {
         <HalfHalfSection
           leftContent={
             <Image
-              src="Steel/ecosystem.png"
+              src="Steel/ecosystem.webp"
               alt="Hands with Plant"
               fluid
               className="shadow border-rounded"
+              style={{ minHeight: "600px", objectFit: 'cover' }}
             />
           }
           rightContent={
@@ -254,7 +254,7 @@ const SteelBusiness = () => {
       </section>
 
       {/* News & Features Section */}
-      <section className="py-5">
+      {/* <section className="py-5">
         <Container>
           <div className="d-flex justify-content-between">
             <h2 className="h3 text-uppercase  cambria-bold ">
@@ -266,7 +266,7 @@ const SteelBusiness = () => {
             <News />
           </Reveal>
         </Container>
-      </section>
+      </section> */}
 
       {/* The Road Ahead Section */}
       <Banner image="Steel/road.webp">

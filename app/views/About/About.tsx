@@ -9,7 +9,7 @@ const AboutUs = () => {
   return (
     <div className="about-us-page">
       {/* Hero Section */}
-      <Banner image="about/about-banner.png">
+      <Banner image="about/about-banner.webp">
         <div className="flex-50"></div>
         <div className="flex-50 banner-inner-text">
           <div className="">
@@ -30,10 +30,11 @@ const AboutUs = () => {
         <HalfHalfSection
           leftContent={
             <Image
-              src="about/stand.png"
+              src="about/desc.webp"
               alt="Industrial Plant"
               fluid
               className="rounded shadow"
+             style={{ minHeight: "600px", objectFit: 'cover' }}
             />
           }
           rightContent={

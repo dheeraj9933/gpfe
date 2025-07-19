@@ -15,7 +15,7 @@ const HalfHalfSection: React.FC<HalfHalfSectionProps> = ({
     <Container>
       <Row className="align-items-center justify-content-around">
         <Col xs={12} md={6} className="d-flex ">
-          <Reveal config={{ fromLeft: true, delay: 0.2 }}>
+          <Reveal config={{ fromLeft: true, delay: 0.2 }} className="me-2">
             {leftContent}
           </Reveal>
         </Col>

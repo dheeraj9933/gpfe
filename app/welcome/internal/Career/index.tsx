@@ -4,11 +4,20 @@ import Reveal from "~/common/Reveal";
 
 const Career: React.FC = () => {
   return (
-    <Container fluid className="career dark-blue-bg">
+    <Container
+      fluid
+      className="career background-image"
+      style={{
+        backgroundImage: "url('/HomePage/career.webp')",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <Container className="career-container">
         <Reveal config={{ fromLeft: true }} className="position-relative z-1">
           <div className="career-text d-flex justify-content-center flex-column gap-2 text-white ">
-            <h2 className="orange-text fs-5  helvetica-neue-reg">Career</h2>
+            <h2 className="orange-text fs-5  helvetica-neue-reg text-uppercase">Career</h2>
             <h2 className="fs-3 cambria-bold">
               Empowered People. Empowering Progress.
             </h2>
@@ -26,7 +35,7 @@ const Career: React.FC = () => {
           </div>
         </Reveal>
 
-        <Image src="HomePage/career.png" className="career-img-1" />
+        {/* <Image src="HomePage/career.png" className="career-img-1" /> */}
       </Container>
     </Container>
   );

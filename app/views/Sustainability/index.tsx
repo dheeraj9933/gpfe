@@ -40,10 +40,11 @@ const Sustainability = () => {
         <HalfHalfSection
           leftContent={
             <Image
-              src="Sustainability/commitment.png"
+              src="Sustainability/commitment.webp"
               alt="Hands with Plant"
               fluid
               className="shadow border-rounded"
+              style={{minHeight: '650px', objectFit: 'cover'}}
             />
           }
           rightContent={
@@ -206,7 +207,7 @@ const Sustainability = () => {
               xs={12}
               className="banner-img py-2 d-flex flex-column justify-content-around"
               style={{
-                backgroundImage: "url('/Sustainability/esg.webp')",
+                backgroundImage: "url('/Sustainability/esg.jpeg')",
                 minHeight: "400px",
               }}
             >
@@ -258,7 +259,7 @@ const Sustainability = () => {
             <Col md={6}>
               <Reveal config={{ fromRight: true }}>
                 <Image
-                  src="Sustainability/garden.png"
+                  src="Sustainability/garden.webp"
                   alt="Greener Tomorrow"
                   fluid
                   className="shadow border-rounded"

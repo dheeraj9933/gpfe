@@ -6,7 +6,9 @@ const NewsSmall: React.FC<any> = ({ data }) => {
     <div className="align-items-stretch d-flex flex-column h-100 p-3">
       <h3 className="fs-18 helvetica-neue-reg mb-3">{data.title}</h3>
       <p className="fs-6">{data.description}</p>
-      <span className="text-red align-self-end mt-auto myriad-reg-bold">Press Release <ArrowUpRight /></span>
+      <span className="text-red align-self-end mt-auto myriad-reg-bold">
+        Press Release <ArrowUpRight />
+      </span>
     </div>
   );
 };
@@ -17,15 +19,16 @@ const NewsBig: React.FC<any> = ({ data }) => {
       <Image src={data.img} alt="News Image" fluid />
       <h3 className="fs-18 helvetica-neue-reg mt-3">{data.title}</h3>
       <p className="fs-6">{data.description}</p>
-      <span className="text-red align-self-end mt-auto myriad-reg-bold">Press Release <ArrowUpRight className="fw-bold" /></span>
+      <span className="text-red align-self-end mt-auto myriad-reg-bold">
+        Press Release <ArrowUpRight className="fw-bold" />
+      </span>
     </div>
   );
 };
 
 import "./styles.scss";
 import { ArrowUpRight } from "react-bootstrap-icons";
-const News: React.FC = (props) => {
-
+const News = ({ img = "/news.png" }: { img?: string }) => {
   const newsData = {
     title:
       "Chairman Shekharan Merger with our businesses, community initiatives",
@@ -33,7 +36,7 @@ const News: React.FC = (props) => {
       "Get the latest news and feature stories on our businesses, community initiatives, heritage and people. Scroll to read.",
   };
   const newsData2 = {
-    img: "/news.png",
+    img: img,
     title:
       "Chairman Shekharan Merger with our businesses, community initiatives",
     description:
@@ -41,21 +44,20 @@ const News: React.FC = (props) => {
   };
   return (
     <div className="news-section">
-      
       {/* <Row className="my-3"> */}
-        {/* <Col md={12}> */}
-          <Row className="gap-row-3 gap-lg-3 flex-wrap flex-lg-nowrap my-3">
-            <Col md={12} lg={6} className="light-grey-bg my-3 my-lg-0 news-item">
-              <NewsBig data={newsData2} />
-            </Col>
-            <Col md={6} lg={3} className="light-grey-bg news-item">
-              <NewsSmall data={newsData} />
-            </Col>
-            <Col md={6} lg={3} className="light-grey-bg news-item">
-              <NewsSmall data={newsData} />
-            </Col>  
-          </Row>
-        {/* </Col> */}
+      {/* <Col md={12}> */}
+      <Row className="gap-row-3 gap-lg-3 flex-wrap flex-lg-nowrap my-3">
+        <Col md={12} lg={6} className="light-grey-bg my-3 my-lg-0 news-item">
+          <NewsBig data={newsData2} />
+        </Col>
+        <Col md={6} lg={3} className="light-grey-bg news-item">
+          <NewsSmall data={newsData} />
+        </Col>
+        <Col md={6} lg={3} className="light-grey-bg news-item">
+          <NewsSmall data={newsData} />
+        </Col>
+      </Row>
+      {/* </Col> */}
       {/* </Row> */}
     </div>
   );

@@ -245,7 +245,7 @@ const Casting = () => {
       </section>
 
       {/* News & Features Section */}
-      <section className="py-5">
+      {/* <section className="py-5">
         <Container>
           <div className="d-flex justify-content-between">
             <h2 className="h3 text-uppercase cambria-bold">News & Features</h2>
@@ -255,7 +255,7 @@ const Casting = () => {
             <News />
           </Reveal>
         </Container>
-      </section>
+      </section> */}
 
       {/* The Road Ahead Section */}
 
