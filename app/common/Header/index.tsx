@@ -66,7 +66,7 @@ const Header: React.FC = () => {
             id="responsive-navbar-nav"
             className="justify-content-between"
           >
-            <Nav className="mx-auto column-gap-2">
+            <Nav className="ms-auto column-gap-2">
               <NavDropdown
                 title={
                   <span>
@@ -99,7 +99,7 @@ const Header: React.FC = () => {
             </Nav>
 
             {/* Right section */}
-            <div
+            {/* <div
               className={`flex-shrink-0 d-flex align-items-center position-relative ${
                 scrolled ? "right-nav-container" : ""
               }`}
@@ -124,7 +124,7 @@ const Header: React.FC = () => {
                 <option value="2">Hindi</option>
                 <option value="3">Spanish</option>
               </Form.Select>
-            </div>
+            </div> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

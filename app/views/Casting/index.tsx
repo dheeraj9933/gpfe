@@ -143,7 +143,7 @@ const Casting = () => {
         <HalfHalfSection
           leftContent={
             <Image
-              src="Steel/ecosystem.png"
+              src="Casting/Rectangle74.png"
               alt="Hands with Plant"
               fluid
               className="shadow border-rounded"

@@ -134,7 +134,7 @@ const SteelBusiness = () => {
       </section>
 
       {/* Sustainability Highlights Section */}
-      <section className="lightgreen-bg highlight">
+      <section className="lightgreen-bg highlight" style={{minHeight: '1100px'}}>
         <Reveal config={{ fromRight: true }}>
           <Container>
             <h2 className="h4 text-uppercase text-green helvetica-neue-reg">

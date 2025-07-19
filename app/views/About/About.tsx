@@ -215,7 +215,7 @@ const AboutUs = () => {
                 <div className="d-flex flex-column leader  rounded-4 hover-effect">
                   <Image
                     fluid
-                    src="about/leadership2.webp"
+                    src="about/leadership2.jpg"
                     alt="Abhishek Agarwal"
                   />
                   <div className="light-border py-2">
