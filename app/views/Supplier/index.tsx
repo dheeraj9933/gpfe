@@ -207,7 +207,7 @@ const Partners = () => {
         </Container>
       </section>
 
-      {/* Global Presence Section */}
+      {/*  What We Look For */}
       <section className="customer-grid-collage">
         <Container
           fluid
@@ -232,7 +232,7 @@ const Partners = () => {
                   />
                   <Card.Body>
                     <Card.Title className="">Quality Product</Card.Title>
-                    <Card.Text className="">
+                    <Card.Text className="text-center">
                       Rigorous quality control for consistent output{" "}
                     </Card.Text>
                   </Card.Body>
@@ -248,7 +248,7 @@ const Partners = () => {
                   />
                   <Card.Body>
                     <Card.Title className="">Compliance-Ready</Card.Title>
-                    <Card.Text className="">
+                    <Card.Text className="text-center">
                       Adherence to certifications and industry norms.
                     </Card.Text>
                   </Card.Body>
@@ -264,7 +264,7 @@ const Partners = () => {
                   />
                   <Card.Body>
                     <Card.Title className="">Tailored Solutions</Card.Title>
-                    <Card.Text className="">
+                    <Card.Text className="text-center">
                       understanding project’s needs & customize offerings.
                     </Card.Text>
                   </Card.Body>
@@ -280,7 +280,7 @@ const Partners = () => {
                   />
                   <Card.Body>
                     <Card.Title className="">On time Delivery</Card.Title>
-                    <Card.Text className="">
+                    <Card.Text className="text-center">
                       Aligned values in responsibility and impact.
                     </Card.Text>
                   </Card.Body>
@@ -296,7 +296,7 @@ const Partners = () => {
                   />
                   <Card.Body>
                     <Card.Title className="">Tech Adaptability </Card.Title>
-                    <Card.Text className="">
+                    <Card.Text className="text-center">
                       Openness to innovation and process upgrades.
                     </Card.Text>
                   </Card.Body>

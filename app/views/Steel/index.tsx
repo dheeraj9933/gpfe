@@ -67,7 +67,7 @@ const SteelBusiness = () => {
           <Row className="flex-container">
             <Col className="flex-30">
               <Reveal config={{ popIn: true }}>
-                <Card className="border-0 text-center box-shadow-light">
+                <Card className="border-0 text-center box-shadow-light overflow-hidden">
                   <Card.Img
                     variant="top"
                     src="Steel/offer-1.webp"
@@ -83,7 +83,7 @@ const SteelBusiness = () => {
             </Col>
             <Col className="flex-30">
               <Reveal config={{ popIn: true }}>
-                <Card className="border-0 text-center box-shadow-light">
+                <Card className="border-0 text-center box-shadow-light  overflow-hidden">
                   <Card.Img
                     variant="top"
                     src="Steel/offer-2.jpg"
@@ -99,7 +99,7 @@ const SteelBusiness = () => {
             </Col>
             <Col className="flex-30">
               <Reveal config={{ popIn: true }}>
-                <Card className="border-0 text-center box-shadow-light">
+                <Card className="border-0 text-center box-shadow-light  overflow-hidden">
                   <Card.Img
                     variant="top"
                     src="Steel/offer-3.webp"
@@ -115,7 +115,7 @@ const SteelBusiness = () => {
             </Col>
             <Col className="flex-30">
               <Reveal config={{ popIn: true }}>
-                <Card className="border-0 text-center box-shadow-light">
+                <Card className="border-0 text-center box-shadow-light  overflow-hidden">
                   <Card.Img
                     variant="top"
                     src="Steel/offer-4.webp"
@@ -131,7 +131,7 @@ const SteelBusiness = () => {
             </Col>
             <Col className="flex-30">
               <Reveal config={{ popIn: true }}>
-                <Card className="border-0 text-center box-shadow-light">
+                <Card className="border-0 text-center box-shadow-light  overflow-hidden">
                   <Card.Img
                     variant="top"
                     src="Steel/offer-5.webp"

@@ -197,7 +197,7 @@ const AboutUs = () => {
                   />
                   <div className="light-border py-2">
                     <h5>Gopal Agarwal</h5>
-                    <p className="fs-6 text-secondary mt-1">
+                    <p className="fs-6 text-secondary mt-1 text-center">
                       Managing Director
                     </p>
                     <a
@@ -225,7 +225,7 @@ const AboutUs = () => {
                   />
                   <div className="light-border py-2">
                     <h5>Abhishek Agarwal</h5>
-                    <p className="fs-6 text-secondary mt-1">CEO</p>
+                    <p className="fs-6 text-secondary mt-1 text-center">CEO</p>
                     <a
                       href="https://www.linkedin.com/posts/maruti-ispat-pipes-private-limited_today-was-a-special-day-at-our-office-as-activity-7287415828575133696-spcB/"
                       target="__blank"
@@ -265,7 +265,7 @@ const AboutUs = () => {
                     className="w-50"
                   />
                   <Card.Body>
-                    <Card.Text>Star Export Certified Company 2020</Card.Text>
+                    <Card.Text className="text-center">Star Export Certified Company 2020</Card.Text>
                   </Card.Body>
                 </Card>
               </Reveal>
@@ -282,7 +282,7 @@ const AboutUs = () => {
                     className="w-50"
                   />
                   <Card.Body>
-                    <Card.Text>ISO 9001:2020 Certified</Card.Text>
+                    <Card.Text className="text-center">ISO 9001:2020 Certified</Card.Text>
                   </Card.Body>
                 </Card>
               </Reveal>
@@ -299,7 +299,7 @@ const AboutUs = () => {
                     className="w-50"
                   />
                   <Card.Body>
-                    <Card.Text>Best TMF for the Year 2019</Card.Text>
+                    <Card.Text className="text-center">Best TMF for the Year 2019</Card.Text>
                   </Card.Body>
                 </Card>
               </Reveal>
@@ -316,7 +316,7 @@ const AboutUs = () => {
                     className="w-50"
                   />
                   <Card.Body>
-                    <Card.Text>Award for Best Employee Retention</Card.Text>
+                    <Card.Text className="text-center">Award for Best Employee Retention</Card.Text>
                   </Card.Body>
                 </Card>
               </Reveal>

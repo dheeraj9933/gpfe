@@ -155,7 +155,7 @@ const Partners = () => {
                   />
                   <Card.Body>
                     <Card.Title className="fw-bold">Quality Product</Card.Title>
-                    <Card.Text className="fw-bold">
+                    <Card.Text className="fw-bold text-center">
                       Rigorous quality control for consistent output{" "}
                     </Card.Text>
                   </Card.Body>
@@ -173,7 +173,7 @@ const Partners = () => {
                     <Card.Title className="fw-bold">
                       Compliance-Ready
                     </Card.Title>
-                    <Card.Text className="fw-bold">
+                    <Card.Text className="fw-bold text-center">
                       Adherence to certifications and industry norms.
                     </Card.Text>
                   </Card.Body>
@@ -191,7 +191,7 @@ const Partners = () => {
                     <Card.Title className="fw-bold">
                       Tailored Solutions
                     </Card.Title>
-                    <Card.Text className="fw-bold">
+                    <Card.Text className="fw-bold text-center">
                       understanding project’s needs & customize offerings.
                     </Card.Text>
                   </Card.Body>
@@ -209,7 +209,7 @@ const Partners = () => {
                     <Card.Title className="fw-bold">
                       On time Delivery
                     </Card.Title>
-                    <Card.Text className="fw-bold">
+                    <Card.Text className="fw-bold text-center">
                       Aligned values in responsibility and impact.
                     </Card.Text>
                   </Card.Body>
@@ -227,7 +227,7 @@ const Partners = () => {
                     <Card.Title className="fw-bold">
                       Tech Adaptability{" "}
                     </Card.Title>
-                    <Card.Text className="fw-bold">
+                    <Card.Text className="fw-bold text-center">
                       Openness to innovation and process upgrades.
                     </Card.Text>
                   </Card.Body>

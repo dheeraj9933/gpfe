@@ -65,7 +65,7 @@ const Casting = () => {
           <Row className="flex-container">
             <Col className="flex-30">
               <Reveal config={{ popIn: true }}>
-                <Card className="border-0 text-center box-shadow-light">
+                <Card className="border-0 text-center box-shadow-light  overflow-hidden">
                   <Card.Img
                     variant="top"
                     src="Casting/offer1.webp"
@@ -79,7 +79,7 @@ const Casting = () => {
             </Col>
             <Col className="flex-30">
               <Reveal config={{ popIn: true }}>
-                <Card className="border-0 text-center box-shadow-light">
+                <Card className="border-0 text-center box-shadow-light overflow-hidden">
                   <Card.Img
                     variant="top"
                     src="Casting/offer2.webp"
@@ -93,7 +93,7 @@ const Casting = () => {
             </Col>
             <Col className="flex-30">
               <Reveal config={{ popIn: true }}>
-                <Card className="border-0 text-center box-shadow-light">
+                <Card className="border-0 text-center box-shadow-light overflow-hidden">
                   <Card.Img
                     variant="top"
                     src="Casting/offer3.webp"
@@ -107,7 +107,7 @@ const Casting = () => {
             </Col>
             <Col className="flex-30">
               <Reveal config={{ popIn: true }}>
-                <Card className="border-0 text-center box-shadow-light">
+                <Card className="border-0 text-center box-shadow-light overflow-hidden">
                   <Card.Img
                     variant="top"
                     src="Casting/offer4.webp"
@@ -121,7 +121,7 @@ const Casting = () => {
             </Col>
             <Col className="flex-30">
               <Reveal config={{ popIn: true }}>
-                <Card className="border-0 text-center box-shadow-light">
+                <Card className="border-0 text-center box-shadow-light overflow-hidden">
                   <Card.Img
                     variant="top"
                     src="Casting/offer5.webp"
