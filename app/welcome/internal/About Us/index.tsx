@@ -1,13 +1,15 @@
 import React from "react";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
+import { useNavigate } from "react-router";
 import Reveal from "~/common/Reveal";
 
 const AboutUs: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <Container className="about-us-section-container">
       <Row className="">
         <Col className="flex-50">
-           <Reveal config={{ fromLeft: true }}>
+          <Reveal config={{ fromLeft: true }}>
             <div className="d-flex justify-content-center flex-column gap-2">
               <h2 className="orange-text helvetica-neue-reg text-uppercase h4">
                 About Us
@@ -23,7 +25,11 @@ const AboutUs: React.FC = () => {
                 integrity, and impact.
               </p>
               <div>
-                <Button className="px-4 mt-3" variant="danger">
+                <Button
+                  className="px-4 mt-3"
+                  variant="danger"
+                  onClick={() => navigate("/about-us")}
+                >
                   Know More
                 </Button>
               </div>

@@ -34,7 +34,7 @@ const AboutUs = () => {
               alt="Industrial Plant"
               fluid
               className="rounded shadow"
-             style={{ minHeight: "600px", objectFit: 'cover' }}
+              style={{ minHeight: "600px", objectFit: "cover" }}
             />
           }
           rightContent={
@@ -200,12 +200,17 @@ const AboutUs = () => {
                     <p className="fs-6 text-secondary mt-1">
                       Managing Director
                     </p>
-                    <Image
-                      fluid
-                      src="Contact/linkedin.svg"
-                      alt="Gopal Agarwal"
-                      className="my-2"
-                    />
+                    <a
+                      href="https://www.linkedin.com/posts/maruti-ispat-pipes-private-limited_today-was-a-special-day-at-our-office-as-activity-7287415828575133696-spcB/"
+                      target="__blank"
+                    >
+                      <Image
+                        fluid
+                        src="Contact/linkedin.svg"
+                        alt="Gopal Agarwal"
+                        className="my-2"
+                      />
+                    </a>
                   </div>
                 </div>
               </Reveal>
@@ -221,12 +226,17 @@ const AboutUs = () => {
                   <div className="light-border py-2">
                     <h5>Abhishek Agarwal</h5>
                     <p className="fs-6 text-secondary mt-1">CEO</p>
-                    <Image
-                      fluid
-                      src="Contact/linkedin.svg"
-                      alt="Gopal Agarwal"
-                      className="my-2"
-                    />
+                    <a
+                      href="https://www.linkedin.com/posts/maruti-ispat-pipes-private-limited_today-was-a-special-day-at-our-office-as-activity-7287415828575133696-spcB/"
+                      target="__blank"
+                    >
+                      <Image
+                        fluid
+                        src="Contact/linkedin.svg"
+                        alt="Gopal Agarwal"
+                        className="my-2"
+                      />
+                    </a>
                   </div>
                 </div>
               </Reveal>

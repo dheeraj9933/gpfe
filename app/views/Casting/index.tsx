@@ -59,7 +59,7 @@ const Casting = () => {
       </section>
 
       {/* What We Offer Section */}
-      <section className="py-5 position-relative what-we-offer">
+      <section className="position-relative what-we-offer padding-y-100">
         <Container>
           <h2 className="text-center mb-5 cambria-bold">What We Offer</h2>
           <Row className="flex-container">
@@ -277,7 +277,7 @@ const Casting = () => {
               </p>
               <Button
                 variant="light"
-                href="#contact-us"
+                href="/contact-us"
                 className="mt-3 text-green fw-bold px-5 fs-5"
               >
                 Contact Us

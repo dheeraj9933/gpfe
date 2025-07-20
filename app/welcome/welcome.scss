@@ -169,13 +169,13 @@ main {
         url("/HomePage/power.webp");
       @include background;
     }
-    .chemicals {
+    .casting {
       background-image: linear-gradient(
           180deg,
           rgba(0, 0, 0, 0.55) 0%,
           rgba(0, 0, 0, 0) 100%
         ),
-        url("/HomePage/chemicals.webp");
+        url("/HomePage/casting.webp");
       @include background;
     }
     .water {

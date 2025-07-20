@@ -134,8 +134,8 @@ const Partners = () => {
       <section className="customer-grid-collage">
         <Container
           fluid
-          className="padding-y-100 banner-img"
-          style={{ backgroundImage: "url('Customers/promise.webp')" }}
+          className="padding-y-100 banner-img dark-blue-bg"
+          // style={{ backgroundImage: "url('Customers/promise.webp')" }}
         >
           <Container
             className="my-5 py-5 px-0 bg-white infra-internal border-rounded"
@@ -253,7 +253,7 @@ const Partners = () => {
               </p>
               <Button
                 variant="light"
-                href="#contact-us"
+                href="/contact-us"
                 className="mt-3 text-green fw-bold px-5 fs-5"
               >
                 Get Started

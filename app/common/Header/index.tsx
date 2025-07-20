@@ -2,13 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { ChevronDown, Search } from "react-bootstrap-icons";
 import Navbar from "react-bootstrap/Navbar";
-import {
-  Container,
-  Form,
-  Image,
-  Nav,
-  NavDropdown,
-} from "react-bootstrap";
+import { Container, Form, Image, Nav, NavDropdown } from "react-bootstrap";
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -67,19 +61,8 @@ const Header: React.FC = () => {
             className="justify-content-between"
           >
             <Nav className="ms-auto column-gap-2">
-              <NavDropdown
-                title={
-                  <span>
-                    Who we are <ChevronDown />
-                  </span>
-                }
-                id="basic-nav-dropdown"
-              >
-                <NavDropdown.Item href="/about-us">About us</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Founders Journey
-                </NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link href="/about-us">Who we are</Nav.Link>
+
               <NavDropdown
                 title={
                   <span>
@@ -93,6 +76,19 @@ const Header: React.FC = () => {
                 <NavDropdown.Item href="/power">Power</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="/Sustainability">Sustainability</Nav.Link>
+              <NavDropdown
+                title={
+                  <span>
+                    Partners<ChevronDown />
+                  </span>
+                }
+                id="basic-nav-dropdown"
+              >
+                <NavDropdown.Item href="/suppliers">Suppliers</NavDropdown.Item>
+                <NavDropdown.Item href="/customers">
+                  Customers
+                </NavDropdown.Item>
+              </NavDropdown>
               <Nav.Link href="/careers">Careers</Nav.Link>
 
               <Nav.Link href="/contact-us">Contact Us</Nav.Link>

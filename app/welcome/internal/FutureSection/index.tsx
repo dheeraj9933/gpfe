@@ -67,7 +67,7 @@ const FutureSection: React.FC = () => {
       <Container>
         <Row>
           <Col md={6} lg={2}>
-            <Reveal config={{ fromLeft: true }}>
+            <Reveal config={{ fromLeft: true }} className="d-flex flex-column justify-content-center h-100">
               <div className="d-flex flex-column justify-content-center align-items-end h-100">
                 <Image src="/leaf.svg" />{" "}
                 <p className="text-light cambria-bold text-end mt-2 fs-20">

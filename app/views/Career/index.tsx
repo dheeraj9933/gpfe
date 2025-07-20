@@ -302,16 +302,16 @@ const Careers = () => {
             Life at GP Agarwal Group
           </h2>
           <div className="custom-grid">
-            <div className="grid-item-6 bg-muted-blue rounded-4 p-3 ">
+            <div className="grid-item-6 bg-muted-blue rounded-4 p-3 d-flex flex-column">
               <Reveal config={{ popIn: true }}>
                 <Card className="border-0 bg-transparent text-white">
                   <Card.Body className="p-0">
-                    <Card.Text className="h5">
+                    <Card.Text className="h5 mt-2">
                       “The company has supported my growth with a trainee to
                       team lead – the learning opportunities here are
                       unmatched.”
                     </Card.Text>
-                    <Card.Text className="mt-5">
+                    <Card.Text className="mt-4">
                       <strong className="h5">Rahul Varma</strong>
                       <br />
                       <span className="">Senior Engineer</span>
@@ -486,7 +486,7 @@ const Careers = () => {
               </p>
               <Button
                 variant="light"
-                href="#contact-us"
+                href="/contact-us"
                 className="mt-3 text-green fw-bold px-5 fs-5"
               >
                 Get Started

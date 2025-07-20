@@ -65,7 +65,7 @@ const SteelBusiness = () => {
       </section>
 
       {/* Key Infrastructure Section 5 3 3 */}
-      <section className=" ">
+      <section className=" padding-y-100">
         <Container>
           <h2 className="text-center mb-5 cambria-bold">Industries We Serve</h2>
           <div className="d-flex flex-wrap image-collage justify-content-between">
@@ -252,7 +252,7 @@ const SteelBusiness = () => {
               </p>
               <Button
                 variant="light"
-                href="#contact-us"
+                href="/contact-us"
                 className="mt-3 text-green fw-bold px-5 fs-5"
               >
                 Contact Us

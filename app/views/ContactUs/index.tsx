@@ -14,10 +14,36 @@ import {
   Dropdown,
 } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
-import HalfHalfSection from "~/common/HalfHalfSection";
 import Reveal from "~/common/Reveal";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
+interface HalfHalfSectionProps {
+  leftContent: React.ReactNode;
+  rightContent: React.ReactNode;
+}
+
+const HalfHalfSection: React.FC<HalfHalfSectionProps> = ({
+  leftContent,
+  rightContent,
+}) => {
+  return (
+    <Container>
+      <Row className="align-items-center justify-content-around">
+        <Col xs={12} md={6} className="d-flex ">
+          <Reveal config={{ fromLeft: true, delay: 0.2 }} className="me-2">
+            {leftContent}
+          </Reveal>
+        </Col>
+        <Col xs={12} md={6} className="d-flex ">
+          <Reveal config={{ fromRight: true, delay: 0.2 }} className="ms-4 w-100">
+            {rightContent}
+          </Reveal>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
 const ContactUs = () => {
   const containerVariants = {
@@ -33,7 +59,7 @@ const ContactUs = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
     show: { opacity: 1, y: 0 },
-  }; 
+  };
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -53,7 +79,9 @@ const ContactUs = () => {
             />
           }
           rightContent={
-            <div className="d-flex flex-column gap-3 w-100">
+            <div
+              className="d-flex flex-column gap-3 pl-3"
+              >
               <h2 className="orange-text h4 m-0 helvetica-neue-reg mt-3 mt-md-0">
                 CONTACT US
               </h2>
@@ -110,7 +138,10 @@ const ContactUs = () => {
                     />
                   </Form.Group>
                 </Reveal>
-                <Reveal config={{ fromRight: true, delay: 0.6 }} className="position-relative z-1">
+                <Reveal
+                  config={{ fromRight: true, delay: 0.6 }}
+                  className="position-relative z-1"
+                >
                   <Form.Group className="mb-3" controlId="phone">
                     <Form.Label className="fw-semi-bold">
                       Phone Number

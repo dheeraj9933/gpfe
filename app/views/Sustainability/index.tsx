@@ -187,20 +187,20 @@ const Sustainability = () => {
                   src="Sustainability/csr.svg"
                   alt="CSR"
                   fluid
-                  className="rounded shadow"
+                  className=""
                 />
                 <hr className="border border-white border-2 opacity-100 w-25"></hr>
                 <span className="text-center h4 helvetica-neue-reg">
                   Our CSR{" "}
                 </span>
               </div>
-              <a
+              {/* <a
                 href="#explore"
                 className="text-white link-underline link-underline-opacity-0 border border-white align-self-center px-3 rounded py-1"
               >
                 Explore
                 <ArrowRight className="ms-5" />
-              </a>
+              </a> */}
             </Col>
             <Col
               md={6}
@@ -216,7 +216,7 @@ const Sustainability = () => {
                   src="Sustainability/esg.svg"
                   alt="ESG"
                   fluid
-                  className="rounded shadow"
+                  className=""
                 />
                 <hr className="border border-white border-2 opacity-100 w-25"></hr>
                 <span className="text-center h4 helvetica-neue-reg">
@@ -224,13 +224,13 @@ const Sustainability = () => {
                 </span>
               </div>
 
-              <a
+              {/* <a
                 href="#explore"
                 className="text-white link-underline link-underline-opacity-0 border border-white align-self-center px-3 rounded py-1"
               >
                 Explore
                 <ArrowRight className="ms-5" />
-              </a>
+              </a> */}
             </Col>
           </Row>
         </Container>
@@ -445,7 +445,7 @@ const Sustainability = () => {
             </h3>
             <Button
               variant="light"
-              href="#contact-us"
+              href="/contact-us"
               className="mt-3 text-green fw-bold px-5 fs-5"
             >
               Contact Us

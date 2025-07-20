@@ -1,8 +1,10 @@
 import React from "react";
 import { Button, Container, Image } from "react-bootstrap";
 import Reveal from "~/common/Reveal";
+import { useNavigate } from "react-router";
 
 const Career: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <Container
       fluid
@@ -28,7 +30,7 @@ const Career: React.FC = () => {
               transformation.
             </p>
             <div>
-              <Button className="px-4 mt-3" variant="danger">
+              <Button className="px-4 mt-3" variant="danger"  onClick={() => navigate("/careers")}>
                 Explore
               </Button>
             </div>

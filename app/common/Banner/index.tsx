@@ -22,6 +22,7 @@ const Banner = ({
         backgroundPosition: "center",
         minHeight: "100vh",
         backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
       }}
     >
       <Container>

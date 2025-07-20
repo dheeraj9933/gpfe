@@ -8,8 +8,10 @@ import ImageWithText from "~/common/ImageWithText";
 import News from "~/common/News";
 import SliderIcons from "~/common/SliderIcons";
 import Reveal from "~/common/Reveal";
+import { useNavigate } from "react-router";
 
 const SteelBusiness = () => {
+  const navigate = useNavigate();
   return (
     <div className="steel-page">
       {/* Hero Section */}
@@ -34,18 +36,18 @@ const SteelBusiness = () => {
               alt="Hands with Plant"
               fluid
               className="shadow border-rounded"
-              style={{ minHeight: "600px", objectFit: 'cover' }}
+              style={{ minHeight: "600px", objectFit: "cover" }}
             />
           }
           rightContent={
             <div className="d-flex flex-column gap-3">
               <h2 className="helvetica-neue-reg">The Steel Ecosystem</h2>
-              <p className="fs-5">
+              <p className="fs-5 justified-text">
                 Steel lies at the core of GP Agarwal Group’s journey—a symbol of
                 our commitment to building India’s industrial future with
                 strength, precision, and purpose.
               </p>
-              <p className="fs-5">
+              <p className="fs-5 justified-text">
                 Through our flagship entity, Maruti Ispat & Pipes Pvt. Ltd.
                 (MIPPL), we have emerged as one of South India’s largest
                 integrated steel plants—spread across 200+ acres in Martsalayam,
@@ -84,7 +86,7 @@ const SteelBusiness = () => {
                 <Card className="border-0 text-center box-shadow-light">
                   <Card.Img
                     variant="top"
-                    src="Steel/offer-2.webp"
+                    src="Steel/offer-2.jpg"
                     alt="Steel Billets"
                   />
                   <Card.Body>
@@ -241,7 +243,7 @@ const SteelBusiness = () => {
                 <h2 className="h3 cambria-bold ">
                   Our roadmap for building a sustainable, responsible future.
                 </h2>
-                <p className="fs-5">
+                <p className="fs-5 justified-text">
                   At GP Agarwal Group, our commitment to sustainability is not
                   limited to today. We are investing in long-term solutions that
                   protect our environment, empower communities, and build
@@ -285,8 +287,8 @@ const SteelBusiness = () => {
               </p>
               <Button
                 variant="light"
-                href="#contact-us"
                 className="mt-3 text-green fw-bold px-5 fs-5"
+                onClick={() => navigate("/contact-us")}
               >
                 Contact Us
               </Button>

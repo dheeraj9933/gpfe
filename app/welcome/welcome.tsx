@@ -88,14 +88,13 @@ export function Welcome() {
                   </p>
                   <div className="d-flex flex-column my-4">
                     <h3 className="helvetica-neue-reg">Shri. Gopal Agarwal </h3>
-                    <p className="helvetica-neue-reg">Shri. Gopal Agarwal </p>
                     <span>Managing Director , GP Agarwal Group</span>
                   </div>
-                  <div>
+                  {/* <div>
                     <Button className="px-4" variant="danger">
                       Know More
                     </Button>
-                  </div>
+                  </div> */}
                 </Reveal>
               </Col>
             </Row>

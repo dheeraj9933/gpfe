@@ -45,13 +45,13 @@ const Footer: React.FC = () => {
           <Col className="footer-col">
             <h5 className="cambria-bold">Careers</h5>
             <Nav className="flex-column">
-              <Nav.Link href="/media" className="bold-link">
+              <Nav.Link href="/media" className="cambria-bold ">
                 Media
               </Nav.Link>
-              <Nav.Link href="/contact-us" className="bold-link">
+              <Nav.Link href="/contact-us" className="cambria-bold">
                 Contact Us
               </Nav.Link>
-              <Nav.Link href="/news" className="bold-link">
+              <Nav.Link href="/news" className="cambria-bold">
                 News & Features
               </Nav.Link>
             </Nav>
