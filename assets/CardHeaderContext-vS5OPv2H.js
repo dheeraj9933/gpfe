@@ -1,0 +1,1 @@
+import{a as s,o}from"./chunk-AYJ5UCUI-DCoWkaiw.js";import{c as r}from"./Container-2XCU0S2d.js";const d=e=>s.forwardRef((a,t)=>o.jsx("div",{...a,ref:t,className:r(a.className,e)})),c=s.createContext(null);c.displayName="CardHeaderContext";export{c,d};

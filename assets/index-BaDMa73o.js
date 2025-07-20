@@ -1,0 +1,1 @@
+import{o as s}from"./chunk-AYJ5UCUI-DCoWkaiw.js";/* empty css               */const r=({src:i,alt:t,text:a,className:e})=>s.jsxs("figure",{className:`${e} image-with-text`,children:[s.jsx("img",{src:i,alt:t}),s.jsx("figcaption",{className:"ms-2 cambria-bold fs-5",children:a})]});export{r as I};

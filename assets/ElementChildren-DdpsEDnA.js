@@ -1,0 +1,1 @@
+import{a as r}from"./chunk-AYJ5UCUI-DCoWkaiw.js";function o(t,a){let e=0;return r.Children.map(t,n=>r.isValidElement(n)?a(n,e++):n)}function s(t,a){let e=0;r.Children.forEach(t,n=>{r.isValidElement(n)&&a(n,e++)})}function f(t,a){return r.Children.toArray(t).some(e=>r.isValidElement(e)&&e.type===a)}export{s as f,f as h,o as m};
