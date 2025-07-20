@@ -9,7 +9,7 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (location.pathname === "/contact-us") return;
+      if (location.pathname === "/contact-us" || location.pathname === "/media") return;
       setScrolled(window.scrollY > 50); // adjust threshold as needed
     };
 
@@ -19,7 +19,7 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     // This runs on every URL change
-    if (location.pathname === "/contact-us") {
+    if (location.pathname === "/contact-us" || location.pathname === "/media") {
       setScrolled(true);
     }
 

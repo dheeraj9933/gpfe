@@ -1,28 +1,32 @@
 import React from "react";
+const tagListDefault = [
+  {
+    key: "all",
+    label: "All",
+    active: true,
+  },
+  {
+    key: "press",
+    label: "Press",
+    active: false,
+  },
+  {
+    key: "social",
+    label: "Social",
+    active: false,
+  },
+  {
+    key: "facts",
+    label: "Facts",
+    active: false,
+  },
+];
 
-const Tags: React.FC = () => {
-  const tagList = [
-    {
-      key: "all",
-      label: "All",
-      active: true,
-    },
-    {
-      key: "press",
-      label: "Press",
-      active: false,
-    },
-    {
-      key: "social",
-      label: "Social",
-      active: false,
-    },
-    {
-      key: "facts",
-      label: "Facts",
-      active: false,
-    },
-  ];
+const Tags = ({
+  tagList = tagListDefault,
+}: {
+  tagList?: Array<any>;
+}) => {
   return (
     <div className="d-flex gap-3 flex-wrap">
       {tagList.map((tag) => (
