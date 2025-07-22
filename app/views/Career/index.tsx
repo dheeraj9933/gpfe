@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   Navbar,
@@ -12,6 +12,7 @@ import {
   InputGroup,
   DropdownButton,
   Dropdown,
+  Modal,
 } from "react-bootstrap";
 import { ArrowRight, ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 import Banner from "~/common/Banner";
@@ -22,6 +23,10 @@ import "./styles.scss"; // Assuming you have a CSS file for styles
 import Reveal from "~/common/Reveal";
 
 const Careers = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <div className="career-page">
       <Banner image="Career/banner.webp">
@@ -49,7 +54,7 @@ const Careers = () => {
               alt="Work Culture"
               fluid
               className="shadow border-rounded"
-               style={{ minHeight: "500px", objectFit: 'cover' }}
+              style={{ minHeight: "500px", objectFit: "cover" }}
             />
           }
           rightContent={
@@ -240,7 +245,10 @@ const Careers = () => {
           </Row>
           <div className="grid-container-2">
             <Reveal config={{ fromLeft: true }}>
-              <Card className="bg-transparent text-white border-0 border-2 border-start rounded-0">
+              <Card
+                className="bg-transparent text-white border-0 border-2 border-start rounded-0 cursor-pointer"
+                onClick={handleShow}
+              >
                 <Card.Body className="py-0">
                   <Card.Title>Mechanical Engineer – Steel Division</Card.Title>
                   <Card.Text>Mart. Kolta</Card.Text>
@@ -248,7 +256,10 @@ const Careers = () => {
               </Card>
             </Reveal>
             <Reveal config={{ fromRight: true }}>
-              <Card className="bg-transparent text-white border-0 border-2 border-start rounded-0">
+              <Card
+                className="bg-transparent text-white border-0 border-2 border-start rounded-0 cursor-pointer"
+                onClick={handleShow}
+              >
                 <Card.Body className="py-0">
                   <Card.Title>
                     Sustainability Officer – Corporate Office
@@ -258,7 +269,10 @@ const Careers = () => {
               </Card>
             </Reveal>
             <Reveal config={{ fromLeft: true }}>
-              <Card className="bg-transparent text-white border-0 border-2 border-start rounded-0">
+              <Card
+                className="bg-transparent text-white border-0 border-2 border-start rounded-0 cursor-pointer"
+                onClick={handleShow}
+              >
                 <Card.Body className="py-0">
                   <Card.Title>
                     Business Analyst – Strategy & Development Group
@@ -268,7 +282,10 @@ const Careers = () => {
               </Card>
             </Reveal>
             <Reveal config={{ fromRight: true }}>
-              <Card className="bg-transparent text-white border-0 border-2 border-start rounded-0">
+              <Card
+                className="bg-transparent text-white border-0 border-2 border-start rounded-0 cursor-pointer"
+                onClick={handleShow}
+              >
                 <Card.Body className="py-0">
                   <Card.Title>Manager – Global Sales Division</Card.Title>
                   <Card.Text>Hyderabad</Card.Text>
@@ -276,7 +293,10 @@ const Careers = () => {
               </Card>
             </Reveal>
             <Reveal config={{ fromLeft: true }}>
-              <Card className="bg-transparent text-white border-0 border-2 border-start rounded-0">
+              <Card
+                className="bg-transparent text-white border-0 border-2 border-start rounded-0 cursor-pointer"
+                onClick={handleShow}
+              >
                 <Card.Body className="py-0">
                   <Card.Title>HR Executive – Plant Operations</Card.Title>
                   <Card.Text>Hyderabad</Card.Text>
@@ -284,7 +304,10 @@ const Careers = () => {
               </Card>
             </Reveal>
             <Reveal config={{ fromRight: true }}>
-              <Card className="bg-transparent text-white border-0 border-2 border-start rounded-0">
+              <Card
+                className="bg-transparent text-white border-0 border-2 border-start rounded-0 cursor-pointer"
+                onClick={handleShow}
+              >
                 <Card.Body className="py-0">
                   <Card.Title>Financial Analyst, GP Agarwal Group</Card.Title>
                   <Card.Text>Hyderabad</Card.Text>
@@ -495,6 +518,98 @@ const Careers = () => {
           </div>
         </Reveal>
       </Banner>
+
+      <Modal size="xl" show={show} onHide={handleClose} centered>
+        <div className="p-4 p-md-5">
+          <div className="d-flex justify-content-between align-items-start mb-4">
+            <div>
+              <h4 className="fw-bold text-blue mb-1">
+                Mechanical Engineer – Steel Division
+              </h4>
+              <span className="text-decoration-none text-blue">
+                Mippl, Bangalore
+              </span>
+            </div>
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              onClick={handleClose}
+            ></button>
+          </div>
+          <hr />
+          <div className="d-flex justify-content-between text-center text-md-start mb-4">
+            <div className="">
+              <div className="fw-semibold">Department</div>
+              <div className="fw-bold">Operations</div>
+            </div>
+            <div className="">
+              <div className="fw-semibold">Job Posted On</div>
+              <div className="fw-bold">May 5, 2025</div>
+            </div>
+            <div className=" mt-3 mt-md-0">
+              <div className="fw-semibold">Employee Type</div>
+              <div className="fw-bold">Full-Time</div>
+            </div>
+            <div className=" mt-3 mt-md-0">
+              <div className="fw-semibold">Experience Range</div>
+              <div className="fw-bold">3–6 years</div>
+            </div>
+            <div className="d-flex gap-2 mb-4">
+              <button className="btn bg-muted-blue text-white">
+                Apply For This Job
+              </button>
+              <button className="btn btn-outline-secondary">Share</button>
+            </div>
+          </div>
+
+          <div className="bg-light rounded p-3 p-md-4">
+            <h6 className="fw-bold mb-2">Job Description</h6>
+            <p className="mb-3">
+              We are seeking a skilled and proactive Mechanical Engineer to join
+              our Steel Division. This role is integral to maintaining smooth
+              operations, ensuring maximum equipment uptime, and leading
+              mechanical improvement initiatives across the plant. The ideal
+              candidate will have hands-on experience in mechanical maintenance,
+              root cause analysis, and reliability improvement in a steel or
+              heavy manufacturing environment.
+            </p>
+            <h6 className="fw-bold">Key Responsibilities</h6>
+            <ul className="mb-0">
+              <li>
+                Conduct routine inspection, maintenance, and repair of
+                mechanical equipment (e.g., rolling mills, conveyors, pumps,
+                gearboxes, cranes).
+              </li>
+              <li>
+                Troubleshoot mechanical faults and implement preventive and
+                predictive maintenance practices.
+              </li>
+              <li>
+                Collaborate with cross-functional teams during breakdowns or
+                shutdowns to ensure timely resolution and restart.
+              </li>
+              <li>
+                Monitor machine performance and lead efficiency improvement
+                projects.
+              </li>
+              <li>
+                Manage mechanical spare parts inventory and procurement
+                planning.
+              </li>
+              <li>
+                Adhere to safety standards and ensure all work complies with
+                plant safety policies.
+              </li>
+              <li>
+                Support capital project execution, vendor coordination, and
+                installation of new equipment.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 };
