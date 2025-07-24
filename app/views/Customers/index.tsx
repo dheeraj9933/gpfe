@@ -20,10 +20,10 @@ const Partners = () => {
     <div className="customers-page">
       {/* Hero Section */}
       <Banner image="Customers/banner.webp">
-        <div className="" style={{ flexBasis: "50%" }}></div>
+        <div className="flex-50"></div>
         <div
-          className=""
-          style={{ flexBasis: "50%", width: "50%", maxWidth: "500px" }}
+          className="flex-50 banner-inner-text"
+          // style={{ flexBasis: "50%", width: "50%", maxWidth: "500px" }}
         >
           <div className="">
             <h1 className="fs-2  cambria-bold-it mb-2">
@@ -48,7 +48,7 @@ const Partners = () => {
               alt="Work Culture"
               fluid
               className="shadow border-rounded"
-               style={{ minHeight: "500px", objectFit: 'cover' }}
+              style={{ minHeight: "500px", objectFit: "cover" }}
             />
           }
           rightContent={

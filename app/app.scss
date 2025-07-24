@@ -390,20 +390,24 @@ body {
     flex-basis: 40%;
     flex-grow: 0;
     @include media.respond-to(lg) {
+      margin: 10px 0;
       flex-basis: 100%;
     }
   }
   .flex-49 {
     flex-basis: 49%;
     flex-grow: 0;
+    margin: 15px 0;
     @include media.respond-to(lg) {
+      margin: 10px 0;
       flex-basis: 100%;
     }
   }
   .flex-28 {
     flex-basis: 28%;
     flex-grow: 0;
-    @include media.respond-to(md) {
+    @include media.respond-to(lg) {
+      margin: 10px 0;
       flex-basis: 100%;
     }
   }

@@ -19,7 +19,7 @@ const HalfHalfSection: React.FC<HalfHalfSectionProps> = ({
             {leftContent}
           </Reveal>
         </Col>
-        <Col xs={12} md={6} className="d-flex ">
+        <Col xs={12} md={6} className="d-flex mt-3 mt-md-0">
           <Reveal config={{ fromRight: true, delay: 0.2 }}>
             {rightContent}
           </Reveal>

@@ -202,7 +202,7 @@ const Casting = () => {
               />
             </Reveal>
           </div>
-          <div className="my-0 my-md-4 d-flex flex-wrap image-collage justify-content-between">
+          <div className="d-flex flex-wrap image-collage justify-content-between">
             <Reveal config={{ popIn: true }} className="flex-49">
               <ImageWithText
                 src="Steel/collage-4.png"

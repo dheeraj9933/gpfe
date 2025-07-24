@@ -83,7 +83,7 @@ const Sustainability = () => {
             Three Sustainability Pillars
           </h2>
           <Row className="justify-content-around align-items-stretch">
-            <Col className="flex-100 flex-md-30">
+            <Col className="flex-30">
               <Reveal config={{ fromLeft: true }} className="h-100">
                 <Card className="border-0 text-center px-2 pt-5 box-shadow-light h-100 hover-effect">
                   <Card.Img
@@ -108,7 +108,7 @@ const Sustainability = () => {
                 </Card>
               </Reveal>
             </Col>
-            <Col className="flex-100 flex-md-30 my-2 my-lg-0">
+            <Col className="flex-30 my-2 my-lg-0">
               <Reveal config={{ fromBottom: true, delay: 0.4 }} className="h-100">
                 <Card className="border-0 text-center px-2 pt-5 box-shadow-light h-100 hover-effect">
                   <Card.Img
@@ -133,7 +133,7 @@ const Sustainability = () => {
                 </Card>
               </Reveal>
             </Col>
-            <Col className="flex-100 flex-md-30">
+            <Col className="flex-30">
               <Reveal config={{ fromRight: true, delay: 0.6 }} className="h-100">
                 <Card className="border-0 text-center px-2 pt-5 box-shadow-light h-100 hover-effect">
                   <Card.Img
