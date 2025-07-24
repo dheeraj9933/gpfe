@@ -220,7 +220,7 @@ const SteelBusiness = () => {
       </section>
 
       {/* Roadmap Section */}
-      <section className="padding-y-100 text-white green-bg position-relative">
+      <section className="padding-y-100 text-white dark-blue-bg position-relative">
         <Image
           src="Steel/tree.svg"
           className="top-right-bg"
@@ -287,7 +287,7 @@ const SteelBusiness = () => {
               </p>
               <Button
                 variant="light"
-                className="mt-3 text-green fw-bold px-5 fs-5"
+                className="mt-3 text-dark-blue fw-bold px-5 fs-5"
                 onClick={() => navigate("/contact-us")}
               >
                 Contact Us

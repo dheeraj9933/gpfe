@@ -323,7 +323,7 @@ const Partners = () => {
               <Button
                 variant="light"
                 href="/contact-us"
-                className="mt-3 text-green fw-bold px-5 fs-5"
+                className="mt-3 text-dark-blue fw-bold px-5 fs-5"
               >
                 Get Started
               </Button>

@@ -49,7 +49,7 @@ const Sustainability = () => {
           }
           rightContent={
             <div className="d-flex flex-column gap-3">
-              <h2 className="text-green h3 m-0 cambria-bold">
+              <h2 className="text-dark-blue h3 m-0 cambria-bold">
                 Our Commitment to Sustainability
               </h2>
               <p>
@@ -65,7 +65,7 @@ const Sustainability = () => {
                 and every forward step leaves a positive legacy for generations
                 to come.
               </p>
-              <p className="text-white green-bg p-3 rounded commitment w-100 w-md-75">
+              <p className="text-white dark-blue-bg p-3 rounded commitment w-100 w-md-75">
                 <strong>Our vision is clear:</strong> To create an India where
                 every innovation fuels resilience, every investment strengthens
                 the planet, and every step forward leaves a positive legacy for
@@ -79,7 +79,7 @@ const Sustainability = () => {
       {/* Three Sustainability Pillars Section */}
       <section className="pillars lightgreen-bg position-relative">
         <Container>
-          <h2 className="text-center mb-5 text-green cambria-bold">
+          <h2 className="text-center mb-5 text-dark-blue cambria-bold">
             Three Sustainability Pillars
           </h2>
           <Row className="justify-content-around align-items-stretch">
@@ -94,7 +94,7 @@ const Sustainability = () => {
                     style={{ width: "150px", height: "150px" }}
                   />
                   <Card.Body>
-                    <Card.Title className="text-green cambria-bold">
+                    <Card.Title className="text-dark-blue cambria-bold">
                       Clean Manufacturing
                     </Card.Title>
                     <Card.Text>
@@ -119,7 +119,7 @@ const Sustainability = () => {
                     style={{ width: "150px", height: "150px" }}
                   />
                   <Card.Body>
-                    <Card.Title className="text-green cambria-bold">
+                    <Card.Title className="text-dark-blue cambria-bold">
                       Community Development
                     </Card.Title>
                     <Card.Text>
@@ -144,7 +144,7 @@ const Sustainability = () => {
                     style={{ width: "150px", height: "150px" }}
                   />
                   <Card.Body>
-                    <Card.Title className="text-green cambria-bold">
+                    <Card.Title className="text-dark-blue cambria-bold">
                       Environmental Responsibility
                     </Card.Title>
                     <Card.Text>
@@ -161,7 +161,7 @@ const Sustainability = () => {
           </Row>
         </Container>
         <Image
-          src="Sustainability/poly-bg-right.svg"
+          src="Sustainability/poly-bg-right.png"
           className="bottom-right-bg"
         />
       </section>
@@ -242,7 +242,7 @@ const Sustainability = () => {
           <Row className="mb-5">
             <Col md={6} className="pe-5">
               <Reveal config={{ fromLeft: true }}>
-                <h2 className="text-green h4 text-uppercase helvetica-neue-reg">
+                <h2 className="text-dark-blue h4 text-uppercase helvetica-neue-reg">
                   Forging a Greener Tomorrow
                 </h2>
                 <h3 className="h4 cambria-bold">
@@ -272,6 +272,7 @@ const Sustainability = () => {
             <Col className="flex-24 my-2">
               <Reveal config={{ popIn: true }} className="h-100">
                 <Card className="border-0 p-4 box-shadow-light h-100">
+                  
                   <Card.Img
                     variant="top"
                     src="Sustainability/roadmap1.svg"
@@ -359,7 +360,7 @@ const Sustainability = () => {
       <section className="py-5 lightgreen-bg highlight">
         <Container>
           <Reveal config={{ fromRight: true }}>
-            <h2 className="h4 text-uppercase text-green helvetica-neue-reg">
+            <h2 className="h4 text-uppercase text-dark-blue helvetica-neue-reg">
               Sustainability Highlights of FY 2023-24
             </h2>
             <p className="w-75 fs-5">
@@ -373,18 +374,18 @@ const Sustainability = () => {
                 <h4 className="h6 text">
                   Material <br /> Management
                 </h4>
-                <h3 className="text-green fw-bold">32%</h3>
+                <h3 className="text-dark-blue fw-bold">32%</h3>
                 <p className="fs-7">Recycled eco-friendly material used</p>
               </Col>
               <Col md={2}>
                 <h4 className="h6">
                   Renewable <br /> Resource
                 </h4>
-                <h3 className="text-green fw-bold">0.16 Mn GJ</h3>
+                <h3 className="text-dark-blue fw-bold">0.16 Mn GJ</h3>
                 <p className="fs-7">Renewable energy used</p>
               </Col>
               <Col md={3}>
-                <h3 className="text-green fw-bold">9.2%</h3>
+                <h3 className="text-dark-blue fw-bold">9.2%</h3>
                 <p className="fs-7">of total electricity consumption</p>
               </Col>
             </Row>
@@ -393,7 +394,7 @@ const Sustainability = () => {
                 <h4 className="h6">
                   Green <br /> Business
                 </h4>
-                <h3 className="text-green fw-bold">50%</h3>
+                <h3 className="text-dark-blue fw-bold">50%</h3>
                 <p className="fs-7">Of revenue</p>
               </Col>
               <Col md={3}>
@@ -401,7 +402,7 @@ const Sustainability = () => {
                   Energy <br /> Efficiency
                 </h4>
 
-                <h3 className="text-green fw-bold">16%</h3>
+                <h3 className="text-dark-blue fw-bold">16%</h3>
                 <p className="fs-7">Reduction in energy intensity FY</p>
               </Col>
             </Row>
@@ -410,15 +411,15 @@ const Sustainability = () => {
                 <h4 className="h6">
                   Protecting <br /> Nature
                 </h4>
-                <h3 className="text-green fw-bold">~4M</h3>
+                <h3 className="text-dark-blue fw-bold">~4M</h3>
                 <p className="fs-7">Saplings planted across the region</p>
               </Col>
               <Col md={3}>
-                <h3 className="text-green fw-bold">&gt;50%</h3>
+                <h3 className="text-dark-blue fw-bold">&gt;50%</h3>
                 <p className="fs-7">Water reused</p>
               </Col>
             </Row>
-            <h2 className="text-green w-50 text-center mt-5 ms-5">
+            <h2 className="text-dark-blue w-50 text-center mt-5 ms-5">
               "Sustainability is not a choice — it’s the future we build today."
             </h2>
           </Reveal>
@@ -446,7 +447,7 @@ const Sustainability = () => {
             <Button
               variant="light"
               href="/contact-us"
-              className="mt-3 text-green fw-bold px-5 fs-5"
+              className="mt-3 text-dark-blue fw-bold px-5 fs-5"
             >
               Contact Us
             </Button>

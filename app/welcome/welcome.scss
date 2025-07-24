@@ -54,7 +54,6 @@ main {
   }
   .founder-section {
     h2 {
-      color: #47867a;
       font-style: italic;
       line-height: 1;
       // font-family: 'Helvetica Neue';
@@ -78,13 +77,12 @@ main {
   }
 
   .future {
-    background-color: colors.$material-green;
+    background-color: colors.$dark-blue-bg;
     .white-box {
       background-color: #fff;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      // margin: 20px;
       transition: all 0.3s ease;
     }
   }

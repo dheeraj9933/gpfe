@@ -76,7 +76,7 @@ export function Welcome() {
                 <Reveal
                   config={{ fromRight: true, delay: 0.4 }}
                 >
-                  <h2 className="helvetica-neue-reg-it">
+                  <h2 className="helvetica-neue-reg-it text-dark-blue">
                     Cherish every day. We have adapted the journey as our
                     destination.
                   </h2>
