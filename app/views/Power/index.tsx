@@ -137,7 +137,7 @@ const SteelBusiness = () => {
       <section className="lightgreen-bg highlight" style={{minHeight: '1100px'}}>
         <Reveal config={{ fromRight: true }}>
           <Container>
-            <h2 className="h4 text-uppercase text-green helvetica-neue-reg">
+            <h2 className="h4 text-uppercase text-dark-blue helvetica-neue-reg">
               Applications & Impact
             </h2>
             <p className="w-75 fs-5">
@@ -152,13 +152,13 @@ const SteelBusiness = () => {
             </p>
             <Row className="mt-4 align-items-end">
               <Col md={3}>
-                <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
+                <h4 className="text-dark-blue fw-bold mb-3 helvetica-neue-reg">
                   Integrated Power
                 </h4>
                 <p className="fs-6">Recycled eco-friendly material used</p>
               </Col>
               <Col md={3}>
-                <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
+                <h4 className="text-dark-blue fw-bold mb-3 helvetica-neue-reg">
                   Unit-Wide Supply
                 </h4>
                 <p className="fs-6">Renewable energy used</p>
@@ -166,13 +166,13 @@ const SteelBusiness = () => {
             </Row>
             <Row className="mt-4">
               <Col md={3}>
-                <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
+                <h4 className="text-dark-blue fw-bold mb-3 helvetica-neue-reg">
                   Grid Independence
                 </h4>
                 <p className="fs-6">Of revenue</p>
               </Col>
               <Col md={3}>
-                <h4 className="text-green fw-bold mb-3 helvetica-neue-reg">
+                <h4 className="text-dark-blue fw-bold mb-3 helvetica-neue-reg">
                   Scalable Energy
                 </h4>
                 <p className="fs-6">Reduction in energy intensity FY</p>
@@ -184,7 +184,7 @@ const SteelBusiness = () => {
       </section>
 
       {/* Roadmap Section */}
-      <section className="padding-y-100 text-white green-bg position-relative">
+      <section className="padding-y-100 text-white dark-blue-bg position-relative">
         <Image
           src="Steel/tree.svg"
           className="top-right-bg"
@@ -253,7 +253,7 @@ const SteelBusiness = () => {
               <Button
                 variant="light"
                 href="/contact-us"
-                className="mt-3 text-green fw-bold px-5 fs-5"
+                className="mt-3 text-dark-blue fw-bold px-5 fs-5"
               >
                 Contact Us
               </Button>
