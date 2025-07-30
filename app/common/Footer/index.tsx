@@ -68,17 +68,17 @@ const Footer: React.FC = () => {
             <p>
               <a
                 className="text-decoration-none text-black mt-2"
-                href="tel:+91 40 2939 6799"
+                href="tel:9000012989"
               >
-                Tel: +91 40 2939 6799{" "}
+                Tel: 900 001 2989{" "}
               </a>
             </p>
             <p>
               <a
-                href="mailto:Inquiry@marutiispat.in"
+                href="mailto:communication@msvayu.com"
                 className="text-decoration-none text-black mt-2"
               >
-                Email: Inquiry@marutiispat.in
+                Email:  communication@msvayu.com
               </a>
             </p>
           </Col>
@@ -92,24 +92,24 @@ const Footer: React.FC = () => {
             </ul>
           </Col>
           <Col className="d-flex justify-content-end column-gap-3 flex-shrink-1  flex-grow-0 mt-2">
-            <a href="http://www.google.com" target="__blank">
+            <a href="https://www.instagram.com/marutiispatpipes/" target="__blank">
               <Image
                 src="/social/LogoInstagram.svg"
-                alt="Linked In"
+                alt="Instagram"
                 className=""
               />
             </a>
-            <a href="http://www.google.com" target="__blank">
+            <a href="https://x.com/marutiispatpies" target="__blank">
               <Image src="/social/X.svg" alt="Linked In" className="" />
             </a>
-            <a href="http://www.google.com" target="__blank">
+            <a href="https://www.youtube.com/@marutiispatpipes" target="__blank">
               <Image
                 src="/social/LogoYouTube.svg"
                 alt="Linked In"
                 className=""
               />
             </a>
-            <a href="http://www.google.com" target="__blank">
+            <a href="https://www.linkedin.com/company/maruti-ispat-pipes-private-limited/?viewAsMember=true" target="__blank">
               <Image src="/social/LinkedIn.svg" alt="Linked In" className="" />
             </a>
           </Col>

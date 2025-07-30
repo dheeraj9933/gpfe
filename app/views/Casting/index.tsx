@@ -207,14 +207,14 @@ const Casting = () => {
               <ImageWithText
                 src="Steel/collage-4.png"
                 alt="Collage 4"
-                text="Railways"
+                text="Railway Bogey (Suspension)"
               />
             </Reveal>
             <Reveal config={{ popIn: true }} className="flex-49">
               <ImageWithText
                 src="Steel/collage-5.png"
                 alt="Collage 5"
-                text="Automotive"
+                text="CMS Crossing Coupler"
               />
             </Reveal>
           </div>
@@ -223,7 +223,7 @@ const Casting = () => {
               <ImageWithText
                 src="Steel/collage-6.png"
                 alt="Collage 6"
-                text="Water"
+                text="WHRB Power Plant"
               />
             </Reveal>
             <Reveal config={{ popIn: true }} className="flex-28">

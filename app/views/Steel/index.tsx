@@ -113,7 +113,7 @@ const SteelBusiness = () => {
                 </Card>
               </Reveal>
             </Col>
-            <Col className="flex-30">
+            {/* <Col className="flex-30">
               <Reveal config={{ popIn: true }}>
                 <Card className="border-0 text-center box-shadow-light  overflow-hidden">
                   <Card.Img
@@ -128,8 +128,8 @@ const SteelBusiness = () => {
                   </Card.Body>
                 </Card>
               </Reveal>
-            </Col>
-            <Col className="flex-30">
+            </Col> */}
+            {/* <Col className="flex-30">
               <Reveal config={{ popIn: true }}>
                 <Card className="border-0 text-center box-shadow-light  overflow-hidden">
                   <Card.Img
@@ -144,7 +144,7 @@ const SteelBusiness = () => {
                   </Card.Body>
                 </Card>
               </Reveal>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
         <Image src="Steel/poly-bottom-right.png" className="bottom-right-bg" />
@@ -182,14 +182,14 @@ const SteelBusiness = () => {
               <ImageWithText
                 src="Steel/collage-4.png"
                 alt="Collage 4"
-                text="Railways"
+                text="Railway Bogey (Suspension)"
               />
             </Reveal>
             <Reveal config={{ popIn: true }} className="flex-49">
               <ImageWithText
                 src="Steel/collage-5.png"
                 alt="Collage 5"
-                text="Automotive"
+                text="CMS Crossing Coupler"
               />
             </Reveal>
           </div>
@@ -198,7 +198,7 @@ const SteelBusiness = () => {
               <ImageWithText
                 src="Steel/collage-6.png"
                 alt="Collage 6"
-                text="Water"
+                text="WHRB Power Plant"
               />
             </Reveal>
             <Reveal config={{ popIn: true }} className="flex-28">
@@ -231,7 +231,7 @@ const SteelBusiness = () => {
             <Col md={6}>
               <Reveal config={{ fromLeft: true, delay: 0.2 }}>
                 <Image
-                  src="Steel/roadmap.png"
+                  src="Steel/roadmap.webp"
                   alt="Roadmap"
                   fluid
                   className="rounded shadow"

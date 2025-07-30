@@ -89,10 +89,10 @@ const ContactUs = () => {
               <p className="fs-5">
                 Or reach out manually to{" "}
                 <a
-                  href="mailto:hello@gpagarwalgroup.com"
+                  href="mailto:communication@msvayu.com"
                   className="text-danger text-decoration-none"
                 >
-                  hello@gpagarwalgroup.com
+                  communication@msvayu.com
                 </a>
               </p>
               <Form>
@@ -201,10 +201,10 @@ const ContactUs = () => {
           <p className="fs-5">
             Or reach out manually to{" "}
             <a
-              href="mailto:hello@gpagarwal.com"
+              href="mailto:communication@msvayu.com"
               className="text-danger text-decoration-none"
             >
-              hello@gpagarwal.com
+              communication@msvayu.com
             </a>
           </p>
           <Reveal config={{ fromBottom: true }}>
@@ -223,10 +223,10 @@ const ContactUs = () => {
                     <Card.Text>Our team will get back shortly.</Card.Text>
                     <Card.Text>
                       <a
-                        href="mailto:hello@gpagarwal.com"
+                        href="mailto:communication@msvayu.com"
                         className="text-danger"
                       >
-                        hello@gpagarwal.com
+                        communication@msvayu.com
                       </a>
                     </Card.Text>
                   </Card.Body>
@@ -263,8 +263,8 @@ const ContactUs = () => {
                     <Card.Title>Call Us Directly</Card.Title>
                     <Card.Text>Available working hours.</Card.Text>
                     <Card.Text>
-                      <a href="tel:+919002345678" className="text-danger">
-                        +91 9002345678
+                      <a href="tel:+91 9000012989" className="text-danger">
+                        +91 9000012989
                       </a>
                     </Card.Text>
                   </Card.Body>
@@ -276,7 +276,7 @@ const ContactUs = () => {
       </section>
 
       {/* Social Media Section */}
-      <section className="py-5 text-white dark-blue-bg">
+      {/* <section className="py-5 text-white dark-blue-bg">
         <Container>
           <h2 className="text-center">Social Media Channels</h2>
           <motion.div
@@ -330,7 +330,7 @@ const ContactUs = () => {
             </Row>
           </motion.div>
         </Container>
-      </section>
+      </section> */}
     </div>
   );
 };

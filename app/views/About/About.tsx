@@ -4,6 +4,7 @@ import Banner from "~/common/Banner";
 import HalfHalfSection from "~/common/HalfHalfSection";
 import "./About.scss";
 import Reveal from "~/common/Reveal";
+import BlueBgContainer from "~/common/BlueBgContainer";
 
 const AboutUs = () => {
   return (
@@ -72,35 +73,93 @@ const AboutUs = () => {
 
       {/* Mission and Vision Section */}
       <section
-        className="text-white banner-img padding-y-100"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(about/mission.jpg)`,
-        }}
+      // className="banner-img padding-y-100"
       >
-        <Container className="py-5">
-          <Row className="justify-content-between">
-            <Col md={5}>
-              <Reveal config={{ fromLeft: true, delay: 0.2 }}>
-                <h3 className="cambria-bold mb-3">Our Mission</h3>
-                <p>
-                  To empower industries and communities by delivering
-                  high-quality, sustainable engineering solutions that inspire
-                  trust, growth, and long-term value.
-                </p>
-              </Reveal>
-            </Col>
-            <Col md={5}>
-              <Reveal config={{ fromRight: true, delay: 0.2 }}>
-                <h3 className="cambria-bold mb-3">Our Vision</h3>
-                <p>
-                  To empower industries and communities by delivering
-                  high-quality, sustainable engineering solutions that inspire
-                  trust, growth, and long-term value.
-                </p>
-              </Reveal>
-            </Col>
-          </Row>
-        </Container>
+        <BlueBgContainer>
+          <Container className="py-5">
+            <Row className="justify-content-between">
+              <Col md={6}>
+                <Reveal config={{ fromLeft: true, delay: 0.2 }} className="h-100">
+                  <div className="d-flex flex-column gap-3 bg-white p-3 rounded-3 h-100">
+                    {/* Title Row */}
+                    <div className="row align-items-center">
+                      <div className="col-10 d-flex align-items-center gap-2">
+                        <div
+                          style={{ width: "4px", height: "32px" }}
+                          className="bg-warning me-2"
+                        ></div>
+                        <h3 className="fs-4 fw-bold cambria-bold m-0">
+                          {"Mission"}
+                        </h3>
+                      </div>
+                      <div className="col-2 text-end">
+                        <img
+                          src={"/about/Mission.svg"}
+                          alt="Icon"
+                          className="img-fluid"
+                          style={{ width: "60px", height: "60px" }}
+                        />
+                      </div>
+                    </div>
+                    {/* Description Row */}
+                    <div className="row">
+                      <div className="col-10">
+                        <p className="fs-5 font-myraid m-0">
+                          To Deliver Innovative, Durable, And Reliable Steel
+                          Pipe Products That Meet The Evolving Needs Of Our
+                          Customers And Industries. We Are Committed To
+                          Excellence In Manufacturing, Environmental
+                          Responsibility, And Fostering Long-term Relationships
+                          With Our Clients, Partners, And Employees.
+                        </p>
+                      </div>
+                      <div className="col-2"></div>
+                    </div>
+                  </div>
+                </Reveal>
+              </Col>
+              <Col md={6}>
+                <Reveal config={{ fromRight: true, delay: 0.2 }} className="h-100">
+                  {/* <h3 className="cambria-bold mb-3">Our Vision</h3> */}
+                  <div className="d-flex flex-column gap-3 bg-white p-3 rounded-3 h-100">
+                    {/* Title Row */}
+                    <div className="row align-items-center">
+                      <div className="col-10 d-flex align-items-center gap-2">
+                        <div
+                          style={{ width: "4px", height: "32px" }}
+                          className="bg-warning me-2"
+                        ></div>
+                        <h3 className="fs-4 fw-bold cambria-bold m-0">{"Vision"}</h3>
+                      </div>
+                      <div className="col-2 text-end">
+                        <img
+                          src={"/about/Vision.svg"}
+                          alt="Icon"
+                          className="img-fluid"
+                          style={{ width: "60px", height: "60px" }}
+                        />
+                      </div>
+                    </div>
+                    {/* Description Row */}
+                    <div className="row">
+                      <div className="col-10">
+                        <p className="fs-5 font-myraid m-0">
+                          At Maruti Ispat & Pipes Pvt. Ltd., We’re Committed To
+                          Building A Stronger, Sustainable Future.through
+                          Advanced Technology And Precision Engineering, We
+                          Deliver High-quality Steel Solutions That Drive
+                          Industrial Growth, Infrastructure Development, And
+                          Environmental Responsibility.
+                        </p>
+                      </div>
+                      <div className="col-2"></div>
+                    </div>
+                  </div>
+                </Reveal>
+              </Col>
+            </Row>
+          </Container>
+        </BlueBgContainer>
       </section>
 
       {/* Our Values Section */}
@@ -195,12 +254,12 @@ const AboutUs = () => {
                     alt="Gopal Agarwal"
                     className=""
                   />
-                  <div className="light-border py-2">
+                  <div className="light-border py-4">
                     <h5>Gopal Agarwal</h5>
                     <p className="fs-6 text-secondary mt-1 text-center">
                       Managing Director
                     </p>
-                    <a
+                    {/* <a
                       href="https://www.linkedin.com/posts/maruti-ispat-pipes-private-limited_today-was-a-special-day-at-our-office-as-activity-7287415828575133696-spcB/"
                       target="__blank"
                     >
@@ -210,7 +269,7 @@ const AboutUs = () => {
                         alt="Gopal Agarwal"
                         className="my-2"
                       />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </Reveal>
@@ -223,10 +282,10 @@ const AboutUs = () => {
                     src="about/leadership2.jpg"
                     alt="Abhishek Agarwal"
                   />
-                  <div className="light-border py-2">
+                  <div className="light-border py-4">
                     <h5>Abhishek Agarwal</h5>
                     <p className="fs-6 text-secondary mt-1 text-center">CEO</p>
-                    <a
+                    {/* <a
                       href="https://www.linkedin.com/posts/maruti-ispat-pipes-private-limited_today-was-a-special-day-at-our-office-as-activity-7287415828575133696-spcB/"
                       target="__blank"
                     >
@@ -236,7 +295,7 @@ const AboutUs = () => {
                         alt="Gopal Agarwal"
                         className="my-2"
                       />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </Reveal>
@@ -265,7 +324,9 @@ const AboutUs = () => {
                     className="w-50"
                   />
                   <Card.Body>
-                    <Card.Text className="text-center">Star Export Certified Company 2020</Card.Text>
+                    <Card.Text className="text-center">
+                      Star Export Certified Company 2020
+                    </Card.Text>
                   </Card.Body>
                 </Card>
               </Reveal>
@@ -282,7 +343,9 @@ const AboutUs = () => {
                     className="w-50"
                   />
                   <Card.Body>
-                    <Card.Text className="text-center">ISO 9001:2020 Certified</Card.Text>
+                    <Card.Text className="text-center">
+                      ISO 9001:2020 Certified
+                    </Card.Text>
                   </Card.Body>
                 </Card>
               </Reveal>
@@ -299,7 +362,9 @@ const AboutUs = () => {
                     className="w-50"
                   />
                   <Card.Body>
-                    <Card.Text className="text-center">Best TMF for the Year 2019</Card.Text>
+                    <Card.Text className="text-center">
+                      Best TMF for the Year 2019
+                    </Card.Text>
                   </Card.Body>
                 </Card>
               </Reveal>
@@ -316,7 +381,9 @@ const AboutUs = () => {
                     className="w-50"
                   />
                   <Card.Body>
-                    <Card.Text className="text-center">Award for Best Employee Retention</Card.Text>
+                    <Card.Text className="text-center">
+                      Award for Best Employee Retention
+                    </Card.Text>
                   </Card.Body>
                 </Card>
               </Reveal>
