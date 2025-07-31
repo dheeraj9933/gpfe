@@ -2,7 +2,6 @@
   .clients-inner-container {
     overflow: hidden;
 
-
     .clients-scroll {
       position: relative;
       overflow: hidden;
@@ -30,17 +29,18 @@
         gap: 20px;
         animation: scroll-left 20s linear infinite;
         img {
-            height: 100%;
-            align-self: center;
+          width: 200px;
+          // height: 100%;
+          // align-self: center;
         }
       }
     }
-     @media screen and (max-width: "992px") {
+    @media screen and (max-width: "992px") {
       flex-wrap: wrap;
       .client-text {
         margin-bottom: 20px;
       }
-     }
+    }
   }
 }
 

@@ -11,9 +11,6 @@ const Clients: React.FC = () => {
     "6.png",
     "7.png",
     "8.png",
-    "9.png",
-    "10.png",
-    "11.png",
   ];
   return (
     <Container fluid className="clients">
