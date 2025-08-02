@@ -168,7 +168,7 @@ const AboutUs = () => {
           <h2 className="text-center mb-5 cambria-bold">Our Values</h2>
           <div className="d-flex card-container">
             <Reveal
-              config={{ fromBottom: true, delay: 0.6 }}
+              config={{ fromBottom: true, delay: 0.2 }}
               className="my-card"
             >
               <Col className="hover-effect box-shadow-light p-4 ">
@@ -182,7 +182,7 @@ const AboutUs = () => {
               </Col>
             </Reveal>
             <Reveal
-              config={{ fromBottom: true, delay: 0.8 }}
+              config={{ fromBottom: true, delay: 0.4 }}
               className="my-card"
             >
               <Col className="hover-effect box-shadow-light p-4 ">
@@ -194,7 +194,7 @@ const AboutUs = () => {
               </Col>
             </Reveal>
             <Reveal
-              config={{ fromBottom: true, delay: 0.2 }}
+              config={{ fromBottom: true, delay: 0.6 }}
               className="my-card"
             >
               <Col className="hover-effect box-shadow-light p-4 ">
@@ -209,7 +209,7 @@ const AboutUs = () => {
               </Col>
             </Reveal>
             <Reveal
-              config={{ fromBottom: true, delay: 0.4 }}
+              config={{ fromBottom: true, delay: 0.8 }}
               className="my-card"
             >
               <Col className="hover-effect box-shadow-light p-4 ">
@@ -224,7 +224,7 @@ const AboutUs = () => {
               </Col>
             </Reveal>
             <Reveal
-              config={{ fromBottom: true, delay: 0.4 }}
+              config={{ fromBottom: true, delay: 1 }}
               className="my-card"
             >
               <Col className="hover-effect box-shadow-light p-4 ">
@@ -235,7 +235,7 @@ const AboutUs = () => {
                 <p>We solve real-world problems and shape a better future.</p>
               </Col>
             </Reveal>
-            <Reveal config={{ fromBottom: true, delay: 1 }} className="my-card">
+            <Reveal config={{ fromBottom: true, delay: 1.2 }} className="my-card">
               <Col className="hover-effect box-shadow-light p-4 h-100">
                 <div className="d-flex align-items-center mb-3">
                   <Image src="about/values5.svg" className="me-2" />
