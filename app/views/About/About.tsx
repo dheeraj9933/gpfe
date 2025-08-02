@@ -72,14 +72,15 @@ const AboutUs = () => {
       </section>
 
       {/* Mission and Vision Section */}
-      <section
-      // className="banner-img padding-y-100"
-      >
+      <section>
         <BlueBgContainer>
           <Container className="py-5">
             <Row className="justify-content-between">
               <Col md={6}>
-                <Reveal config={{ fromLeft: true, delay: 0.2 }} className="h-100">
+                <Reveal
+                  config={{ fromLeft: true, delay: 0.2 }}
+                  className="h-100"
+                >
                   <div className="d-flex flex-column gap-3 bg-white p-3 rounded-3 h-100">
                     {/* Title Row */}
                     <div className="row align-items-center">
@@ -105,12 +106,9 @@ const AboutUs = () => {
                     <div className="row">
                       <div className="col-10">
                         <p className="fs-5 font-myraid m-0">
-                          To Deliver Innovative, Durable, And Reliable Steel
-                          Pipe Products That Meet The Evolving Needs Of Our
-                          Customers And Industries. We Are Committed To
-                          Excellence In Manufacturing, Environmental
-                          Responsibility, And Fostering Long-term Relationships
-                          With Our Clients, Partners, And Employees.
+                          To build a sustainable and respectable organization
+                          through innovation and excellence that delivers
+                          superior value to all stakeholders.
                         </p>
                       </div>
                       <div className="col-2"></div>
@@ -119,7 +117,10 @@ const AboutUs = () => {
                 </Reveal>
               </Col>
               <Col md={6}>
-                <Reveal config={{ fromRight: true, delay: 0.2 }} className="h-100">
+                <Reveal
+                  config={{ fromRight: true, delay: 0.2 }}
+                  className="h-100"
+                >
                   {/* <h3 className="cambria-bold mb-3">Our Vision</h3> */}
                   <div className="d-flex flex-column gap-3 bg-white p-3 rounded-3 h-100">
                     {/* Title Row */}
@@ -129,7 +130,9 @@ const AboutUs = () => {
                           style={{ width: "4px", height: "32px" }}
                           className="bg-warning me-2"
                         ></div>
-                        <h3 className="fs-4 fw-bold cambria-bold m-0">{"Vision"}</h3>
+                        <h3 className="fs-4 fw-bold cambria-bold m-0">
+                          {"Vision"}
+                        </h3>
                       </div>
                       <div className="col-2 text-end">
                         <img
@@ -144,12 +147,9 @@ const AboutUs = () => {
                     <div className="row">
                       <div className="col-10">
                         <p className="fs-5 font-myraid m-0">
-                          At Maruti Ispat & Pipes Pvt. Ltd., We’re Committed To
-                          Building A Stronger, Sustainable Future.through
-                          Advanced Technology And Precision Engineering, We
-                          Deliver High-quality Steel Solutions That Drive
-                          Industrial Growth, Infrastructure Development, And
-                          Environmental Responsibility.
+                          To diversify and build a profitable business known for
+                          excellence, creating value for all stakeholders and a
+                          workplace of choice for employees.
                         </p>
                       </div>
                       <div className="col-2"></div>
@@ -167,6 +167,32 @@ const AboutUs = () => {
         <Container>
           <h2 className="text-center mb-5 cambria-bold">Our Values</h2>
           <div className="d-flex card-container">
+            <Reveal
+              config={{ fromBottom: true, delay: 0.6 }}
+              className="my-card"
+            >
+              <Col className="hover-effect box-shadow-light p-4 ">
+                <div className="d-flex align-items-center mb-3">
+                  <Image src="about/values3.svg" className="me-2" />
+                  <h5>Excellence</h5>
+                </div>
+                <p>
+                  From raw material to product—we ensure quality at every stage.
+                </p>
+              </Col>
+            </Reveal>
+            <Reveal
+              config={{ fromBottom: true, delay: 0.8 }}
+              className="my-card"
+            >
+              <Col className="hover-effect box-shadow-light p-4 ">
+                <div className="d-flex align-items-center mb-3">
+                  <Image src="about/values4.svg" className="me-2" />
+                  <h5>Respecting Individual</h5>
+                </div>
+                <p>We invest in people, valuing relationships with respect.</p>
+              </Col>
+            </Reveal>
             <Reveal
               config={{ fromBottom: true, delay: 0.2 }}
               className="my-card"
@@ -189,45 +215,37 @@ const AboutUs = () => {
               <Col className="hover-effect box-shadow-light p-4 ">
                 <div className="d-flex align-items-center mb-3 ">
                   <Image src="about/values2.svg" className="me-2" />
-                  <h5>Innovation</h5>
-                </div>
-                <p>We solve real-world problems and shape a better future.</p>
-              </Col>
-            </Reveal>
-            <Reveal
-              config={{ fromBottom: true, delay: 0.6 }}
-              className="my-card"
-            >
-              <Col className="hover-effect box-shadow-light p-4 ">
-                <div className="d-flex align-items-center mb-3">
-                  <Image src="about/values3.svg" className="me-2" />
-                  <h5>Excellence</h5>
+                  <h5>Empowerment</h5>
                 </div>
                 <p>
-                  From raw material to product—we ensure quality at every stage.
+                  We believe in empowering our employees and communities in
+                  every aspect we can.
                 </p>
               </Col>
             </Reveal>
             <Reveal
-              config={{ fromBottom: true, delay: 0.8 }}
+              config={{ fromBottom: true, delay: 0.4 }}
               className="my-card"
             >
               <Col className="hover-effect box-shadow-light p-4 ">
-                <div className="d-flex align-items-center mb-3">
-                  <Image src="about/values4.svg" className="me-2" />
-                  <h5>People-Centered</h5>
+                <div className="d-flex align-items-center mb-3 ">
+                  <Image src="about/values2.svg" className="me-2" />
+                  <h5>Innovation</h5>
                 </div>
-                <p>We invest in people, valuing relationships with respect.</p>
+                <p>We solve real-world problems and shape a better future.</p>
               </Col>
             </Reveal>
             <Reveal config={{ fromBottom: true, delay: 1 }} className="my-card">
               <Col className="hover-effect box-shadow-light p-4 h-100">
                 <div className="d-flex align-items-center mb-3">
                   <Image src="about/values5.svg" className="me-2" />
-                  <h5>Sustainability</h5>
+                  <h5>Transparency</h5>
                 </div>
 
-                <p>We’re responsible—protecting our communities.</p>
+                <p>
+                  Transparency within the organization and with stakeholders
+                  is of utmost importance.
+                </p>
               </Col>
             </Reveal>
           </div>
